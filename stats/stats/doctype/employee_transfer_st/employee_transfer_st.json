@@ -1,0 +1,232 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ET-.#####",
+ "creation": "2025-05-15 07:13:00.899053",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_o6ez",
+  "employee_no",
+  "employee_name",
+  "section",
+  "main_department",
+  "sub_department",
+  "direct_manager",
+  "direct_manager_name",
+  "request_reasons",
+  "column_break_aaog",
+  "new_sub_department",
+  "new_main_department",
+  "new_section",
+  "new_direct_manager",
+  "new_direct_manager_name",
+  "transfer_date",
+  "transfer_to_vacancy",
+  "vacancy_number",
+  "note",
+  "decision_number",
+  "decision_date",
+  "decision_attachment",
+  "amended_from",
+  "section_break_swou",
+  "managers_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_o6ez",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Transfer ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sub_department.custom_direct_manager",
+   "fieldname": "direct_manager",
+   "fieldtype": "Link",
+   "label": "Direct Manager",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "direct_manager.employee_name",
+   "fieldname": "direct_manager_name",
+   "fieldtype": "Data",
+   "label": "Direct Manager Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_aaog",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "new_sub_department",
+   "fieldtype": "Link",
+   "label": "New Sub Department",
+   "link_filters": "[[\"Department\",\"is_group\",\"=\",0]]",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "new_sub_department.parent_department",
+   "fieldname": "new_main_department",
+   "fieldtype": "Link",
+   "label": "New Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "new_main_department.custom_section",
+   "fieldname": "new_section",
+   "fieldtype": "Link",
+   "label": "New Section",
+   "options": "Section ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "new_sub_department.custom_direct_manager",
+   "fieldname": "new_direct_manager",
+   "fieldtype": "Link",
+   "label": "New Direct Manager",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "new_direct_manager.employee_name",
+   "fieldname": "new_direct_manager_name",
+   "fieldtype": "Data",
+   "label": "New Direct Manager Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transfer_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Transfer Date"
+  },
+  {
+   "fieldname": "request_reasons",
+   "fieldtype": "Small Text",
+   "label": "Request Reasons",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "transfer_to_vacancy",
+   "fieldtype": "Check",
+   "label": "Transfer to Vacancy"
+  },
+  {
+   "depends_on": "eval:doc.transfer_to_vacancy",
+   "fieldname": "vacancy_number",
+   "fieldtype": "Data",
+   "label": "Vacancy Number",
+   "mandatory_depends_on": "eval:doc.transfer_to_vacancy"
+  },
+  {
+   "fieldname": "decision_number",
+   "fieldtype": "Data",
+   "label": "Decision Number"
+  },
+  {
+   "fieldname": "decision_date",
+   "fieldtype": "Date",
+   "label": "Decision Date"
+  },
+  {
+   "fieldname": "decision_attachment",
+   "fieldtype": "Attach",
+   "label": "Decision Attachment"
+  },
+  {
+   "default": "\u064a\u062e\u0636\u0639 \u0637\u0644\u0628 \u0627\u0644\u0646\u0642\u0644 \u0644\u062f\u0631\u0627\u0633\u0629 \u0639\u0628\u0621 \u0627\u0644\u0639\u0645\u0644 \u0648\u0645\u0631\u0627\u062c\u0639\u0629 \u0645\u062f\u0649 \u0627\u062a\u0633\u0627\u0642 \u062a\u0623\u062b\u064a\u0631 \u0627\u0644\u0646\u0642\u0644 \u0639\u0644\u0649 \u062e\u0637\u0629 \u0627\u0644\u0642\u0648\u0649 \u0627\u0644\u0639\u0627\u0645\u0644\u0629 \u0648\u0645\u0648\u0627\u0641\u0642\u0629 \u0635\u0627\u062d\u0628 \u0627\u0644\u0635\u0644\u0627\u062d\u064a\u0629.\n",
+   "depends_on": "eval:doc.transfer_to_vacancy==0",
+   "fieldname": "note",
+   "fieldtype": "Data",
+   "label": "Note",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_swou",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "managers_notes",
+   "fieldtype": "Table",
+   "label": "Managers Notes",
+   "options": "Managers Notes ST"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-26 08:41:18.059557",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Transfer ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

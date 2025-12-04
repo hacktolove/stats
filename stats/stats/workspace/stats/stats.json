@@ -1,0 +1,755 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"VfGWfoLahC\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u0627\u062e\u062a\u0635\u0627\u0631\u0627\u062a \u0627\u0644\u0639\u0645\u0644\u064a\u0627\u062a</b></span>\",\"col\":12}},{\"id\":\"n5YCviTnAo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Post Request ST\",\"col\":3}},{\"id\":\"ZpX5f-3lez\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stats Settings ST\",\"col\":3}},{\"id\":\"dhgDwVmNY9\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b></b></span>\",\"col\":12}},{\"id\":\"nCHmvYGFpW\",\"type\":\"card\",\"data\":{\"card_name\":\"Inetrnal Comunication\",\"col\":4}},{\"id\":\"-XAe6PYlKG\",\"type\":\"card\",\"data\":{\"card_name\":\"Talent Acquisition\",\"col\":4}},{\"id\":\"QsfaysMSZI\",\"type\":\"card\",\"data\":{\"card_name\":\"Scholarship Services Management\",\"col\":4}},{\"id\":\"heS8fHsRhA\",\"type\":\"card\",\"data\":{\"card_name\":\"Operation Services Management\",\"col\":4}},{\"id\":\"dRI6xTWmlp\",\"type\":\"card\",\"data\":{\"card_name\":\"Training Management\",\"col\":4}},{\"id\":\"EmrITfhpiy\",\"type\":\"card\",\"data\":{\"card_name\":\"Man Power Planning ST\",\"col\":4}},{\"id\":\"04ptcqtLZw\",\"type\":\"card\",\"data\":{\"card_name\":\"Employee Reallocation ST\",\"col\":4}},{\"id\":\"Wzj32D6OFW\",\"type\":\"card\",\"data\":{\"card_name\":\"Resignation & End Of Services\",\"col\":4}},{\"id\":\"b-ffuVPrEW\",\"type\":\"card\",\"data\":{\"card_name\":\"Purchase\",\"col\":4}},{\"id\":\"WMHe2HjVWr\",\"type\":\"card\",\"data\":{\"card_name\":\"Statistics Managment\",\"col\":4}},{\"id\":\"MyT65tSJjX\",\"type\":\"card\",\"data\":{\"card_name\":\"Attendance Settings\",\"col\":4}},{\"id\":\"kRjTa1MMLY\",\"type\":\"card\",\"data\":{\"card_name\":\"Education Allowance\",\"col\":4}}]",
+ "creation": "2024-08-06 15:54:16.748573",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "workflow",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Stats",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Inetrnal Comunication",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Post Request ST",
+   "link_count": 0,
+   "link_to": "Post Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Post Approval ST",
+   "link_count": 0,
+   "link_to": "Post Approval ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Certificate of Appreciation ST",
+   "link_count": 0,
+   "link_to": "Certificate of Appreciation ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Event Planning ST",
+   "link_count": 0,
+   "link_to": "Event Planning ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Internal Campaign ST",
+   "link_count": 0,
+   "link_to": "Internal Campaign ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Organisational Culture ST",
+   "link_count": 0,
+   "link_to": "Organisational Culture ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Talent Acquisition",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Opening Job ST",
+   "link_count": 0,
+   "link_to": "Opening Job ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Job Application ST",
+   "link_count": 0,
+   "link_to": "Job Application ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Job Offer ST",
+   "link_count": 0,
+   "link_to": "Job Offer ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Onboarding ST",
+   "link_count": 0,
+   "link_to": "Employee Onboarding ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Contract ST",
+   "link_count": 0,
+   "link_to": "Employee Contract ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee",
+   "link_count": 0,
+   "link_to": "Employee",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance Settings",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance Request ST",
+   "link_count": 0,
+   "link_to": "Attendance Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Checkin",
+   "link_count": 0,
+   "link_to": "Employee Checkin",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance",
+   "link_count": 0,
+   "link_to": "Attendance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance Reconciliation ST",
+   "link_count": 0,
+   "link_to": "Attendance Reconciliation ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Attendance Checkup ST",
+   "link_count": 0,
+   "link_to": "Employee Attendance Checkup ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Employee Attendance",
+   "link_count": 0,
+   "link_to": "Employee Attendance",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Scholarship Services Management",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Scholarship ST",
+   "link_count": 0,
+   "link_to": "Scholarship ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Scholarship Request ST",
+   "link_count": 0,
+   "link_to": "Scholarship Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Scholarship Requests Processing ST",
+   "link_count": 0,
+   "link_to": "Scholarship Requests Processing ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Operation Services Management",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee",
+   "link_count": 0,
+   "link_to": "Employee",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Contract ST",
+   "link_count": 0,
+   "link_to": "Employee Contract ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Salary Freezing ST",
+   "link_count": 0,
+   "link_to": "Salary Freezing ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Loan Reimbursement ST",
+   "link_count": 0,
+   "link_to": "Loan Reimbursement ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Penalty ST",
+   "link_count": 0,
+   "link_to": "Employee Penalty ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Reallocation ST",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Reallocation ST",
+   "link_count": 0,
+   "link_to": "Employee Reallocation ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Reallocation Sheet ST",
+   "link_count": 0,
+   "link_to": "Employee Reallocation Sheet ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Transfer",
+   "link_count": 0,
+   "link_to": "Employee Transfer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Material Request",
+   "link_count": 0,
+   "link_to": "Material Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchasing Committee ST",
+   "link_count": 0,
+   "link_to": "Purchasing Committee ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Order",
+   "link_count": 0,
+   "link_to": "Purchase Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Man Power Planning ST",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Man Power Planning ST",
+   "link_count": 0,
+   "link_to": "Man Power Planning ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Man Power Plan Change Request ST",
+   "link_count": 0,
+   "link_to": "Man Power Plan Change Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "System Permission Management ST",
+   "link_count": 0,
+   "link_to": "System Permission Management ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Administrative structure Change Request",
+   "link_count": 0,
+   "link_to": "General Structure Change Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Inquiry ST",
+   "link_count": 0,
+   "link_to": "Employee Inquiry ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Orgnisation Structure Update",
+   "link_count": 0,
+   "link_to": "Administrative Structure Updates Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Training Management",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Training Event ST",
+   "link_count": 0,
+   "link_to": "Training Event ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Training Announcement ST",
+   "link_count": 0,
+   "link_to": "Training Announcement ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Training Request ST",
+   "link_count": 0,
+   "link_to": "Training Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Training Needs Analysis ST",
+   "link_count": 0,
+   "link_to": "Training Needs Analysis ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Classification ",
+   "link_count": 0,
+   "link_to": "Training Classification ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Training Evaluation ST",
+   "link_count": 0,
+   "link_to": "Training Evaluation ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Resignation & End Of Services",
+   "link_count": 7,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Resignation ST",
+   "link_count": 0,
+   "link_to": "Employee Resignation ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Retirement Request ST",
+   "link_count": 0,
+   "link_to": "Retirement Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "End of Service Calculation ST",
+   "link_count": 0,
+   "link_to": "End of Service Calculation ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "End Of Service Sheet ST",
+   "link_count": 0,
+   "link_to": "End Of Service Sheet ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Evacuation of Party ST",
+   "link_count": 0,
+   "link_to": "Evacuation of Party ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vacation Encashment Sheet ST",
+   "link_count": 0,
+   "link_to": "Vacation Encashment Sheet ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Leave Balance Summary",
+   "link_count": 0,
+   "link_to": "Employee Leave Balance Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Employee",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Education Allowance",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Education Allowance Request ST",
+   "link_count": 0,
+   "link_to": "Education Allowance Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Education Allowance Sheet ST",
+   "link_count": 0,
+   "link_to": "Education Allowance Sheet ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Educational Year ST",
+   "link_count": 0,
+   "link_to": "Educational Year ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Statistics Managment",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Statistic Name ST",
+   "link_count": 0,
+   "link_to": "Statistic Name ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Statistic Request ST",
+   "link_count": 0,
+   "link_to": "Statistic Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Statistic Processing Before Budget ST",
+   "link_count": 0,
+   "link_to": "Statistic Processing Before Budget ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Final Statistic Processing ST",
+   "link_count": 0,
+   "link_to": "Final Statistic Processing ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Statistic Change Request ST",
+   "link_count": 0,
+   "link_to": "Statistic Change Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Unplanned Statistic Request ST",
+   "link_count": 0,
+   "link_to": "Unplanned Statistic Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-04-17 07:40:07.230563",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Stats",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 19.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Stats Settings ST",
+   "link_to": "Stats Settings ST",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Post Request ST",
+   "link_to": "Post Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Stats"
+}

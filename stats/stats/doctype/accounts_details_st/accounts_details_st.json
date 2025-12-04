@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-23 07:20:48.960944",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "budget_expense_account",
+  "requested_amount",
+  "approved_amount",
+  "budget_type",
+  "column_break_nmyc",
+  "previous_balance",
+  "net_balance",
+  "available_balance",
+  "section_break_xqxf",
+  "economic_number",
+  "column_break_emto",
+  "classifications"
+ ],
+ "fields": [
+  {
+   "fieldname": "requested_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Requested Amount",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "approved_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Approved Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "previous_balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Previous Balance",
+   "precision": "2"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "net_balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Net Balance",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "available_balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Available Balance",
+   "precision": "2"
+  },
+  {
+   "fieldname": "budget_expense_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account Name",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "budget_expense_account.custom_economic_number",
+   "fieldname": "economic_number",
+   "fieldtype": "Data",
+   "label": "Economic Number"
+  },
+  {
+   "fetch_from": "budget_expense_account.custom_classifications",
+   "fieldname": "classifications",
+   "fieldtype": "Link",
+   "label": "Classifications",
+   "options": "Classifications ST"
+  },
+  {
+   "fieldname": "column_break_nmyc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xqxf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_emto",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Requested",
+   "fieldname": "budget_type",
+   "fieldtype": "Select",
+   "label": "Budget Type",
+   "options": "Requested\nNot Requested"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-19 08:20:37.972712",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Accounts Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

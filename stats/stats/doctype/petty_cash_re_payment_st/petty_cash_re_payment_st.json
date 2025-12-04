@@ -1,0 +1,158 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PCRP-.#####",
+ "creation": "2024-11-21 14:01:21.396348",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_kbbr",
+  "creation_date",
+  "created_by",
+  "main_department",
+  "sub_department",
+  "deposit_amount",
+  "column_break_qzgw",
+  "petty_cash_request_reference",
+  "petty_cash_closing_reference",
+  "payment_proof_attachment",
+  "deposit_to_mof",
+  "total_unpaid",
+  "amended_from",
+  "section_break_nwsb",
+  "pc_repayment_account_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_kbbr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Petty Cash Re-Payment ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "deposit_amount",
+   "fieldtype": "Currency",
+   "label": "Deposit Amount"
+  },
+  {
+   "fieldname": "column_break_qzgw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "petty_cash_request_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Petty Cash Request Reference",
+   "options": "Petty Cash Request ST",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "payment_proof_attachment",
+   "fieldtype": "Attach",
+   "label": "Payment Proof Attachment"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "description": "change on submit of Deposit to MOF",
+   "fieldname": "deposit_to_mof",
+   "fieldtype": "Select",
+   "label": "Deposit to MOF",
+   "options": "\nPending\nDone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_unpaid",
+   "fieldtype": "Currency",
+   "label": "Total Unpaid"
+  },
+  {
+   "fieldname": "section_break_nwsb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pc_repayment_account_details",
+   "fieldtype": "Table",
+   "label": "PC Re-Payment Account Details",
+   "options": "PC Re-Payment Account Details ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "petty_cash_closing_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Petty Cash Closing Reference",
+   "options": "Petty Cash Closing ST",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Journal Entry",
+   "link_fieldname": "custom_petty_cash_re_payment_reference"
+  }
+ ],
+ "modified": "2025-08-25 14:08:31.261570",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Petty Cash Re-Payment ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

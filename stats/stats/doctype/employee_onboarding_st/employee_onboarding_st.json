@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EO-.######",
+ "creation": "2024-08-21 13:49:24.318053",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "job_offer_reference",
+  "candidate_name",
+  "candidate_namein_english",
+  "email",
+  "phone_no",
+  "column_break_bncu",
+  "onboarding_date",
+  "sub_department",
+  "designation",
+  "branch",
+  "section_break_iuwt",
+  "employee_onboarding_template",
+  "onboarding_procedures",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_offer_reference",
+   "fieldtype": "Link",
+   "label": "Job Offer Reference",
+   "options": "Job Offer ST"
+  },
+  {
+   "fetch_from": "job_offer_reference.candidate_name",
+   "fieldname": "candidate_name",
+   "fieldtype": "Data",
+   "label": "Candidate Name"
+  },
+  {
+   "fetch_from": "job_offer_reference.candidate_namein_english",
+   "fieldname": "candidate_namein_english",
+   "fieldtype": "Data",
+   "label": "Candidate Name(In English)"
+  },
+  {
+   "fetch_from": "job_offer_reference.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fetch_from": "job_offer_reference.phone_no",
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "label": "Phone No",
+   "options": "Phone"
+  },
+  {
+   "default": "Today",
+   "fieldname": "onboarding_date",
+   "fieldtype": "Date",
+   "label": "Onboarding Date"
+  },
+  {
+   "fetch_from": "job_offer_reference.sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "job_offer_reference.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fetch_from": "job_offer_reference.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "column_break_bncu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_iuwt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_onboarding_template",
+   "fieldtype": "Link",
+   "label": "Employee Onboarding Template",
+   "options": "Employee Onboarding Template ST"
+  },
+  {
+   "fieldname": "onboarding_procedures",
+   "fieldtype": "Table",
+   "label": "Onboarding Procedures",
+   "options": "Onboarding Procedures ST"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Onboarding ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-22 08:54:50.553903",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Onboarding ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

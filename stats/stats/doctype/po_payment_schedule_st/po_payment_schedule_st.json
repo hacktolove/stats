@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SPS-.#####",
+ "creation": "2025-02-12 12:56:27.035092",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_mwox",
+  "creation_date",
+  "created_by",
+  "main_department",
+  "sub_department",
+  "column_break_hnro",
+  "po_reference",
+  "supplier",
+  "total_amount",
+  "amended_from",
+  "section_break_tybc",
+  "payment_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_mwox",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "PO Payment Schedule ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_hnro",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "po_reference",
+   "fieldtype": "Link",
+   "label": "PO Reference",
+   "options": "Purchase Order"
+  },
+  {
+   "fetch_from": "po_reference.supplier",
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "section_break_tybc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payment_details",
+   "fieldtype": "Table",
+   "label": "Payment Details",
+   "options": "Payment Details ST"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-12 13:42:53.171910",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "PO Payment Schedule ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

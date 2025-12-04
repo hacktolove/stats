@@ -1,0 +1,258 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"VqSt0nrA74\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\u0627\u0644\u062e\u062f\u0645\u0627\u062a \u0627\u0644\u0630\u0627\u062a\u064a\u0629</span>\",\"col\":12}},{\"id\":\"q19BrlEN7H\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ON7ScK-etV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Post Request ST\",\"col\":3}},{\"id\":\"YIsJRuPVUC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Permission Request ST\",\"col\":3}},{\"id\":\"4ttxSda4u5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Application\",\"col\":3}},{\"id\":\"GSp0y0GLOz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Attendance Request\",\"col\":3}},{\"id\":\"HR5WoGMVvz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Attendance Request ST\",\"col\":3}},{\"id\":\"tuwIKGSO64\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Work Out of Office ST\",\"col\":3}},{\"id\":\"yHe1EA9buL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Business Trip Request ST\",\"col\":3}},{\"id\":\"PBydi9-Ogs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overtime Request ST\",\"col\":3}},{\"id\":\"AValyHr6o9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overtime Approval Request ST\",\"col\":3}},{\"id\":\"jqZAoIBX7L\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Training Request ST\",\"col\":3}},{\"id\":\"8KLAymo82B\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Request ST\",\"col\":3}},{\"id\":\"5ex8byUZOC\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"e8kgtt8TLJ\",\"type\":\"card\",\"data\":{\"card_name\":\"Attendance\",\"col\":4}},{\"id\":\"dV8l0blGW2\",\"type\":\"card\",\"data\":{\"card_name\":\"\u0627\u0644\u0627\u062c\u0627\u0632\u0627\u062a\",\"col\":4}},{\"id\":\"rz4hiMcDpa\",\"type\":\"card\",\"data\":{\"card_name\":\"Finance Services\",\"col\":4}},{\"id\":\"pOmwiOxpTz\",\"type\":\"card\",\"data\":{\"card_name\":\"Overtime Services\",\"col\":4}}]",
+ "creation": "2025-05-19 23:42:06.512184",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "customer",
+ "idx": 8,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Employee Services",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\u0627\u0644\u0627\u062c\u0627\u0632\u0627\u062a",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\u0637\u0644\u0628 \u0627\u062c\u0627\u0632\u0629",
+   "link_count": 0,
+   "link_to": "Leave Application",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\u0637\u0644\u0628 \u062a\u063a\u064a\u064a\u0631 \u0627\u0644\u0627\u062c\u0627\u0632\u0629",
+   "link_count": 0,
+   "link_to": "Leave Change Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Finance Services",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Salary Document Request ST",
+   "link_count": 0,
+   "link_to": "Salary Document Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bank Agreement Request ST",
+   "link_count": 0,
+   "link_to": "Bank Agreement Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Remote Work Request",
+   "link_count": 0,
+   "link_to": "Attendance Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance Request ST",
+   "link_count": 0,
+   "link_to": "Attendance Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Employee Daily Check in",
+   "link_count": 0,
+   "link_to": "Employee Daily Check in",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Overtime Services",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Overtime Request ST",
+   "link_count": 0,
+   "link_to": "Overtime Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Overtime Approval Request ST",
+   "link_count": 0,
+   "link_to": "Overtime Approval Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-06-24 10:44:20.233477",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Services",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Employee"
+  },
+  {
+   "role": "Employee Self Service"
+  },
+  {
+   "role": "Self Services"
+  },
+  {
+   "role": "Supplier Supervisor Accountant"
+  }
+ ],
+ "sequence_id": 46.2,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Training Request ST",
+   "link_to": "Training Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Leave Request ST",
+   "link_to": "Leave Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Leave Application",
+   "link_to": "Leave Application",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Permission Request ST",
+   "link_to": "Employee Permission Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Work Out of Office ST",
+   "link_to": "Employee Work Out of Office ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Business Trip Request ST",
+   "link_to": "Business Trip Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Attendance Request",
+   "link_to": "Attendance Request",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Overtime Request ST",
+   "link_to": "Overtime Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Attendance Request ST",
+   "link_to": "Attendance Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Overtime Approval Request ST",
+   "link_to": "Overtime Approval Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Post Request ST",
+   "link_to": "Post Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Employee Services"
+}

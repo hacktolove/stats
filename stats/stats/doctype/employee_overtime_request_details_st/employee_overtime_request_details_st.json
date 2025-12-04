@@ -1,0 +1,178 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-10 11:02:07.254788",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_no",
+  "employee_name",
+  "employee_contract_name",
+  "contract_type",
+  "no_of_hours_per_day",
+  "request_status",
+  "department",
+  "total_no_of_days",
+  "rate_per_hour",
+  "extra_amount_of_basic_salary",
+  "overtime_rate_per_hour",
+  "transport_per_day",
+  "due_amount",
+  "column_break_ygzn",
+  "total_salary",
+  "basic_salary",
+  "transportation_amount"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee No",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "columns": 3,
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "no_of_hours_per_day",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "No of Hours Per Day",
+   "non_negative": 1,
+   "options": "\n1\n1.5\n2\n2.5\n3\n3.5\n4\n4.5\n5\n5.5\n6\n6.5\n7\n7.5\n8",
+   "read_only_depends_on": "eval:doc.employee_no === undefined",
+   "reqd": 1
+  },
+  {
+   "description": "Direct : Overtime rate per hour\n * No of Hours Per Day * Total No of Days <br>\nCivil : ( Overtime rate per hour * No of Hours Per Day * Total No of Days ) + ( Transport Per Day * Total No of Days )",
+   "fieldname": "due_amount",
+   "fieldtype": "Currency",
+   "label": "Due Amount",
+   "precision": "2",
+   "read_only_depends_on": "eval:doc.employee_no === undefined"
+  },
+  {
+   "fieldname": "rate_per_hour",
+   "fieldtype": "Currency",
+   "label": "Rate Per Hour",
+   "precision": "2",
+   "read_only_depends_on": "eval:doc.employee_no === undefined"
+  },
+  {
+   "description": "Direct : Extra amount of basic salary + Rate Per Hour<br>\nCivil : Basic Salary * Multiplication Factor of Overtime for Civil Contract ( From stats settings )<br> ( for civil contract it is excluding transport )",
+   "fieldname": "overtime_rate_per_hour",
+   "fieldtype": "Currency",
+   "label": "Overtime rate per hour",
+   "precision": "2",
+   "read_only_depends_on": "eval:doc.employee_no === undefined"
+  },
+  {
+   "columns": 2,
+   "fieldname": "request_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Request Status",
+   "options": "\nPending\nAccepted\nRejected"
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_no_of_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total No of Days",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.contract_type==\"Civil\"",
+   "description": "consider for civil contract only",
+   "fieldname": "transport_per_day",
+   "fieldtype": "Currency",
+   "label": "Transport Per Day",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_contract_type",
+   "fieldname": "employee_contract_name",
+   "fieldtype": "Link",
+   "label": "Employee Contract Name",
+   "options": "Contract Type ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_contract_name.contract",
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "\nDirect\nCivil",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.contract_type==\"Direct\"",
+   "fieldname": "extra_amount_of_basic_salary",
+   "fieldtype": "Currency",
+   "label": "Extra amount of basic salary",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ygzn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_salary",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Total Salary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "basic_salary",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Basic Salary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transportation_amount",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Transportation Amount",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-08 13:07:37.956028",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Overtime Request Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

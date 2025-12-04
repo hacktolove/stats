@@ -1,0 +1,36 @@
+{% extends "templates/web.html" %}
+
+{% block title %} SA Stats {% endblock %}
+
+{% block page_content %}
+<div class='with-border'>
+    <p>{{frappe.session.user}} you will be redirected to STATS portal</p>
+</div>
+
+{% endblock %}
+
+{%- block script -%}
+<script>
+    frappe.ready(() => {
+        return frappe.call({
+					method: "stats.auth.on_logout",
+					callback: function (r) {
+                        console.log("inside redirect to portal login",r);
+						if (r.exc) {
+							return;
+						}
+                        if (r.message.redirect_url) {
+                            console.log(r.message.redirect_url);
+                            window.location.href = r.message.redirect_url;
+                            
+                        }else if (r.message.redirect_url == null){
+                            console.log("No redirect_url");
+                            me.redirect_to_login();
+                            // window.location.href = "/login";
+                        }
+						
+					}
+				});
+    });
+</script>
+{%- endblock -%}

@@ -1,0 +1,651 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "JO-.######",
+ "creation": "2024-08-05 15:12:53.279527",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "offer_information_section",
+  "job_application_reference",
+  "job_title",
+  "offer_date",
+  "main_department",
+  "sub_department",
+  "grade",
+  "designation",
+  "column_break_iflz",
+  "status",
+  "employment_type",
+  "contract_type",
+  "section",
+  "branch",
+  "candidate_information_section",
+  "candidate_name",
+  "candidate_namein_english",
+  "hijri_birth_date",
+  "date_of_birth",
+  "birth_place",
+  "column_break_uncl",
+  "gender",
+  "phone_no",
+  "email",
+  "country",
+  "column_break_emth",
+  "religion",
+  "marital_status",
+  "blood_group",
+  "date_of_joining",
+  "section_break_cllu",
+  "id_expiration_date",
+  "id_igama_no",
+  "column_break_nklu",
+  "there_is_a_security_survey",
+  "health_insurance_status",
+  "bank_details_section",
+  "bank_name",
+  "column_break_fcbg",
+  "bank_ac_no",
+  "candidate_national_address_section",
+  "building_number",
+  "neighbourhood",
+  "postal_code",
+  "column_break_wrdh",
+  "street_name",
+  "city",
+  "additional_number",
+  "attachment_section_section",
+  "clearance_of_previous_employment",
+  "employment_application_form",
+  "national_address",
+  "experience",
+  "curriculum_vitae_cv",
+  "column_break_hwki",
+  "education_certificates",
+  "training_courses",
+  "job_offer",
+  "medical_examination",
+  "copy_of_bank_statement",
+  "column_break_exkd",
+  "personal_photo",
+  "copy_of_national_id",
+  "candidates_dependents",
+  "presidents_approval",
+  "modod_certificate",
+  "offer_details_section",
+  "offer_details",
+  "salary_structure_details_section",
+  "basic_salary_amount",
+  "column_break_hiuj",
+  "gosi_registration_date",
+  "gosi_type",
+  "gosi_percentage",
+  "section_break_sjgz",
+  "earnings_details",
+  "deduction_details",
+  "salary_details_section",
+  "earning",
+  "column_break_yybj",
+  "deduction",
+  "section_break_hfaw",
+  "education",
+  "section_break_yzqu",
+  "external_work_history",
+  "section_break_jhvw",
+  "terms_and_condition"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_application_reference",
+   "fieldtype": "Link",
+   "label": "Job Application Reference",
+   "options": "Job Application ST"
+  },
+  {
+   "default": "Today",
+   "fieldname": "offer_date",
+   "fieldtype": "Date",
+   "label": "Job Offer Date"
+  },
+  {
+   "fetch_from": "job_application_reference.main_department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "job_application_reference.sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "job_application_reference.grade",
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade"
+  },
+  {
+   "fetch_from": "job_application_reference.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "offer_information_section",
+   "fieldtype": "Section Break",
+   "label": "Offer Information"
+  },
+  {
+   "fieldname": "column_break_iflz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Candidate Status",
+   "options": "\nOpen\nAccepted\nRejected"
+  },
+  {
+   "fetch_from": "job_application_reference.employment_type",
+   "fieldname": "employment_type",
+   "fieldtype": "Link",
+   "label": "Employment Type",
+   "options": "Employment Type"
+  },
+  {
+   "fetch_from": "job_application_reference.contract_type",
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "label": "Contract Type",
+   "options": "Contract Type ST",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "job_application_reference.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fetch_from": "job_application_reference.country",
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "candidate_information_section",
+   "fieldtype": "Section Break",
+   "label": "Candidate Information"
+  },
+  {
+   "fetch_from": "job_application_reference.candidate_name",
+   "fieldname": "candidate_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Candidate Name"
+  },
+  {
+   "fetch_from": "job_application_reference.candidate_namein_english",
+   "fieldname": "candidate_namein_english",
+   "fieldtype": "Data",
+   "label": "Candidate Name(In English)"
+  },
+  {
+   "fetch_from": "job_application_reference.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Personal Email",
+   "options": "Email"
+  },
+  {
+   "fetch_from": "job_application_reference.phone_no",
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "label": "Phone No",
+   "options": "Phone"
+  },
+  {
+   "fetch_from": "job_application_reference.id_igama_no",
+   "fieldname": "id_igama_no",
+   "fieldtype": "Data",
+   "label": "ID/Residency Number"
+  },
+  {
+   "fetch_from": "job_application_reference.date_of_birth",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_uncl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "job_application_reference.id_expiration_date",
+   "fieldname": "id_expiration_date",
+   "fieldtype": "Date",
+   "label": "ID Expiration Date"
+  },
+  {
+   "fieldname": "offer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Offer Details"
+  },
+  {
+   "fieldname": "section_break_jhvw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "grade.custom_terms_and_condition",
+   "fieldname": "terms_and_condition",
+   "fieldtype": "Text Editor",
+   "label": "Terms And Condition"
+  },
+  {
+   "depends_on": "eval:doc.contract_type",
+   "fieldname": "offer_details",
+   "fieldtype": "Table",
+   "label": "Offer Details",
+   "options": "Job Offer Details ST"
+  },
+  {
+   "fieldname": "salary_details_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Salary Details"
+  },
+  {
+   "depends_on": "eval:doc.offer_details.length>0",
+   "fieldname": "earning",
+   "fieldtype": "Table",
+   "label": "Earning",
+   "options": "Earning Amount ST"
+  },
+  {
+   "depends_on": "eval:doc.offer_details.length>0",
+   "fieldname": "deduction",
+   "fieldtype": "Table",
+   "label": "Deduction",
+   "options": "Deduction Amount ST"
+  },
+  {
+   "fieldname": "column_break_yybj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "job_application_reference.section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  },
+  {
+   "fetch_from": "job_application_reference.gender",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fetch_from": "job_application_reference.religion",
+   "fieldname": "religion",
+   "fieldtype": "Select",
+   "label": "Religion",
+   "options": "\nMuslim\nNon-Muslim"
+  },
+  {
+   "fieldname": "column_break_emth",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "candidate_national_address_section",
+   "fieldtype": "Section Break",
+   "label": "Candidate National Address"
+  },
+  {
+   "fetch_from": "job_application_reference.building_number",
+   "fieldname": "building_number",
+   "fieldtype": "Data",
+   "label": "Building number"
+  },
+  {
+   "fetch_from": "job_application_reference.neighbourhood",
+   "fieldname": "neighbourhood",
+   "fieldtype": "Data",
+   "label": "Neighbourhood"
+  },
+  {
+   "fetch_from": "job_application_reference.postal_code",
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal code"
+  },
+  {
+   "fieldname": "column_break_wrdh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "job_application_reference.street_name",
+   "fieldname": "street_name",
+   "fieldtype": "Data",
+   "label": "Street name"
+  },
+  {
+   "fetch_from": "job_application_reference.city",
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fetch_from": "job_application_reference.additional_number",
+   "fieldname": "additional_number",
+   "fieldtype": "Data",
+   "label": "Additional number",
+   "options": "Phone"
+  },
+  {
+   "fetch_from": "job_application_reference.job_title",
+   "fieldname": "job_title",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job No",
+   "options": "Job No ST"
+  },
+  {
+   "fetch_from": "job_application_reference.birth_place",
+   "fieldname": "birth_place",
+   "fieldtype": "Data",
+   "label": "Birth Place"
+  },
+  {
+   "fetch_from": "job_application_reference.marital_status",
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "\nSingle\nMarried\nDivorced\nWidowed"
+  },
+  {
+   "fetch_from": "job_application_reference.blood_group",
+   "fieldname": "blood_group",
+   "fieldtype": "Select",
+   "label": "Blood Group",
+   "options": "\nA+\nA-\nB+\nB-\nAB+\nAB-\nO+\nO-"
+  },
+  {
+   "fieldname": "section_break_cllu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "health_insurance_status",
+   "fieldtype": "Select",
+   "label": "Health Insurance Status",
+   "options": "\nUnder Progress\nCompleted Insurance\nNot Passed"
+  },
+  {
+   "fieldname": "there_is_a_security_survey",
+   "fieldtype": "Select",
+   "label": "There is a security survey",
+   "options": "\nNot Required\nCompleted\nUnder Progress"
+  },
+  {
+   "fieldname": "column_break_nklu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hfaw",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Educational Qualification"
+  },
+  {
+   "fieldname": "education",
+   "fieldtype": "Table",
+   "label": "Education",
+   "options": "Employee Education"
+  },
+  {
+   "fieldname": "section_break_yzqu",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Previous Work Experience"
+  },
+  {
+   "fieldname": "external_work_history",
+   "fieldtype": "Table",
+   "label": "External Work History",
+   "options": "Employee External Work History"
+  },
+  {
+   "fetch_from": "job_application_reference.hijri_birth_date",
+   "fieldname": "hijri_birth_date",
+   "fieldtype": "Data",
+   "label": "Hijri Birth Date"
+  },
+  {
+   "fieldname": "basic_salary_amount",
+   "fieldtype": "Currency",
+   "label": "Basic Salary Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "salary_structure_details_section",
+   "fieldtype": "Section Break",
+   "hide_border": 1,
+   "label": "Salary Structure Details"
+  },
+  {
+   "fieldname": "earnings_details",
+   "fieldtype": "Table",
+   "label": "Earnings Details",
+   "options": "Grade Earnings Amount Details ST"
+  },
+  {
+   "fieldname": "deduction_details",
+   "fieldtype": "Table",
+   "label": "Deduction Details",
+   "options": "Grade Deductions Amount Details ST"
+  },
+  {
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "label": "Joining Date",
+   "mandatory_depends_on": "eval:doc.status==\"Accepted\""
+  },
+  {
+   "fieldname": "bank_details_section",
+   "fieldtype": "Section Break",
+   "label": "Bank Details"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "column_break_fcbg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_ac_no",
+   "fieldtype": "Data",
+   "label": "Bank A/C No."
+  },
+  {
+   "fieldname": "attachment_section_section",
+   "fieldtype": "Section Break",
+   "label": "Attachment Section"
+  },
+  {
+   "fieldname": "clearance_of_previous_employment",
+   "fieldtype": "Attach",
+   "label": "Clearance of previous employment"
+  },
+  {
+   "fieldname": "employment_application_form",
+   "fieldtype": "Attach",
+   "label": "Employment application form",
+   "reqd": 1
+  },
+  {
+   "fieldname": "national_address",
+   "fieldtype": "Attach",
+   "label": "National address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "experience",
+   "fieldtype": "Attach",
+   "label": "Experience"
+  },
+  {
+   "fieldname": "curriculum_vitae_cv",
+   "fieldtype": "Attach",
+   "label": "Curriculum Vitae (CV)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "training_courses",
+   "fieldtype": "Attach",
+   "label": "Training courses"
+  },
+  {
+   "fieldname": "column_break_hwki",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "job_offer",
+   "fieldtype": "Attach",
+   "label": "Job offer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "medical_examination",
+   "fieldtype": "Attach",
+   "label": "Medical examination",
+   "reqd": 1
+  },
+  {
+   "fieldname": "copy_of_bank_statement",
+   "fieldtype": "Attach",
+   "label": "Copy of bank statement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "personal_photo",
+   "fieldtype": "Attach",
+   "label": "Personal photo"
+  },
+  {
+   "fieldname": "copy_of_national_id",
+   "fieldtype": "Attach",
+   "label": "Copy of national ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "candidates_dependents",
+   "fieldtype": "Attach",
+   "label": "Candidate's dependents"
+  },
+  {
+   "fieldname": "presidents_approval",
+   "fieldtype": "Attach",
+   "label": "President's approval",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_exkd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "education_certificates",
+   "fieldtype": "Attach",
+   "label": "Education Certificates",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gosi_registration_date",
+   "fieldtype": "Date",
+   "label": "GOSI Registration Date"
+  },
+  {
+   "default": "Fixed",
+   "depends_on": "eval:doc.gosi_registration_date",
+   "fieldname": "gosi_type",
+   "fieldtype": "Select",
+   "label": "GOSI Type",
+   "options": "Fixed\nVary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hiuj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gosi_percentage",
+   "fieldtype": "Percent",
+   "label": "GOSI Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_sjgz",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "fieldname": "modod_certificate",
+   "fieldtype": "Attach",
+   "label": "Modod Certificate",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Employee Onboarding ST",
+   "link_fieldname": "job_offer_reference"
+  },
+  {
+   "link_doctype": "Employee Contract ST",
+   "link_fieldname": "job_offer_reference"
+  },
+  {
+   "link_doctype": "Employee",
+   "link_fieldname": "custom_job_offer_reference"
+  }
+ ],
+ "modified": "2025-10-01 12:42:45.545196",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Job Offer ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

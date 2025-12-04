@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-29 08:01:05.739950",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "payment_season",
+  "payment_percentage",
+  "allow_to_exceed"
+ ],
+ "fields": [
+  {
+   "fieldname": "payment_season",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Payment Season",
+   "options": "Season ST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Payment Percentage",
+   "reqd": 1
+  },
+  {
+   "default": "No",
+   "fieldname": "allow_to_exceed",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Allow To exceed %",
+   "options": "Yes\nNo",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-29 08:13:56.294127",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Payment Season Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

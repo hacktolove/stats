@@ -1,0 +1,116 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"HrAfi9iWUU\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Budget Team</span>\",\"col\":12}},{\"id\":\"aQBqhpoL_1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Department Budget ST\",\"col\":3}},{\"id\":\"FU4Q694mr5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Accumulative Budget ST\",\"col\":3}},{\"id\":\"OhjuBRCNx8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Budget Change Request ST\",\"col\":3}},{\"id\":\"_JJ4HRWvKI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Budget Variance Report\",\"col\":3}},{\"id\":\"OPx2PbpYq5\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"SEJlTwHj_C\",\"type\":\"card\",\"data\":{\"card_name\":\"Purchase Transactions\",\"col\":4}}]",
+ "creation": "2025-01-21 15:14:04.816183",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "change",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Budget Team",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Transactions",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Material Request",
+   "link_count": 0,
+   "link_to": "Material Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Order",
+   "link_count": 0,
+   "link_to": "Purchase Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-04-17 07:39:15.070421",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Budget Team",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Budget Ambassador"
+  },
+  {
+   "role": "Senior Analyst"
+  },
+  {
+   "role": "Budget Specialist"
+  },
+  {
+   "role": "Director of Financial Affairs"
+  },
+  {
+   "role": "Budget Manager"
+  },
+  {
+   "role": "Main Department Finance Manager"
+  },
+  {
+   "role": "Main Department HR Manager"
+  },
+  {
+   "role": "Main Department Purchase Manager"
+  }
+ ],
+ "sequence_id": 37.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Budget Variance Report",
+   "link_to": "Budget Variance Report",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Department Budget ST",
+   "link_to": "Department Budget ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Budget Change Request ST",
+   "link_to": "Budget Change Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Accumulative Budget ST",
+   "link_to": "Accumulative Budget ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Budget Team"
+}

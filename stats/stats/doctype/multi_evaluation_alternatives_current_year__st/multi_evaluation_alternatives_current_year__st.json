@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "creation": "2024-11-28 09:34:17.205433",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "evaluation_classification"
+ ],
+ "fields": [
+  {
+   "fieldname": "evaluation_classification",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Evaluation Classification",
+   "options": "Evaluation Classification ST",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-28 09:35:34.248590",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Multi Evaluation Alternatives Current Year  ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

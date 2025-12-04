@@ -1,0 +1,62 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2025-07-29 12:14:28.501858",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "Main Header",
+ "letterhead": null,
+ "modified": "2025-07-29 12:14:28.501858",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "EOS Leave Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Employee Resignation ST",
+ "report_name": "EOS Leave Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Employee"
+  },
+  {
+   "role": "Department Manager"
+  },
+  {
+   "role": "Main Department Manager"
+  },
+  {
+   "role": "HR Operation Manager"
+  },
+  {
+   "role": "Senior HR Services Employee"
+  },
+  {
+   "role": "Salary Supervisor"
+  },
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "Vice President of Operations"
+  },
+  {
+   "role": "Self Services"
+  },
+  {
+   "role": "Sub Department Manager"
+  },
+  {
+   "role": "Senior HR Services Spcialist"
+  }
+ ],
+ "timeout": 0
+}

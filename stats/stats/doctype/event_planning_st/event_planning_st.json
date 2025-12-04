@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EP-.#####",
+ "creation": "2024-08-28 13:29:21.765609",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "created_by",
+  "main_department",
+  "sub_department",
+  "employee",
+  "goals",
+  "column_break_vtja",
+  "event_name",
+  "event_date",
+  "event_time",
+  "event_period",
+  "event_location",
+  "event_type",
+  "estimated_cost"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_vtja",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "event_name",
+   "fieldtype": "Data",
+   "label": "Event Name"
+  },
+  {
+   "fieldname": "event_date",
+   "fieldtype": "Date",
+   "label": "Event Date"
+  },
+  {
+   "fieldname": "event_time",
+   "fieldtype": "Time",
+   "label": "Event Time"
+  },
+  {
+   "fieldname": "event_period",
+   "fieldtype": "Data",
+   "label": "Event Period"
+  },
+  {
+   "fieldname": "event_location",
+   "fieldtype": "Data",
+   "label": "Event Location"
+  },
+  {
+   "fieldname": "event_type",
+   "fieldtype": "Link",
+   "label": "Event Type",
+   "options": "Event Type ST"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "goals",
+   "fieldtype": "Small Text",
+   "label": "Goals"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-28 15:23:34.058549",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Event Planning ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

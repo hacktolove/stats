@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-03 14:54:22.292540",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "competencies_name",
+  "description",
+  "weight",
+  "column_break_sywo",
+  "degree_out_of_5",
+  "actual_degree",
+  "actual_degree_based_on_weight"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "competencies_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Competencies Name",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "weight",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sywo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "degree_out_of_5",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Degree Out of",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "actual_degree_based_on_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Actual Degree Based on Weight",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "actual_degree",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Actual Degree"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-11 15:38:14.419744",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Competencies Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

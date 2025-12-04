@@ -1,0 +1,286 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EC-.######",
+ "creation": "2024-08-21 06:48:24.946647",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "job_offer_details_section",
+  "job_offer_reference",
+  "candidate_name",
+  "candidate_namein_english",
+  "contract_type",
+  "column_break_npff",
+  "status",
+  "main_department",
+  "section",
+  "sub_department",
+  "grade",
+  "employment_type",
+  "contract_details_section",
+  "test_period_renewed",
+  "contract_start_date",
+  "contract_end_date",
+  "column_break_bfsv",
+  "test_period_end_date",
+  "end_of_new_test_period",
+  "employee_details_section",
+  "employee_no",
+  "column_break_rqzr",
+  "employee_name",
+  "salary_structure_details_section",
+  "total_monthly_salary",
+  "earnings_details",
+  "deduction_details",
+  "salary_details_section",
+  "earning",
+  "column_break_eegg",
+  "deduction",
+  "section_break_sequ",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_offer_reference",
+   "fieldtype": "Link",
+   "label": "Job Offer Reference",
+   "options": "Job Offer ST"
+  },
+  {
+   "fetch_from": "job_offer_reference.candidate_name",
+   "fieldname": "candidate_name",
+   "fieldtype": "Data",
+   "label": "Candidate Name"
+  },
+  {
+   "fetch_from": "job_offer_reference.candidate_namein_english",
+   "fieldname": "candidate_namein_english",
+   "fieldtype": "Data",
+   "label": "Candidate Name(In English)"
+  },
+  {
+   "fetch_from": "job_offer_reference.main_department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "job_offer_reference.sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "job_offer_reference.section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  },
+  {
+   "fetch_from": "job_offer_reference.date_of_joining",
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date",
+   "mandatory_depends_on": "eval:doc.test_period_renewed==\"Yes\"",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nActive\nRenewed\nResigned\nSeparated"
+  },
+  {
+   "fieldname": "employment_type",
+   "fieldtype": "Link",
+   "label": "Employment Type",
+   "options": "Employment Type"
+  },
+  {
+   "fetch_from": "job_offer_reference.contract_type",
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "label": "Contract type",
+   "options": "Contract Type ST"
+  },
+  {
+   "fetch_from": "job_offer_reference.grade",
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Grade",
+   "options": "Employee Grade"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "No",
+   "fieldname": "test_period_renewed",
+   "fieldtype": "Select",
+   "label": "Test Period Renewed",
+   "options": "Yes\nNo"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "end_of_new_test_period",
+   "fieldtype": "Date",
+   "label": "End of New Test Period",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_npff",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salary_details_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Salary Details"
+  },
+  {
+   "fieldname": "earning",
+   "fieldtype": "Table",
+   "label": "Earning",
+   "options": "Earning Amount ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_eegg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deduction",
+   "fieldtype": "Table",
+   "label": "Deduction",
+   "options": "Deduction Amount ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "job_offer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Job Offer Details"
+  },
+  {
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "column_break_bfsv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rqzr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Contract ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "total_monthly_salary",
+   "fieldtype": "Currency",
+   "label": "Total Monthly Salary",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "test_period_end_date",
+   "fieldtype": "Date",
+   "label": "Test Period End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "salary_structure_details_section",
+   "fieldtype": "Section Break",
+   "label": "Salary Structure Details"
+  },
+  {
+   "fieldname": "earnings_details",
+   "fieldtype": "Table",
+   "label": "Earnings Details",
+   "options": "Grade Earnings Amount Details ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deduction_details",
+   "fieldtype": "Table",
+   "label": "Deduction Details",
+   "options": "Grade Deductions Amount Details ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_sequ",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-27 07:52:37.038814",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Contract ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,137 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2025-06-23 08:15:50.451680",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "Main Header",
+ "letterhead": null,
+ "modified": "2025-06-23 08:15:50.451680",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Business Trip Balance Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Employee",
+ "report_name": "Business Trip Balance Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "HR User"
+  },
+  {
+   "role": "Employee"
+  },
+  {
+   "role": "Employee Self Service"
+  },
+  {
+   "role": "Main Department HR Manager"
+  },
+  {
+   "role": "Budget Ambassador"
+  },
+  {
+   "role": "Main Department Purchase Manager"
+  },
+  {
+   "role": "Department Manager"
+  },
+  {
+   "role": "Procurement Supervisor"
+  },
+  {
+   "role": "Purchase Specialist"
+  },
+  {
+   "role": "Chairman of the Authority"
+  },
+  {
+   "role": "Contract Supervisor"
+  },
+  {
+   "role": "Budget Manager"
+  },
+  {
+   "role": "BOD Admin"
+  },
+  {
+   "role": "Salary Employee"
+  },
+  {
+   "role": "Salary Supervisor"
+  },
+  {
+   "role": "HR Planning Specialist"
+  },
+  {
+   "role": "BOD Manager"
+  },
+  {
+   "role": "Sub Department Manager"
+  },
+  {
+   "role": "Self Services"
+  },
+  {
+   "role": "Main Department Manager"
+  },
+  {
+   "role": "HR Operation Manager"
+  },
+  {
+   "role": "Senior HR Services Employee"
+  },
+  {
+   "role": "Senior HR Services Spcialist"
+  },
+  {
+   "role": "Vice President of Operations"
+  },
+  {
+   "role": "HR Excellence Specialist"
+  },
+  {
+   "role": "Performance and Career Path Officer"
+  },
+  {
+   "role": "Performance and Career Specialist"
+  },
+  {
+   "role": "Report Supervisor Employee"
+  },
+  {
+   "role": "Report  Employee"
+  },
+  {
+   "role": "Report Dep Manager"
+  },
+  {
+   "role": "Accountant Employee"
+  },
+  {
+   "role": "Senior Report Accountant"
+  },
+  {
+   "role": "Director General of Financial Affairs"
+  },
+  {
+   "role": "Head Officer HR Services"
+  },
+  {
+   "role": "Supplier Accountant"
+  },
+  {
+   "role": "Supplier Supervisor Accountant"
+  }
+ ],
+ "timeout": 0
+}

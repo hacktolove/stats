@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OAR-.#####",
+ "creation": "2025-05-07 07:19:47.874802",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_3cbf",
+  "creation_date",
+  "overtime_reference",
+  "created_by",
+  "main_department",
+  "sub_department",
+  "column_break_krei",
+  "overtime_start_date",
+  "overtime_end_date",
+  "total_no_of_days",
+  "amended_from",
+  "section_break_bhro",
+  "overtime_approval_employee_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_3cbf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Overtime Approval Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "overtime_reference",
+   "fieldtype": "Link",
+   "label": "Overtime Reference",
+   "no_copy": 1,
+   "options": "Overtime Request ST",
+   "unique": 1
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created by"
+  },
+  {
+   "fieldname": "column_break_krei",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "overtime_reference.overtime_start_date",
+   "fieldname": "overtime_start_date",
+   "fieldtype": "Date",
+   "label": "Overtime Start Date"
+  },
+  {
+   "fetch_from": "overtime_reference.total_no_of_days",
+   "fieldname": "total_no_of_days",
+   "fieldtype": "Int",
+   "label": "Total No of Days"
+  },
+  {
+   "fetch_from": "overtime_reference.overtime_end_date",
+   "fieldname": "overtime_end_date",
+   "fieldtype": "Date",
+   "label": "Overtime End Date"
+  },
+  {
+   "fieldname": "section_break_bhro",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "overtime_approval_employee_details",
+   "fieldtype": "Table",
+   "label": "Overtime Approval Employee Details",
+   "options": "Overtime Approval Employee Details ST"
+  },
+  {
+   "fetch_from": "overtime_reference.main_department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "overtime_reference.sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-17 11:06:01.064978",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Overtime Approval Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

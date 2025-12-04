@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-28 10:17:23.137873",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "grade",
+  "column_break_tjji",
+  "evaluation_classification",
+  "final_evaluation",
+  "reward_value",
+  "notes",
+  "bank_name",
+  "iban_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee No",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee_no.grade",
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade"
+  },
+  {
+   "fieldname": "column_break_tjji",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "evaluation_classification",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Evaluation Classification",
+   "read_only": 1
+  },
+  {
+   "fieldname": "final_evaluation",
+   "fieldtype": "Data",
+   "label": "Final Evaluation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reward_value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Reward Value"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Data",
+   "label": "Notes"
+  },
+  {
+   "fetch_from": "employee_no.bank_name",
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fetch_from": "employee_no.iban",
+   "fieldname": "iban_no",
+   "fieldtype": "Data",
+   "label": "IBAN No"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-28 10:47:09.408298",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Annual Reward Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,168 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EPG-.#####",
+ "creation": "2024-09-24 08:46:05.821966",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_c2vu",
+  "employee_no",
+  "employee_name",
+  "creation_date",
+  "fiscal_year",
+  "amended_from",
+  "column_break_heoq",
+  "main_department",
+  "sub_department",
+  "designation",
+  "direct_manager",
+  "branch",
+  "section",
+  "section_break_xerq",
+  "personal_goals",
+  "section_break_ucjc",
+  "job_goals"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_c2vu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Personal Goals ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "label": "Fiscal Year",
+   "options": "Fiscal Year"
+  },
+  {
+   "fieldname": "column_break_heoq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sub_department.custom_direct_manager",
+   "fieldname": "direct_manager",
+   "fieldtype": "Link",
+   "label": "Direct Manager",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_xerq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "personal_goals",
+   "fieldtype": "Table",
+   "label": "Personal Goals",
+   "options": "Personal Goals Details ST"
+  },
+  {
+   "fieldname": "section_break_ucjc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "job_goals",
+   "fieldtype": "Table",
+   "label": "Job Goals",
+   "options": "Job Goals Details ST"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-03 14:36:57.202720",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Personal Goals ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,296 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "BTR-.#####",
+ "creation": "2024-08-22 08:42:15.000524",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "direct_manager",
+  "section",
+  "contract_type",
+  "trip_direction",
+  "ticket_level",
+  "grade",
+  "employee_salary",
+  "is_manager",
+  "column_break_xuou",
+  "creation_date",
+  "status",
+  "date_of_approval",
+  "business_trip_start_date",
+  "business_trip_end_date",
+  "no_of_days",
+  "trip_classification",
+  "country",
+  "saudi_city",
+  "trip_remaining_balance",
+  "no_of_extra_days",
+  "total_no_of_days",
+  "deputy_employee",
+  "deputy_employee_name",
+  "total_employee_amount_for_trip",
+  "amended_from",
+  "per_diem_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sub_department.custom_direct_manager",
+   "fieldname": "direct_manager",
+   "fieldtype": "Data",
+   "label": "Direct Manager",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "trip_direction",
+   "fieldtype": "Data",
+   "label": "Trip Direction"
+  },
+  {
+   "fieldname": "column_break_xuou",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.status==\"Approved\"",
+   "fieldname": "date_of_approval",
+   "fieldtype": "Date",
+   "label": "Date of Approval",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status : Business Trip Processing",
+   "no_copy": 1,
+   "options": "\nPending\nApproved\nRejected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "business_trip_start_date",
+   "fieldtype": "Date",
+   "label": "Business Trip Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "business_trip_end_date",
+   "fieldtype": "Date",
+   "label": "Business Trip End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_of_days",
+   "fieldtype": "Int",
+   "label": "No of Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "trip_classification",
+   "fieldtype": "Select",
+   "label": "Trip Classification",
+   "options": "\nInternal\nExternal",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_no_of_business_trip_days_remaining",
+   "fieldname": "trip_remaining_balance",
+   "fieldtype": "Int",
+   "label": "Trip Remaining Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Business Trip Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_employee_amount_for_trip",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Total Employee Amount For Trip",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "no_of_extra_days",
+   "fieldtype": "Int",
+   "label": "No of Extra Days"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_no_of_days",
+   "fieldtype": "Int",
+   "label": "Total no of Days",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.trip_classification==\"Internal\"",
+   "fieldname": "saudi_city",
+   "fieldtype": "Link",
+   "label": "Saudi City",
+   "options": "Saudi City ST"
+  },
+  {
+   "depends_on": "eval:doc.trip_classification==\"External\"",
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "per_diem_amount",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Per Diem Amount",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_contract_type",
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "label": "Contract Type",
+   "options": "Contract Type ST",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "grade.custom_ticket_level",
+   "fieldname": "ticket_level",
+   "fieldtype": "Data",
+   "label": "Ticket Level"
+  },
+  {
+   "fetch_from": "employee_no.grade",
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee_salary",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Employee Salary",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "deputy_employee",
+   "fieldtype": "Link",
+   "label": "Deputy Employee",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "deputy_employee.employee_name",
+   "fieldname": "deputy_employee_name",
+   "fieldtype": "Data",
+   "label": "Deputy Employee Name"
+  },
+  {
+   "default": "0",
+   "fetch_from": "employee_no.custom_is_manager",
+   "fieldname": "is_manager",
+   "fieldtype": "Check",
+   "label": "Is Manager",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Ticket Request ST",
+   "link_fieldname": "business_trip_reference"
+  },
+  {
+   "link_doctype": "Employee Task Completion ST",
+   "link_fieldname": "business_trip_reference"
+  }
+ ],
+ "modified": "2025-10-01 15:36:03.396111",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Business Trip Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

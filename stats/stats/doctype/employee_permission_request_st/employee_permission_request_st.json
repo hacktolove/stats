@@ -1,0 +1,251 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EPR-.######",
+ "creation": "2025-04-25 15:09:37.405605",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_5gky",
+  "creation_date",
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "contract_type",
+  "shift_type",
+  "contract",
+  "column_break_lkvp",
+  "type_of_request",
+  "consumption_type",
+  "request_date",
+  "from_time",
+  "to_time",
+  "total_no_of_hour",
+  "amended_from",
+  "total_minutes",
+  "shortage_in_working_minutes",
+  "attendance_reference",
+  "section_break_foys",
+  "reasons",
+  "section_break_dfml",
+  "shift_start_time",
+  "shift_early_start_time",
+  "column_break_qeky",
+  "shift_end_time",
+  "shift_early_end_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_5gky",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Permission Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_lkvp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_request==\"Permission Request\"",
+   "fieldname": "from_time",
+   "fieldtype": "Time",
+   "label": "From Time",
+   "mandatory_depends_on": "eval:doc.type_of_request==\"Permission Request\"",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.type_of_request==\"Permission Request\"",
+   "fieldname": "to_time",
+   "fieldtype": "Time",
+   "label": "To Time",
+   "mandatory_depends_on": "eval:doc.type_of_request==\"Permission Request\"",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.type_of_request==\"Permission Request\"",
+   "fieldname": "total_no_of_hour",
+   "fieldtype": "Float",
+   "label": "Total No Of Hour",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_foys",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reasons",
+   "fieldtype": "Small Text",
+   "label": "Reasons",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_contract_type",
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "label": "Contract Type",
+   "options": "Contract Type ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.default_shift",
+   "fieldname": "shift_type",
+   "fieldtype": "Link",
+   "label": "Shift Type",
+   "options": "Shift Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_dfml",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "shift_start_time",
+   "fieldtype": "Datetime",
+   "label": "Shift Start Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "shift_early_start_time",
+   "fieldtype": "Datetime",
+   "label": "Shift Early Start Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_qeky",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shift_end_time",
+   "fieldtype": "Datetime",
+   "label": "Shift End Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "shift_early_end_time",
+   "fieldtype": "Datetime",
+   "label": "Shift Early End Time",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type_of_request==\"Permission Request\"",
+   "fieldname": "total_minutes",
+   "fieldtype": "Int",
+   "label": "Total Minutes",
+   "read_only": 1
+  },
+  {
+   "fieldname": "type_of_request",
+   "fieldtype": "Select",
+   "label": "Type Of Request",
+   "options": "\nPermission Request\nReconciliation Request",
+   "reqd": 1
+  },
+  {
+   "fieldname": "consumption_type",
+   "fieldtype": "Select",
+   "label": "Consumption Type",
+   "options": "\nDeduct From Permission Balance\nDeduct From Compensatory Balance",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.type_of_request==\"Reconciliation Request\"",
+   "fieldname": "shortage_in_working_minutes",
+   "fieldtype": "Int",
+   "label": "Shortage in working minutes",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contract_type.contract",
+   "fieldname": "contract",
+   "fieldtype": "Select",
+   "label": "Contract",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Request Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attendance_reference",
+   "fieldtype": "Data",
+   "label": "Attendance Reference",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-10-10 09:07:21.680354",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Permission Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

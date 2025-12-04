@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EI-.#####",
+ "creation": "2024-10-15 15:23:57.405117",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_kelv",
+  "creation_date",
+  "employee_no",
+  "employee_name",
+  "section",
+  "main_department",
+  "sub_department",
+  "column_break_jose",
+  "branch",
+  "inquiry_type",
+  "inquiry_details",
+  "reply_details",
+  "amended_from",
+  "section_break_uscp",
+  "employee_inquiry_responsible_team_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_kelv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Inquiry ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_jose",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inquiry_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Inquiry Type",
+   "options": "Inquiry Type ST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inquiry_details",
+   "fieldtype": "Data",
+   "label": "Inquiry Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reply_details",
+   "fieldtype": "Data",
+   "label": "Reply Details"
+  },
+  {
+   "fieldname": "section_break_uscp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_inquiry_responsible_team_details",
+   "fieldtype": "Table",
+   "label": "Responsible Team Details",
+   "options": "Employee Inquiry Responsible Team Details ST"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-18 12:45:23.384788",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Inquiry ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

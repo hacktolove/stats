@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "MPP-.######",
+ "creation": "2024-08-06 10:26:00.206253",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "creation_date",
+  "from_date",
+  "to_date",
+  "column_break_pjxo",
+  "company_name",
+  "supplier",
+  "contact_name",
+  "phone_no",
+  "section_break_zsts",
+  "job_details",
+  "section_break_rgiz",
+  "year",
+  "column_break_gays",
+  "planned_budget",
+  "column_break_eswo",
+  "consumed_budget",
+  "column_break_pcnc",
+  "remaining_budget"
+ ],
+ "fields": [
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company"
+  },
+  {
+   "fieldname": "contact_name",
+   "fieldtype": "Link",
+   "label": "Contact Name",
+   "options": "Contact",
+   "read_only": 1
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "label": "Phone No",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_pjxo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zsts",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "job_details",
+   "fieldtype": "Table",
+   "label": "Job Details",
+   "options": "MP Jobs Details ST"
+  },
+  {
+   "fieldname": "section_break_rgiz",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Budget Details"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Link",
+   "label": "Year",
+   "options": "Fiscal Year"
+  },
+  {
+   "fieldname": "column_break_gays",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "planned_budget",
+   "fieldtype": "Currency",
+   "label": "Planned Budget",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_eswo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consumed_budget",
+   "fieldtype": "Currency",
+   "label": "Consumed Budget",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_pcnc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remaining_budget",
+   "fieldtype": "Currency",
+   "label": "Remaining Budget",
+   "precision": "2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-07 09:07:41.622446",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Man Power Planning ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

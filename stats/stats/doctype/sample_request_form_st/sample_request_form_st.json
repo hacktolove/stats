@@ -1,0 +1,263 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SRF-.#####",
+ "creation": "2024-12-31 07:23:11.246750",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_dsny",
+  "implementation_date",
+  "product_owner_management",
+  "survey_frequency",
+  "column_break_xzda",
+  "date_of_received_the_request",
+  "statistical_product_name",
+  "statistic_type",
+  "amended_from",
+  "target_statistical_community_section",
+  "html_ltqo",
+  "households",
+  "economy",
+  "agriculture",
+  "column_break_ggdn",
+  "html_yvtr",
+  "family",
+  "individuals",
+  "establishments",
+  "holds",
+  "section_break_pwzn",
+  "survey_objectives",
+  "section_break_ushl",
+  "type_of_target_gender",
+  "requested_documents",
+  "column_break_ande",
+  "target_nationality",
+  "statistics_method",
+  "section_break_zdwk",
+  "survey_sample",
+  "the_need_to_a_pull_a_sample_for_pilot_survey",
+  "notes",
+  "column_break_ylwd",
+  "determination_of_spatial_and_temporal_coverage",
+  "determine_the_indicators_to_be_produced"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_dsny",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Sample Request Form ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "implementation_date",
+   "fieldtype": "Date",
+   "label": "Implementation Date"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date_of_received_the_request",
+   "fieldtype": "Date",
+   "label": "Date of Received The Request"
+  },
+  {
+   "fieldname": "product_owner_management",
+   "fieldtype": "Link",
+   "label": "Product Owner Management",
+   "link_filters": "[[\"Department\",\"is_group\",\"=\",0]]",
+   "options": "Department"
+  },
+  {
+   "fieldname": "statistical_product_name",
+   "fieldtype": "Link",
+   "label": "Statistical Product Name",
+   "options": "Statistic Name ST"
+  },
+  {
+   "fieldname": "survey_frequency",
+   "fieldtype": "Select",
+   "label": "Survey Frequency",
+   "options": "\nMonthly\nQuarterly\nSemi Annual\nAnnually\nSeasonal\nOne Time\nOther"
+  },
+  {
+   "fieldname": "statistic_type",
+   "fieldtype": "Link",
+   "label": "Statistic Type",
+   "options": "Statistic Type ST"
+  },
+  {
+   "fieldname": "column_break_xzda",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_statistical_community_section",
+   "fieldtype": "Section Break",
+   "label": "Target Statistical Community"
+  },
+  {
+   "fieldname": "html_ltqo",
+   "fieldtype": "HTML",
+   "options": "<h5 style=\"padding-bottom:20px;\">Target community</h5>"
+  },
+  {
+   "fieldname": "html_yvtr",
+   "fieldtype": "HTML",
+   "options": "<h5 style=\"padding-bottom:20px;\">Sampling Unit</h5>"
+  },
+  {
+   "fieldname": "column_break_ggdn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "households",
+   "fieldtype": "Check",
+   "label": "Households"
+  },
+  {
+   "default": "0",
+   "fieldname": "economy",
+   "fieldtype": "Check",
+   "label": "Economy"
+  },
+  {
+   "default": "0",
+   "fieldname": "agriculture",
+   "fieldtype": "Check",
+   "label": "Agriculture"
+  },
+  {
+   "default": "0",
+   "fieldname": "family",
+   "fieldtype": "Check",
+   "label": "Family"
+  },
+  {
+   "default": "0",
+   "fieldname": "individuals",
+   "fieldtype": "Check",
+   "label": "Individuals"
+  },
+  {
+   "default": "0",
+   "fieldname": "establishments",
+   "fieldtype": "Check",
+   "label": "Establishments"
+  },
+  {
+   "default": "0",
+   "fieldname": "holds",
+   "fieldtype": "Check",
+   "label": "Holds"
+  },
+  {
+   "fieldname": "section_break_pwzn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "survey_objectives",
+   "fieldtype": "Small Text",
+   "label": "Survey Objectives"
+  },
+  {
+   "fieldname": "section_break_ushl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "type_of_target_gender",
+   "fieldtype": "Select",
+   "label": "Type of Target Gender",
+   "options": "\nAll\nMale\nFemale"
+  },
+  {
+   "fieldname": "column_break_ande",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_nationality",
+   "fieldtype": "Select",
+   "label": "Target Nationality",
+   "options": "\nAll\nSaudi\nNon-Saudi"
+  },
+  {
+   "fieldname": "requested_documents",
+   "fieldtype": "Select",
+   "label": "Requested Documents",
+   "options": "\nQuestionnaire\nOther"
+  },
+  {
+   "fieldname": "statistics_method",
+   "fieldtype": "Select",
+   "label": "Statistics Method",
+   "options": "\nCAPI\nCATI\nCAWI\nOther"
+  },
+  {
+   "fieldname": "section_break_zdwk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "survey_sample",
+   "fieldtype": "Small Text",
+   "label": "Survey Sample"
+  },
+  {
+   "fieldname": "the_need_to_a_pull_a_sample_for_pilot_survey",
+   "fieldtype": "Small Text",
+   "label": "The need to a pull a sample for pilot survey?"
+  },
+  {
+   "fieldname": "column_break_ylwd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "determination_of_spatial_and_temporal_coverage",
+   "fieldtype": "Small Text",
+   "label": "Determination of Spatial and Temporal Coverage"
+  },
+  {
+   "fieldname": "determine_the_indicators_to_be_produced",
+   "fieldtype": "Small Text",
+   "label": "Determine the indicators to be produced"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-31 08:41:02.709391",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Sample Request Form ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

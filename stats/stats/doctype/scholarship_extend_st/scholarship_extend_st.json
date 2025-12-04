@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SE-.#####",
+ "creation": "2025-09-03 10:27:07.681780",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_adcd",
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "section",
+  "column_break_wtpp",
+  "scholarship_request_reference",
+  "scholarship_no",
+  "scholarship_start_date",
+  "scholarship_end_date",
+  "permission_days",
+  "plan_return_date",
+  "extend_till_date",
+  "amended_from",
+  "section_break_wcxf",
+  "reason_for_extend"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_adcd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee No",
+   "options": "Employee",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wtpp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scholarship_request_reference",
+   "fieldtype": "Link",
+   "label": "Scholarship Request Reference",
+   "options": "Scholarship Request ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "scholarship_request_reference.scholarship_no",
+   "fieldname": "scholarship_no",
+   "fieldtype": "Link",
+   "label": "Scholarship No",
+   "options": "Scholarship No ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "scholarship_start_date",
+   "fieldtype": "Date",
+   "label": "Scholarship Start Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "scholarship_end_date",
+   "fieldtype": "Date",
+   "label": "Scholarship End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "permission_days",
+   "fieldtype": "Int",
+   "label": "Permission Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "plan_return_date",
+   "fieldtype": "Date",
+   "label": "Plan Return Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Scholarship Extend ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "extend_till_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Extend Till Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_wcxf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reason_for_extend",
+   "fieldtype": "Small Text",
+   "label": "Reason for Extend",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-03 14:57:45.118122",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Scholarship Extend ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

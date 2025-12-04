@@ -1,0 +1,329 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EOS-.#####",
+ "creation": "2024-11-25 07:27:40.584725",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "creation_date",
+  "resignation_reference",
+  "column_break_dibr",
+  "resignation_type",
+  "seperation_reason",
+  "section_break_iafg",
+  "employee",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "column_break_mwpb",
+  "joining_date",
+  "last_working_date",
+  "branch",
+  "section",
+  "section_break_bawo",
+  "total_no_of_working_days",
+  "no_of_full_years_in_service",
+  "no_of_days_in_last_year_of_service",
+  "column_break_dnlm",
+  "vacation_balance",
+  "considered_vacation_days",
+  "section_break_swcg",
+  "per_day_eos_due_amount",
+  "per_year_eos_due_amount",
+  "end_of_service_due_amount",
+  "column_break_vzjz",
+  "vacation_due_amount",
+  "total_due_amount_in_words",
+  "section_break_hdbx",
+  "earning",
+  "salary_structure_assignment_reference",
+  "total_monthly_salary",
+  "net_salary",
+  "column_break_ugte",
+  "deduction",
+  "total_monthly_deduction",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fetch_from": "resignation_reference.employee_no",
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee.custom_section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  },
+  {
+   "fetch_from": "employee.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fetch_from": "resignation_reference.resignation_type",
+   "fieldname": "resignation_type",
+   "fieldtype": "Link",
+   "label": "Resignation Type",
+   "options": "Resignation Type ST"
+  },
+  {
+   "fetch_from": "resignation_reference.separation_reason",
+   "fieldname": "seperation_reason",
+   "fieldtype": "Link",
+   "label": "Separation Reason",
+   "options": "Separation Reason ST"
+  },
+  {
+   "fieldname": "column_break_dibr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.date_of_joining",
+   "fieldname": "joining_date",
+   "fieldtype": "Date",
+   "label": "Joining Date"
+  },
+  {
+   "fetch_from": "employee.relieving_date",
+   "fieldname": "last_working_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Last Working Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_no_of_working_days",
+   "fieldtype": "Int",
+   "label": "Total No of Working Days",
+   "read_only": 1
+  },
+  {
+   "description": "Only consider leave types that allow encasement at the end of service ( Flag In Leave Type )",
+   "fieldname": "vacation_balance",
+   "fieldtype": "Float",
+   "label": "Vacation Balance",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "considered_vacation_days",
+   "fieldtype": "Int",
+   "label": "Considered Vacation Days",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "description": "(Total Earnings / 30) * Minimum Vacation Days",
+   "fieldname": "vacation_due_amount",
+   "fieldtype": "Currency",
+   "label": "<b>Vacation Due Amount</b>",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "description": "Contract Type : any <br>\nResignation Type: Separation : no EOS <br>\nResignation Type: Not to renew Contract <br>\nDuration : &lt; 1 year , Per Day: (mothly sal)/2/360, Due Amt: (Per Day)*(No of days) <br>\n Duration : &lt; 2 year , Per Year:  (mothly sal)/2, Per Day: (mothly sal)/2/360, Due Amt: (Per Year)+[(Per Day)*(No of days)] <br>\n Duration : &gt; 2 and &lt;5 year, Per Year:  [(mothly sal)/2]*(no of years), Per Day: (mothly sal)/2/360, Due Amt: (Per Year)+[(Per Day)*(No of days)] <br>\n Duration : &gt;5 year, Per Year: (mothly sal)*(no of years), Per Day: (mothly sal)/360, Due Amt: (Per Year)+[(Per Day)*(No of days)] <br>\n<br>\nResignation Type: Resignation <br>\n Duration : &lt; 1 year , no EOS <br>\n Duration : &lt; 2 year , no EOS <br>\n Duration : &gt; 2 and &lt;5 year, Per Year:  [(mothly sal)/2/3]*(no of years), Per Day: (mothly sal)/2/3/360, Due Amt: (Per Year)+[(Per Day)*(No of days)] <br>\n Duration : &gt;5 year, Per Year: (mothly sal)*(no of years), Per Day: (mothly sal)/360, Due Amt: (Per Year)+[(Per Day)*(No of days)]",
+   "fieldname": "end_of_service_due_amount",
+   "fieldtype": "Currency",
+   "label": "<b>End of Service Due Amount</b>",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_iafg",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "column_break_mwpb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hdbx",
+   "fieldtype": "Section Break",
+   "label": "Salary Details"
+  },
+  {
+   "fieldname": "earning",
+   "fieldtype": "Table",
+   "label": "Earning",
+   "options": "EOS Earnings ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ugte",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deduction",
+   "fieldtype": "Table",
+   "label": "Deduction",
+   "options": "EOS Deductions ST",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_monthly_salary",
+   "fieldtype": "Currency",
+   "label": "Total Monthly Salary",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "net_salary",
+   "fieldtype": "Currency",
+   "label": "Net Salary",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_monthly_deduction",
+   "fieldtype": "Currency",
+   "label": "Total Monthly Deduction",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_of_full_years_in_service",
+   "fieldtype": "Int",
+   "label": "No of full years in service",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_of_days_in_last_year_of_service",
+   "fieldtype": "Int",
+   "label": "No of days in last year of service",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_bawo",
+   "fieldtype": "Section Break",
+   "label": "Working Days and Vacation Balance"
+  },
+  {
+   "fieldname": "column_break_dnlm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_swcg",
+   "fieldtype": "Section Break",
+   "label": "Due Amount"
+  },
+  {
+   "fieldname": "column_break_vzjz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resignation_reference",
+   "fieldtype": "Link",
+   "label": "Resignation Reference",
+   "options": "Employee Resignation ST",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "per_day_eos_due_amount",
+   "fieldtype": "Currency",
+   "label": "Per Day EOS Due Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "per_year_eos_due_amount",
+   "fieldtype": "Currency",
+   "label": "Per Year EOS Due Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "salary_structure_assignment_reference",
+   "fieldtype": "Link",
+   "label": "Salary Structure Assignment Reference",
+   "options": "Salary Structure Assignment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "End of Service Calculation ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "total_due_amount_in_words",
+   "fieldtype": "Data",
+   "label": "Total Due Amount In Words",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-10-10 12:51:10.365311",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "End of Service Calculation ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

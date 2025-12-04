@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-22 09:30:18.266265",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "direction_name",
+  "column_break_sydj",
+  "from_date",
+  "to_date",
+  "no_of_days"
+ ],
+ "fields": [
+  {
+   "fieldname": "direction_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Direction Name"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date"
+  },
+  {
+   "fieldname": "no_of_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No of Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sydj",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-27 11:55:29.328340",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Business Trip Processing Multi Direction Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,44 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-27 08:22:54.689602",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "earning_name",
+  "column_break_ienq",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "earning_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Earning Name",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "column_break_ienq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-27 08:31:21.072363",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Salary Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

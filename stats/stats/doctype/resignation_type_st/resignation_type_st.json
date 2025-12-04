@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:resignation_type",
+ "creation": "2024-11-04 13:27:22.272098",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "resignation_type",
+  "is_it_separation",
+  "is_it_not_renewal_of_contract",
+  "is_it_resignation",
+  "is_it_test_period_resignation"
+ ],
+ "fields": [
+  {
+   "fieldname": "resignation_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Resignation Type",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "description": "No amount is paid",
+   "fieldname": "is_it_separation",
+   "fieldtype": "Check",
+   "label": "Is it : Separation Type?"
+  },
+  {
+   "default": "0",
+   "description": "service years are less than 2: (half monthly salary) X (no of service years) <br>\nservice years &gt; 2 and &lt; 5 : (half monthly salary/3) X (no of service years) <br>\nservice years &gt; 5: (full monthly salary) X (no of service years)",
+   "fieldname": "is_it_not_renewal_of_contract",
+   "fieldtype": "Check",
+   "label": "Is It:  Not Renewal of Contract?"
+  },
+  {
+   "default": "0",
+   "description": "service years are less than 2: No amount is paid <br>\nservice years &gt; 2 and &lt; 5 : (half monthly salary/3) X (no of service years)  <br>\nservice years &gt; 5: (full monthly salary) X (no of service years)",
+   "fieldname": "is_it_resignation",
+   "fieldtype": "Check",
+   "label": "Is It: Resignation?"
+  },
+  {
+   "default": "0",
+   "description": "No amount is paid",
+   "fieldname": "is_it_test_period_resignation",
+   "fieldtype": "Check",
+   "label": "Is It: Test Period Resignation?"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-26 13:11:20.770510",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Resignation Type ST",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

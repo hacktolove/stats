@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-24 10:20:36.761612",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "skill",
+  "skill_description",
+  "weight",
+  "column_break_vhcq",
+  "target_degree",
+  "actual_degree",
+  "actual_degree_based_on_weight"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "skill",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Skill",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "skill_description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Skill Description",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "weight",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vhcq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "target_degree",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Target Degree",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "actual_degree",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Actual Degree",
+   "precision": "2"
+  },
+  {
+   "columns": 2,
+   "fieldname": "actual_degree_based_on_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Actual Degree Based on Weight",
+   "precision": "2",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-24 15:03:15.870591",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Management Skills Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

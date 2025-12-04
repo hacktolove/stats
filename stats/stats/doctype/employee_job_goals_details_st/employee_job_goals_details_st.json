@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-24 10:15:45.498015",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "goals",
+  "weight",
+  "column_break_vyrl",
+  "target_degree",
+  "actual_degree",
+  "actual_degree_based_on_weight"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "goals",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Goals",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "weight",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vyrl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "target_degree",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Target Degree",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "actual_degree",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Actual Degree",
+   "precision": "2"
+  },
+  {
+   "columns": 2,
+   "fieldname": "actual_degree_based_on_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Actual Degree Based on Weight",
+   "precision": "2",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-15 09:31:44.719891",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Job Goals Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

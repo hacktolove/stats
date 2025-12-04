@@ -1,0 +1,221 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "LR-.######",
+ "creation": "2024-09-06 14:48:59.028989",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_no",
+  "employee_name",
+  "employee_status",
+  "main_department",
+  "sub_department",
+  "section",
+  "decision_number",
+  "decision_date",
+  "bank_loan_reference",
+  "salary_component",
+  "column_break_cnfc",
+  "deduction_start_date",
+  "deduction_end_date",
+  "status",
+  "total_amount",
+  "instalment_value",
+  "first_instalment",
+  "last_instalment",
+  "number_of_instalments",
+  "previously_deducted_instalments",
+  "is_past_data",
+  "section_break_tckc",
+  "table_of_discounts",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  },
+  {
+   "fieldname": "decision_number",
+   "fieldtype": "Data",
+   "label": "Decision number"
+  },
+  {
+   "fieldname": "decision_date",
+   "fieldtype": "Date",
+   "label": "Decision date"
+  },
+  {
+   "fieldname": "deduction_start_date",
+   "fieldtype": "Date",
+   "label": "Deduction Start Date ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_instalments",
+   "fieldtype": "Int",
+   "label": "Number of Instalments",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nActive\nCompleted\nEarly Payment"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "instalment_value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Instalment Value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "first_instalment",
+   "fieldtype": "Currency",
+   "label": "First Instalment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_instalment",
+   "fieldtype": "Currency",
+   "label": "Last Instalment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "previously_deducted_instalments",
+   "fieldtype": "Int",
+   "label": "Previously Deducted Instalments"
+  },
+  {
+   "fieldname": "column_break_cnfc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tckc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_of_discounts",
+   "fieldtype": "Table",
+   "label": "Table Of Discounts",
+   "options": "Table Of Discounts ST"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Loan Reimbursement ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "bank_loan_reference",
+   "fieldtype": "Data",
+   "label": "Bank Loan Reference"
+  },
+  {
+   "fieldname": "salary_component",
+   "fieldtype": "Link",
+   "label": "Salary Component",
+   "link_filters": "[[\"Salary Component\",\"type\",\"=\",\"Deduction\"],[\"Salary Component\",\"disabled\",\"=\",0]]",
+   "options": "Salary Component",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "description": "If <b>Is Past Data</b>  is checked, Additional Salary will not be created.",
+   "fieldname": "is_past_data",
+   "fieldtype": "Check",
+   "label": "Is Past data "
+  },
+  {
+   "fieldname": "deduction_end_date",
+   "fieldtype": "Date",
+   "label": "Deduction End Date ",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.status",
+   "fieldname": "employee_status",
+   "fieldtype": "Select",
+   "label": "Employee Status",
+   "options": "\nActive\nInactive\nSuspended\nLeft"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-22 12:55:51.660527",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Loan Reimbursement ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

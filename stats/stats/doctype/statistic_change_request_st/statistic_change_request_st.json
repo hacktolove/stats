@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SCR-.##### ",
+ "creation": "2024-11-29 14:46:05.937277",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ceiy",
+  "amended_from",
+  "creation_date",
+  "created_by",
+  "sub_department",
+  "statistic_request_reference",
+  "column_break_mopo",
+  "request_reason",
+  "section_break_goqb",
+  "current_number_of_researchers",
+  "current_number_of_inspectors",
+  "current_no_of_support_team",
+  "current_no_of_supervisor",
+  "current_statistics_method",
+  "current_planned_start_date",
+  "current_planned_end_date",
+  "column_break_mbua",
+  "new_number_of_researchers",
+  "new_number_of_inspectors",
+  "new_no_of_support_team",
+  "new_no_of_supervisor",
+  "new_statistics_method",
+  "new_planned_start_date",
+  "new_planned_end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ceiy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Statistic Change Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "link_filters": "[[\"Department\",\"is_group\",\"=\",0]]",
+   "options": "Department"
+  },
+  {
+   "fieldname": "statistic_request_reference",
+   "fieldtype": "Link",
+   "label": "Statistic Request Reference",
+   "options": "Statistic Request ST"
+  },
+  {
+   "fieldname": "column_break_mopo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request_reason",
+   "fieldtype": "Small Text",
+   "label": "Request Reason"
+  },
+  {
+   "fieldname": "section_break_goqb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "statistic_request_reference.no_of_researchers",
+   "fieldname": "current_number_of_researchers",
+   "fieldtype": "Int",
+   "label": "Current Number of Researchers"
+  },
+  {
+   "fetch_from": "statistic_request_reference.no_of_inspectors",
+   "fieldname": "current_number_of_inspectors",
+   "fieldtype": "Int",
+   "label": "Current Number of Inspectors"
+  },
+  {
+   "fetch_from": "statistic_request_reference.no_of_support_team",
+   "fieldname": "current_no_of_support_team",
+   "fieldtype": "Int",
+   "label": "Current No of Support Team"
+  },
+  {
+   "fieldname": "column_break_mbua",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "new_number_of_researchers",
+   "fieldtype": "Int",
+   "label": "New Number of Researchers"
+  },
+  {
+   "fieldname": "new_number_of_inspectors",
+   "fieldtype": "Int",
+   "label": "New Number of Inspectors"
+  },
+  {
+   "fieldname": "new_no_of_support_team",
+   "fieldtype": "Int",
+   "label": "New No of Support Team"
+  },
+  {
+   "fetch_from": "statistic_request_reference.no_of_supervisor",
+   "fieldname": "current_no_of_supervisor",
+   "fieldtype": "Int",
+   "label": "Current No of Supervisor"
+  },
+  {
+   "fieldname": "new_no_of_supervisor",
+   "fieldtype": "Int",
+   "label": "New No of Supervisor"
+  },
+  {
+   "fetch_from": "statistic_request_reference.statistics_method",
+   "fieldname": "current_statistics_method",
+   "fieldtype": "Select",
+   "label": "Current Statistics Method",
+   "options": "\nBy Phone\nBy Field\nBy Record\nBy Mail"
+  },
+  {
+   "fetch_from": "statistic_request_reference.planned_start_date",
+   "fieldname": "current_planned_start_date",
+   "fieldtype": "Date",
+   "label": "Current Planned Start Date"
+  },
+  {
+   "fetch_from": "statistic_request_reference.planned_end_date",
+   "fieldname": "current_planned_end_date",
+   "fieldtype": "Date",
+   "label": "Current Planned End Date"
+  },
+  {
+   "fieldname": "new_statistics_method",
+   "fieldtype": "Select",
+   "label": "New Statistics Method",
+   "options": "\nBy Phone\nBy Field\nBy Record\nBy Mail"
+  },
+  {
+   "fieldname": "new_planned_start_date",
+   "fieldtype": "Date",
+   "label": "New Planned Start Date"
+  },
+  {
+   "fieldname": "new_planned_end_date",
+   "fieldtype": "Date",
+   "label": "New Planned End Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-24 07:13:00.006637",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Statistic Change Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

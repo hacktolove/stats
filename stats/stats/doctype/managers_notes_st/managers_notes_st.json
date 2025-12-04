@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-04 12:21:05.487969",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user_name",
+  "comment"
+ ],
+ "fields": [
+  {
+   "fieldname": "comment",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Comment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "user_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "User Name",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-04 13:16:49.867111",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Managers Notes ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "VES-.#####",
+ "creation": "2024-11-28 09:47:10.040964",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "transaction_date",
+  "created_by",
+  "column_break_xaud",
+  "from_date",
+  "to_date",
+  "section_break_ptnv",
+  "get_employee",
+  "employee_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction Date"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "column_break_xaud",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ptnv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "get_employee",
+   "fieldtype": "Button",
+   "label": "Get Employee"
+  },
+  {
+   "fieldname": "employee_details",
+   "fieldtype": "Table",
+   "label": "Employee Details",
+   "options": "Employee Vacation Details ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vacation Encashment Sheet ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Payment Request ST",
+   "link_fieldname": "reference_no"
+  }
+ ],
+ "modified": "2024-12-02 12:45:07.143685",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Vacation Encashment Sheet ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

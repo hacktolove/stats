@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-02 08:00:34.633216",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reference",
+  "transaction_date",
+  "column_break_luui",
+  "budget_change_type",
+  "section_break_isty",
+  "from_department",
+  "from_account",
+  "column_break_gcjm",
+  "to_department",
+  "to_account",
+  "section_break_pygo",
+  "change_amount",
+  "column_break_cwck",
+  "erpnext_budget_reference"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reference",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Transaction Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_luui",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "budget_change_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Budget Change Type",
+   "options": "\nInitial\nInternal Transfer\nEnhancement",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_isty",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "from_department",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "From Department",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "from_account",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "From Account",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_gcjm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "to_department",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "To Department",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "to_account",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "To Account",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_pygo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "change_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Change Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_cwck",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "erpnext_budget_reference",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ERPNext Budget Reference",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-03 15:41:49.171186",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Department Budget Update Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

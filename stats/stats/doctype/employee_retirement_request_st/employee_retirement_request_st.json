@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ERR-.#####",
+ "creation": "2025-05-07 12:42:30.605965",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_kmth",
+  "creation_date",
+  "employee_no",
+  "employee_name",
+  "contract_type",
+  "main_department",
+  "sub_department",
+  "section",
+  "branch",
+  "column_break_vdqz",
+  "retirement_type",
+  "employee_joining_date",
+  "birth_date_gregorian",
+  "birth_date_hijri",
+  "retirement_date_gregorian",
+  "retirement_date_hijri",
+  "total_working_years",
+  "remaining_days",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_kmth",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee No",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee_no.custom_section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  },
+  {
+   "fetch_from": "employee_no.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "column_break_vdqz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Retirement Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "retirement_date_gregorian",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Retirement Date Gregorian",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fetch_from": "employee_no.date_of_birth",
+   "fieldname": "birth_date_gregorian",
+   "fieldtype": "Date",
+   "label": "Birth Date Gregorian",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_contract_type",
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "label": "Contract Type",
+   "options": "Contract Type ST"
+  },
+  {
+   "fieldname": "retirement_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Retirement Type",
+   "options": "\nNormal Retirement\nEarly Retirement",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_hijri_birth_date",
+   "fieldname": "birth_date_hijri",
+   "fieldtype": "Data",
+   "label": "Birth Date Hijri"
+  },
+  {
+   "description": "ex: 1403-3-30 i.e.(Hijri Year)-(Hijri Month)-(Hijri Day)\n",
+   "fetch_from": "employee_no.custom_hijri_birth_date",
+   "fieldname": "retirement_date_hijri",
+   "fieldtype": "Data",
+   "label": "Retirement Date Hijri"
+  },
+  {
+   "fetch_from": "employee_no.date_of_joining",
+   "fieldname": "employee_joining_date",
+   "fieldtype": "Date",
+   "label": "Employee Joining Date"
+  },
+  {
+   "description": "Based on lunar year (1 year = 354 days, approximately)",
+   "fieldname": "total_working_years",
+   "fieldtype": "Int",
+   "label": "Total Working Years (based on Hijri dates)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remaining_days",
+   "fieldtype": "Int",
+   "label": "Remaining Days(based on Hijri dates)",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Retirement Request ST",
+   "link_fieldname": "employee_retirement_request"
+  }
+ ],
+ "modified": "2025-11-20 10:46:38.254721",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Retirement Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

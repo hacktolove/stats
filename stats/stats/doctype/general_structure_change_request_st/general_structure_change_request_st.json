@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "GSCR-.#####",
+ "creation": "2024-10-21 13:17:44.774670",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1yko",
+  "creation_date",
+  "created_by",
+  "employee_main_department",
+  "employee_sub_department",
+  "created_by_employee",
+  "column_break_rhxi",
+  "change_level_type",
+  "main_department",
+  "sub_department",
+  "amended_from",
+  "btaskb_section",
+  "old_task_main_department",
+  "old_task_sub_department",
+  "new_task",
+  "bstake_holdersb_section",
+  "old_stake_holders_main_department",
+  "old_stake_holders_sub_department",
+  "new_stake_holders",
+  "bmain_responsibilitiesb_section",
+  "old_main_responsibilities_main_department",
+  "old_main_responsibilities_sub_department",
+  "new_main_responsibilities"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1yko",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "General Structure Change Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation date"
+  },
+  {
+   "fetch_from": "created_by_employee.employee_name",
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Main Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.change_level_type == \"Third Level and Below\"",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "mandatory_depends_on": "eval:doc.change_level_type == \"Third Level and Below\"",
+   "options": "Department"
+  },
+  {
+   "fieldname": "change_level_type",
+   "fieldtype": "Select",
+   "label": "Change Level Type",
+   "options": "\nSecond Level and Over\nThird Level and Below",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rhxi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "created_by_employee.department",
+   "fieldname": "employee_main_department",
+   "fieldtype": "Link",
+   "label": "Employee Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "created_by_employee.custom_sub_department",
+   "fieldname": "employee_sub_department",
+   "fieldtype": "Link",
+   "label": "Employee Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "btaskb_section",
+   "fieldtype": "Section Break",
+   "label": "<b>Task</b>"
+  },
+  {
+   "fieldname": "bstake_holdersb_section",
+   "fieldtype": "Section Break",
+   "label": "<b>Stake Holders</b>"
+  },
+  {
+   "fieldname": "new_stake_holders",
+   "fieldtype": "Small Text",
+   "label": "New Stake Holders"
+  },
+  {
+   "fieldname": "bmain_responsibilitiesb_section",
+   "fieldtype": "Section Break",
+   "label": "<b>Main Responsibilities</b>"
+  },
+  {
+   "fieldname": "new_main_responsibilities",
+   "fieldtype": "Small Text",
+   "label": "New Main Responsibilities"
+  },
+  {
+   "depends_on": "eval:doc.change_level_type == \"Third Level and Below\"",
+   "fetch_from": "sub_department.custom_task",
+   "fieldname": "old_task_sub_department",
+   "fieldtype": "Small Text",
+   "label": "Old Task",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.change_level_type == \"Second Level and Over\"",
+   "fetch_from": "main_department.custom_task",
+   "fieldname": "old_task_main_department",
+   "fieldtype": "Small Text",
+   "label": "Old Task",
+   "read_only": 1
+  },
+  {
+   "fieldname": "new_task",
+   "fieldtype": "Small Text",
+   "label": "New Task"
+  },
+  {
+   "depends_on": "eval:doc.change_level_type == \"Third Level and Below\"",
+   "fetch_from": "sub_department.custom_stake_holders",
+   "fieldname": "old_stake_holders_sub_department",
+   "fieldtype": "Small Text",
+   "label": "Old Stake Holders",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.change_level_type == \"Second Level and Over\"",
+   "fetch_from": "main_department.custom_stake_holders",
+   "fieldname": "old_stake_holders_main_department",
+   "fieldtype": "Small Text",
+   "label": "Old Stake Holders",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.change_level_type == \"Third Level and Below\"",
+   "fetch_from": "sub_department.custom_main_responsibilities",
+   "fieldname": "old_main_responsibilities_sub_department",
+   "fieldtype": "Small Text",
+   "label": "Old Main Responsibilities",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.change_level_type == \"Second Level and Over\"",
+   "fetch_from": "main_department.custom_main_responsibilities",
+   "fieldname": "old_main_responsibilities_main_department",
+   "fieldtype": "Small Text",
+   "label": "Old Main Responsibilities",
+   "read_only": 1
+  },
+  {
+   "fieldname": "created_by_employee",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Created By Employee",
+   "options": "Employee",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-10-21 15:33:18.238064",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "General Structure Change Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-29 14:21:17.098851",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "department_budget_name",
+  "main_department",
+  "department_acct_details_name",
+  "budget_expense_account",
+  "requested_amount",
+  "approved_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Main Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Approved Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "requested_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Requested Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "department_budget_name",
+   "fieldtype": "Data",
+   "label": "Department Budget Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "department_acct_details_name",
+   "fieldtype": "Data",
+   "label": "Department Acct Details Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "budget_expense_account",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Budget Account",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-19 08:20:15.114536",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Department Wise Budget Allocation Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

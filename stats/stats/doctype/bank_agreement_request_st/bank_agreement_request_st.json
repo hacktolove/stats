@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "BAR-.######",
+ "creation": "2025-02-27 08:38:47.759646",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_0kts",
+  "amended_from",
+  "request_date",
+  "employee_no",
+  "employee_name",
+  "designation",
+  "grade",
+  "column_break_sipe",
+  "main_department",
+  "sub_department",
+  "bank_name",
+  "account_no",
+  "date_of_procedure"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_0kts",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Bank Agreement Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Request Date"
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "employee_no.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fetch_from": "employee_no.grade",
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade"
+  },
+  {
+   "fieldname": "column_break_sipe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee_no.bank_name",
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bank Name",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.bank_ac_no",
+   "fieldname": "account_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Account No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_procedure",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Procedure",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-04-30 09:58:19.235650",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Bank Agreement Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EA-.#####",
+ "creation": "2024-11-27 13:42:26.802825",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_dokx",
+  "creation_date",
+  "request_by",
+  "main_department",
+  "fetch_employees",
+  "amended_from",
+  "column_break_pyle",
+  "no_of_years_for_retirement",
+  "no_of_years_of_experience",
+  "employee_main_department",
+  "qualification",
+  "previous_year_evaluation",
+  "current_year_evaluation",
+  "evaluation_type",
+  "section_break_zcig",
+  "employee_alternatives_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_dokx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Alternatives ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "request_by",
+   "fieldtype": "Data",
+   "label": "Request By"
+  },
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "User Main Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_pyle",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "no_of_years_for_retirement",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No of Years for Retirement"
+  },
+  {
+   "fieldname": "no_of_years_of_experience",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No of Years of Experience"
+  },
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Table MultiSelect",
+   "label": "Qualification",
+   "options": "Qualification Table"
+  },
+  {
+   "fieldname": "fetch_employees",
+   "fieldtype": "Button",
+   "label": "Fetch Employees"
+  },
+  {
+   "fieldname": "previous_year_evaluation",
+   "fieldtype": "Table MultiSelect",
+   "label": "Previous Year Evaluation",
+   "options": "Multi Evaluation Alternatives Previous Year  ST"
+  },
+  {
+   "fieldname": "current_year_evaluation",
+   "fieldtype": "Table MultiSelect",
+   "label": "Current Year Evaluation",
+   "options": "Multi Evaluation Alternatives Current Year  ST"
+  },
+  {
+   "default": "Yearly",
+   "fieldname": "evaluation_type",
+   "fieldtype": "Data",
+   "label": "Evaluation Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_zcig",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_alternatives_details",
+   "fieldtype": "Table",
+   "label": "Employee Alternatives Details",
+   "options": "Employee Alternatives Details ST"
+  },
+  {
+   "description": "This department is consider to fetch employees",
+   "fieldname": "employee_main_department",
+   "fieldtype": "Link",
+   "label": "Employee Main Department",
+   "options": "Department"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-31 14:51:43.825895",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Alternatives ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

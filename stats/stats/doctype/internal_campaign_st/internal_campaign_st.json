@@ -1,0 +1,211 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "IC-.#####",
+ "creation": "2024-08-28 13:49:02.186425",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "created_by",
+  "main_department",
+  "sub_department",
+  "employee",
+  "column_break_dti5",
+  "campaign_name",
+  "campaign_date",
+  "campaign_time",
+  "campaign_period",
+  "campaign_type",
+  "campaign_content_section",
+  "campaign_content",
+  "column_break_x8g4",
+  "workshop_department",
+  "invitation_for_others",
+  "attachment",
+  "campaign_goals_section",
+  "campaign_goals",
+  "employee_beneficiary_section",
+  "all_employee",
+  "static_section",
+  "operation_section",
+  "column_break_gblq",
+  "president_office",
+  "branches"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_dti5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "campaign_name",
+   "fieldtype": "Data",
+   "label": "Campaign Name"
+  },
+  {
+   "fieldname": "campaign_date",
+   "fieldtype": "Date",
+   "label": "Campaign Date"
+  },
+  {
+   "fieldname": "campaign_time",
+   "fieldtype": "Time",
+   "label": "Campaign Time"
+  },
+  {
+   "fieldname": "campaign_period",
+   "fieldtype": "Data",
+   "label": "Campaign Period"
+  },
+  {
+   "fieldname": "campaign_type",
+   "fieldtype": "Link",
+   "label": "Campaign Type",
+   "options": "Campaign Type ST"
+  },
+  {
+   "fieldname": "campaign_content_section",
+   "fieldtype": "Section Break",
+   "label": "Campaign Content"
+  },
+  {
+   "fieldname": "campaign_content",
+   "fieldtype": "Small Text",
+   "label": "Content"
+  },
+  {
+   "fieldname": "column_break_x8g4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.campaign_type == \"Work Shop\"",
+   "fieldname": "workshop_department",
+   "fieldtype": "Select",
+   "label": "Workshop Department",
+   "options": "\nSub Department\nAll Employee"
+  },
+  {
+   "depends_on": "eval:doc.campaign_type == \"Work Shop\"",
+   "fieldname": "invitation_for_others",
+   "fieldtype": "Data",
+   "label": "Invitation for Others"
+  },
+  {
+   "fieldname": "campaign_goals_section",
+   "fieldtype": "Section Break",
+   "label": "Campaign Goals"
+  },
+  {
+   "fieldname": "campaign_goals",
+   "fieldtype": "Small Text",
+   "label": "Goals"
+  },
+  {
+   "fieldname": "employee_beneficiary_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Beneficiary"
+  },
+  {
+   "default": "0",
+   "fieldname": "all_employee",
+   "fieldtype": "Check",
+   "label": "All Employee"
+  },
+  {
+   "default": "0",
+   "fieldname": "static_section",
+   "fieldtype": "Check",
+   "label": "Static Section"
+  },
+  {
+   "default": "0",
+   "fieldname": "operation_section",
+   "fieldtype": "Check",
+   "label": "Operation Section"
+  },
+  {
+   "fieldname": "column_break_gblq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "president_office",
+   "fieldtype": "Check",
+   "label": "President Office"
+  },
+  {
+   "default": "0",
+   "fieldname": "branches",
+   "fieldtype": "Check",
+   "label": "Branches"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Attachment",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-17 07:48:30.912462",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Internal Campaign ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

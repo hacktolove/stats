@@ -1,0 +1,727 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:EI-{employee_no}-{###}",
+ "creation": "2024-10-16 12:31:37.038731",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_axmy",
+  "interview_done_by",
+  "resignation_reference",
+  "retirement_reference",
+  "resignation_date",
+  "retirement_date",
+  "amended_from",
+  "column_break_hxiu",
+  "employee_no",
+  "employee_name",
+  "sub_department",
+  "country",
+  "marital_status",
+  "id_no",
+  "direct_manager",
+  "leaving_reasons_section",
+  "dissatisfaction_with_salary_and_benefits",
+  "poor_work_environment",
+  "better_job_offer",
+  "lack_of_job_security",
+  "lack_of_clarity",
+  "column_break_clew",
+  "lack_of_development_and_promotion_opportunities",
+  "high_stress_and_poor_worklife_balance",
+  "lack_of_appreciation_and_recognition_of_efforts",
+  "differences_in_values_and_goals",
+  "lack_of_proper_supervision",
+  "section_break_hwhl",
+  "html_chkq",
+  "work_environment",
+  "salary",
+  "treatment",
+  "work_training",
+  "team_work",
+  "communication",
+  "supervising",
+  "respect",
+  "column_break_cjhb",
+  "excellent",
+  "work_environment_ex",
+  "salary_ex",
+  "treatment_ex",
+  "work_training_ex",
+  "team_work_ex",
+  "communication_ex",
+  "supervising_ex",
+  "respect_ex",
+  "column_break_jbom",
+  "very_good",
+  "work_environment_vg",
+  "salary_vg",
+  "treatment_vg",
+  "work_training_vg",
+  "team_work_vg",
+  "communication_vg",
+  "supervising_vg",
+  "respect_vg",
+  "column_break_bbtk",
+  "good",
+  "work_environment_go",
+  "salary_go",
+  "treatment_go",
+  "work_training_go",
+  "team_work_go",
+  "communication_go",
+  "supervising_go",
+  "respect_go",
+  "column_break_brbl",
+  "weak",
+  "work_environment_wk",
+  "salary_wk",
+  "treatment_wk",
+  "work_training_wk",
+  "team_work_wk",
+  "communication_wk",
+  "supervising_wk",
+  "respect_wk",
+  "column_break_ehlo",
+  "very_weak",
+  "work_environment_vwk",
+  "salary_vwk",
+  "treatment_vwk",
+  "work_training_vwk",
+  "team_work_vwk",
+  "communication_vwk",
+  "supervising_vwk",
+  "respect_vwk",
+  "did_you_receive_your_tasks_on_joining__section",
+  "question",
+  "column_break_advw",
+  "joining_yes",
+  "column_break_ptgu",
+  "joining_no",
+  "do_you_wish_to_work_with_us_again__section",
+  "html_swto",
+  "column_break_ucxm",
+  "work_yes",
+  "column_break_ivhj",
+  "work_no",
+  "do_you_wish_to_work_for_the_same_department_again__section",
+  "html_brmu",
+  "column_break_ewhv",
+  "department_yes",
+  "column_break_grtb",
+  "department_no",
+  "section_break_orfe",
+  "other_comment"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_axmy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Exit Interview ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "interview_done_by",
+   "fieldtype": "Data",
+   "label": "Interview Done By"
+  },
+  {
+   "fieldname": "resignation_reference",
+   "fieldtype": "Link",
+   "label": "Resignation Reference",
+   "options": "Employee Resignation ST",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.resignation_reference",
+   "fetch_from": "resignation_reference.resignation_date",
+   "fieldname": "resignation_date",
+   "fieldtype": "Date",
+   "label": "Resignation Date"
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.marital_status",
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "\nSingle\nMarried\nDivorced\nWidowed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hxiu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee_no.custom_idresidency_number",
+   "fieldname": "id_no",
+   "fieldtype": "Data",
+   "label": "ID No",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.reports_to",
+   "fieldname": "direct_manager",
+   "fieldtype": "Link",
+   "label": "Direct Manager",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "leaving_reasons_section",
+   "fieldtype": "Section Break",
+   "label": "<b>\u0627\u0633\u0628\u0627\u0628 \u0627\u0644\u062e\u0631\u0648\u062c</b>"
+  },
+  {
+   "fieldname": "column_break_clew",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "did_you_receive_your_tasks_on_joining__section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "joining_yes",
+   "fieldtype": "Check",
+   "label": "\u0646\u0639\u0645"
+  },
+  {
+   "fieldname": "column_break_ptgu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "joining_no",
+   "fieldtype": "Check",
+   "label": "\u0644\u0627"
+  },
+  {
+   "fieldname": "do_you_wish_to_work_with_us_again__section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "work_yes",
+   "fieldtype": "Check",
+   "label": "\u0646\u0639\u0645"
+  },
+  {
+   "fieldname": "column_break_ivhj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "work_no",
+   "fieldtype": "Check",
+   "label": "\u0644\u0627"
+  },
+  {
+   "fieldname": "do_you_wish_to_work_for_the_same_department_again__section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "department_yes",
+   "fieldtype": "Check",
+   "label": "\u0646\u0639\u0645"
+  },
+  {
+   "fieldname": "column_break_grtb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "department_no",
+   "fieldtype": "Check",
+   "label": "\u0644\u0627"
+  },
+  {
+   "fieldname": "section_break_orfe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "other_comment",
+   "fieldtype": "Small Text",
+   "label": "\u0645\u0644\u0627\u062d\u0638\u0627\u062a \u0623\u062e\u0631\u064a"
+  },
+  {
+   "fieldname": "column_break_advw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "question",
+   "fieldtype": "HTML",
+   "label": "Did you receive your Tasks on Joining ?",
+   "options": "<h5>\u0647\u0644 \u0627\u0633\u062a\u0644\u0645\u062a \u0627\u0644\u0645\u0647\u0627\u0645 \u0627\u0644\u062e\u0627\u0635\u0629 \u0628\u0643 \u0639\u0646\u062f \u0627\u0644\u0627\u0644\u062a\u062d\u0627\u0642\u061f</h5>"
+  },
+  {
+   "fieldname": "html_swto",
+   "fieldtype": "HTML",
+   "label": "Do you wish to work with us Again ?",
+   "options": "<h5>\u0647\u0644 \u062a\u062a\u0645\u0646\u0649 \u0627\u0644\u0639\u0645\u0644 \u0645\u0639\u0646\u0627 \u0645\u0631\u0629 \u0627\u062e\u0631\u0649 \u061f</h5>"
+  },
+  {
+   "fieldname": "column_break_ucxm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "html_brmu",
+   "fieldtype": "HTML",
+   "label": "Do you wish to work for the same department Again ?",
+   "options": "<h5>\u0647\u0644 \u062a\u062a\u0645\u0646\u0649 \u0627\u0644\u0639\u0645\u0644 \u0641\u064a \u0646\u0641\u0633 \u0627\u0644\u0627\u062f\u0627\u0631\u0629 \u0645\u0631\u0629 \u0627\u062e\u0631\u0649 \u061f</h5>"
+  },
+  {
+   "fieldname": "column_break_ewhv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hwhl",
+   "fieldtype": "Section Break",
+   "label": "<b>\u0642\u0645 \u0628\u062a\u0642\u064a\u064a\u0645 \u0627\u0644\u0627\u062a\u064a \u0641\u064a \u0627\u062f\u0627\u0631\u062a\u0643</b>"
+  },
+  {
+   "fieldname": "html_chkq",
+   "fieldtype": "HTML",
+   "label": "Evaluate Following in your Department"
+  },
+  {
+   "fieldname": "work_environment",
+   "fieldtype": "HTML",
+   "label": "Work Environment",
+   "options": "<h5 style=\"padding-top:20px;\">\u0637\u0628\u064a\u0639\u0629 \u0627\u0644\u0639\u0645\u0644</h5>"
+  },
+  {
+   "fieldname": "salary",
+   "fieldtype": "HTML",
+   "label": "Salary",
+   "options": "<h5 style=\"padding-top:15px;\">\u0627\u0644\u0631\u0627\u062a\u0628</h5>"
+  },
+  {
+   "fieldname": "treatment",
+   "fieldtype": "HTML",
+   "label": "Treatment",
+   "options": "<h5 style=\"padding-top:15px;\">\u0623\u0633\u0644\u0648\u0628 \u0627\u0644\u062a\u0639\u0627\u0645\u0644</h5>"
+  },
+  {
+   "fieldname": "work_training",
+   "fieldtype": "HTML",
+   "label": "Work Training",
+   "options": "<h5 style=\"padding-top:15px;\">\u062a\u062f\u0631\u064a\u0628 \u0627\u0644\u0639\u0645\u0644</h5>"
+  },
+  {
+   "fieldname": "team_work",
+   "fieldtype": "HTML",
+   "label": "Team Work",
+   "options": "<h5 style=\"padding-top:15px;\">\u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u062c\u0645\u0627\u0639\u064a</h5>"
+  },
+  {
+   "fieldname": "communication",
+   "fieldtype": "HTML",
+   "label": "Communication",
+   "options": "<h5 style=\"padding-top:15px;\">\u0627\u0644\u062a\u0648\u0627\u0635\u0644</h5>"
+  },
+  {
+   "fieldname": "supervising",
+   "fieldtype": "HTML",
+   "label": "Supervising",
+   "options": "<h5 style=\"padding-top:15px;\">\u0627\u0644\u0625\u0634\u0631\u0627\u0641</h5>"
+  },
+  {
+   "fieldname": "respect",
+   "fieldtype": "HTML",
+   "label": "Respect",
+   "options": "<h5 style=\"padding-top:15px;\">\u0627\u0644\u0625\u062d\u062a\u0631\u0627\u0645</h5>"
+  },
+  {
+   "fieldname": "column_break_cjhb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "excellent",
+   "fieldtype": "HTML",
+   "label": "Excellent",
+   "options": "<h5>\u0645\u0645\u062a\u0627\u0632</h5>"
+  },
+  {
+   "fieldname": "column_break_jbom",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "very_good",
+   "fieldtype": "HTML",
+   "label": "Very good",
+   "options": "<h5>\u062c\u064a\u062f \u062c\u062f\u0623</h5>"
+  },
+  {
+   "fieldname": "column_break_bbtk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "good",
+   "fieldtype": "HTML",
+   "label": "Good",
+   "options": "<h5>\u062c\u064a\u062f</h5>"
+  },
+  {
+   "fieldname": "column_break_brbl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weak",
+   "fieldtype": "HTML",
+   "label": "Weak",
+   "options": "<h5>\u0636\u0639\u064a\u0641</h5>"
+  },
+  {
+   "fieldname": "column_break_ehlo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "very_weak",
+   "fieldtype": "HTML",
+   "label": "Very Weak",
+   "options": "<h5>\u0636\u0639\u064a\u0641 \u062c\u062f\u0623</h5>"
+  },
+  {
+   "default": "0",
+   "fieldname": "work_environment_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "work_environment_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "work_environment_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "work_environment_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "work_environment_vwk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "salary_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "salary_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "salary_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "salary_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "salary_vwk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "treatment_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "treatment_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "treatment_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "treatment_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "treatment_vwk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "work_training_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "work_training_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "work_training_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "work_training_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "work_training_vwk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "team_work_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "team_work_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "team_work_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "team_work_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "team_work_vwk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "communication_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "communication_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "communication_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "communication_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "communication_vwk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "supervising_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "supervising_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "supervising_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "supervising_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "supervising_vwk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "respect_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "respect_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "respect_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "respect_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "respect_vwk",
+   "fieldtype": "Check"
+  },
+  {
+   "fetch_from": "employee_no.custom_country",
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country",
+   "read_only": 1
+  },
+  {
+   "fieldname": "retirement_reference",
+   "fieldtype": "Link",
+   "label": "Retirement Reference",
+   "options": "Retirement Request ST",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.retirement_reference",
+   "fetch_from": "retirement_reference.creation_date",
+   "fieldname": "retirement_date",
+   "fieldtype": "Date",
+   "label": "Retirement Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "dissatisfaction_with_salary_and_benefits",
+   "fieldtype": "Check",
+   "label": "Dissatisfaction with salary and benefits"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor_work_environment",
+   "fieldtype": "Check",
+   "label": "Poor work environment"
+  },
+  {
+   "default": "0",
+   "fieldname": "better_job_offer",
+   "fieldtype": "Check",
+   "label": "Better job offer"
+  },
+  {
+   "default": "0",
+   "fieldname": "lack_of_job_security",
+   "fieldtype": "Check",
+   "label": "Lack of job security"
+  },
+  {
+   "default": "0",
+   "fieldname": "lack_of_clarity",
+   "fieldtype": "Check",
+   "label": "Lack of clarity"
+  },
+  {
+   "default": "0",
+   "fieldname": "lack_of_development_and_promotion_opportunities",
+   "fieldtype": "Check",
+   "label": "Lack of development and promotion opportunities"
+  },
+  {
+   "default": "0",
+   "fieldname": "high_stress_and_poor_worklife_balance",
+   "fieldtype": "Check",
+   "label": "High stress and poor work-life balance"
+  },
+  {
+   "default": "0",
+   "fieldname": "lack_of_appreciation_and_recognition_of_efforts",
+   "fieldtype": "Check",
+   "label": "Lack of appreciation and recognition of efforts"
+  },
+  {
+   "default": "0",
+   "fieldname": "differences_in_values_and_goals",
+   "fieldtype": "Check",
+   "label": "Differences in values and goals"
+  },
+  {
+   "default": "0",
+   "fieldname": "lack_of_proper_supervision",
+   "fieldtype": "Check",
+   "label": "Lack of proper supervision"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-09 15:38:09.873707",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Exit Interview ST",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

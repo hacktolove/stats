@@ -1,0 +1,268 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SPM-.#####",
+ "creation": "2024-10-21 10:18:08.823351",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_4kch",
+  "creation_date",
+  "created_by",
+  "column_break_ermn",
+  "decision_reference",
+  "request_type",
+  "amended_from",
+  "section_break_ghgm",
+  "employee_for_designation",
+  "column_break_phtw",
+  "old_designation",
+  "column_break_yzuv",
+  "new_designation",
+  "section_break_iqaj",
+  "main_department",
+  "column_break_zfkz",
+  "main_department_manager_old",
+  "column_break_ketq",
+  "main_department_manager_new",
+  "bsub_department_manager_changeb_section",
+  "sub_department",
+  "column_break_aluk",
+  "old_direct_manager",
+  "column_break_lrqt",
+  "new_direct_manager",
+  "brole_changeb_section",
+  "employee_for_role",
+  "column_break_hqzl",
+  "new_role",
+  "bother_changesb_section",
+  "other_changes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_4kch",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "System Permission Management ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ermn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "decision_reference",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Decision Reference",
+   "reqd": 1
+  },
+  {
+   "fieldname": "request_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Request Type",
+   "options": "\nRole Change\nOther Changes",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.request_type == \"Designation Change\"",
+   "fieldname": "section_break_ghgm",
+   "fieldtype": "Section Break",
+   "label": "<b>Designation Change</b>"
+  },
+  {
+   "depends_on": "eval:doc.request_type == \"Designation Change\"",
+   "fieldname": "employee_for_designation",
+   "fieldtype": "Link",
+   "label": "Employee For Designation",
+   "mandatory_depends_on": "eval:doc.request_type == \"Designation Change\"",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_for_designation.designation",
+   "fieldname": "old_designation",
+   "fieldtype": "Link",
+   "label": "Old Designation",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.employee_for_designation",
+   "fieldname": "new_designation",
+   "fieldtype": "Link",
+   "label": "New Designation",
+   "mandatory_depends_on": "eval:doc.employee_for_designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "column_break_phtw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yzuv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.request_type == \"Main Department Manager Change\"",
+   "fieldname": "section_break_iqaj",
+   "fieldtype": "Section Break",
+   "label": "<b>Main Department Manager Change</b>"
+  },
+  {
+   "depends_on": "eval:doc.request_type == \"Main Department Manager Change\"",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "mandatory_depends_on": "eval:doc.request_type == \"Main Department Manager Change\"",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_zfkz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "main_department.custom_main_department_manager",
+   "fieldname": "main_department_manager_old",
+   "fieldtype": "Link",
+   "label": "Main Department Manager Old",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ketq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.main_department",
+   "fieldname": "main_department_manager_new",
+   "fieldtype": "Link",
+   "label": "Main Department Manager New",
+   "mandatory_depends_on": "eval:doc.main_department",
+   "options": "Employee"
+  },
+  {
+   "depends_on": "eval:doc.request_type == \"Sub Department Manager Change\"",
+   "fieldname": "bsub_department_manager_changeb_section",
+   "fieldtype": "Section Break",
+   "label": "<b>Sub Department Manager Change</b>"
+  },
+  {
+   "depends_on": "eval:doc.request_type == \"Sub Department Manager Change\"",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "mandatory_depends_on": "eval:doc.request_type == \"Sub Department Manager Change\"",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "sub_department.custom_direct_manager",
+   "fieldname": "old_direct_manager",
+   "fieldtype": "Link",
+   "label": "Old Direct Manager",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.sub_department",
+   "fieldname": "new_direct_manager",
+   "fieldtype": "Link",
+   "label": "New Direct Manager",
+   "mandatory_depends_on": "eval:doc.sub_department",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_aluk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lrqt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.request_type == \"Role Change\"",
+   "fieldname": "brole_changeb_section",
+   "fieldtype": "Section Break",
+   "label": "<b>Role Change</b>"
+  },
+  {
+   "depends_on": "eval:doc.request_type == \"Role Change\"",
+   "fieldname": "employee_for_role",
+   "fieldtype": "Link",
+   "label": "Employee For Role",
+   "mandatory_depends_on": "eval:doc.request_type == \"Role Change\"",
+   "options": "Employee"
+  },
+  {
+   "depends_on": "eval:doc.employee_for_role",
+   "fieldname": "new_role",
+   "fieldtype": "Link",
+   "label": "New Role",
+   "mandatory_depends_on": "eval:doc.request_type == \"Role Change\"",
+   "options": "Role"
+  },
+  {
+   "fieldname": "column_break_hqzl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.request_type == \"Other Changes\"",
+   "fieldname": "bother_changesb_section",
+   "fieldtype": "Section Break",
+   "label": "<b>Other Changes</b>"
+  },
+  {
+   "depends_on": "eval:doc.request_type == \"Other Changes\"",
+   "fieldname": "other_changes",
+   "fieldtype": "Small Text",
+   "label": "Other Changes",
+   "mandatory_depends_on": "eval:doc.request_type == \"Other Changes\""
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-17 10:07:41.133632",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "System Permission Management ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

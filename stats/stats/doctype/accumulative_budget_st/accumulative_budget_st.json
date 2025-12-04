@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:AB-{fiscal_year}",
+ "creation": "2024-08-23 07:43:39.898509",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "transaction_date",
+  "fiscal_year",
+  "department_budget_requests",
+  "column_break_afob",
+  "created_by",
+  "divide_method",
+  "total_requested_amount",
+  "total_approved_amount",
+  "section_break_wqsb",
+  "account_details",
+  "section_break_lyym",
+  "allocate_department_wise_budget",
+  "department_wise_budget_allocation_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fiscal Year",
+   "options": "Fiscal Year",
+   "reqd": 1
+  },
+  {
+   "default": "__user",
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User"
+  },
+  {
+   "fieldname": "divide_method",
+   "fieldtype": "Select",
+   "label": "Divide Method",
+   "options": "\nProportionally\nManually"
+  },
+  {
+   "fieldname": "column_break_afob",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_wqsb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "account_details",
+   "fieldtype": "Table",
+   "label": "Account Details",
+   "options": "Accumulative Budget Details ST"
+  },
+  {
+   "fieldname": "department_budget_requests",
+   "fieldtype": "Button",
+   "label": "Department Budget Requests"
+  },
+  {
+   "fieldname": "section_break_lyym",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:(doc.account_details.length)>0",
+   "fieldname": "allocate_department_wise_budget",
+   "fieldtype": "Button",
+   "label": "Allocate Department Wise Budget"
+  },
+  {
+   "depends_on": "eval:(doc.account_details.length)>0",
+   "fieldname": "department_wise_budget_allocation_details",
+   "fieldtype": "Table",
+   "label": "Department Wise Budget Allocation Details",
+   "options": "Department Wise Budget Allocation Details ST"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Accumulative Budget ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_requested_amount",
+   "fieldtype": "Currency",
+   "label": "Total Requested Amount",
+   "precision": "2"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_approved_amount",
+   "fieldtype": "Currency",
+   "label": "Total Approved Amount ",
+   "precision": "2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-28 15:03:55.943228",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Accumulative Budget ST",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

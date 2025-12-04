@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "REA-.#####",
+ "creation": "2025-08-29 08:16:40.602861",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "creation_date",
+  "education_year",
+  "season_type",
+  "column_break_aird",
+  "activate",
+  "activate_from",
+  "activate_till",
+  "season"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Creation date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "education_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Education Year",
+   "options": "Educational Year ST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_aird",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Yes",
+   "fieldname": "activate",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Activate",
+   "options": "Yes\nNo",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.activate==\"Yes\"",
+   "fieldname": "activate_from",
+   "fieldtype": "Date",
+   "label": "Activate From",
+   "mandatory_depends_on": "eval:doc.activate==\"Yes\""
+  },
+  {
+   "depends_on": "eval:doc.activate==\"Yes\"",
+   "fieldname": "activate_till",
+   "fieldtype": "Date",
+   "label": "Activate Till",
+   "mandatory_depends_on": "eval:doc.activate==\"Yes\""
+  },
+  {
+   "fieldname": "season",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Season",
+   "options": "Season ST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "season_type",
+   "fieldtype": "Table MultiSelect",
+   "label": "Season Type",
+   "options": "Season Type Table ST"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-16 15:23:32.392157",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Release Education Allowance ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

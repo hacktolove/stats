@@ -1,0 +1,234 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EDAR-.#####",
+ "creation": "2024-12-09 12:38:56.350653",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ulv6",
+  "creation_date",
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "section",
+  "grade",
+  "column_break_pvga",
+  "educational_year",
+  "season",
+  "approved_amount",
+  "payment_status",
+  "release_reference",
+  "family_report",
+  "no_of_kids",
+  "ed_request_reason",
+  "section_break_hasz",
+  "terms_and_conditions",
+  "i_agree_to_the_terms_and_conditions",
+  "section_break_trnq",
+  "education_allowance_request_details",
+  "amended_from",
+  "section_break_sxeg",
+  "employee_education_allowance_history"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ulv6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "description": "Child's age would be based on this date",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.grade",
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_pvga",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "educational_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Educational Year",
+   "options": "Educational Year ST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "approved_amount",
+   "fieldtype": "Currency",
+   "label": "Approved Amount",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "no_copy": 1,
+   "options": "\nPending\nPaid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_hasz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "education_allowance_request_details",
+   "fieldtype": "Table",
+   "label": "Education Allowance Request Details",
+   "options": "Education Allowance Request Details ST"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Education Allowance Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "season",
+   "fieldtype": "Link",
+   "label": "Season",
+   "no_copy": 1,
+   "options": "Season ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_sxeg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_education_allowance_history",
+   "fieldtype": "Table",
+   "label": "Employee Education Allowance History",
+   "options": "Employee Education Allowance History ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "family_report",
+   "fieldtype": "Attach",
+   "label": "Family Report",
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_of_kids",
+   "fieldtype": "Int",
+   "label": "No of Kids",
+   "non_negative": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_trnq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Small Text",
+   "label": "Terms and Conditions",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "i_agree_to_the_terms_and_conditions",
+   "fieldtype": "Check",
+   "label": "I agree to the terms and conditions"
+  },
+  {
+   "fieldname": "release_reference",
+   "fieldtype": "Link",
+   "label": "Release Reference",
+   "options": "Release Education Allowance ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ed_request_reason",
+   "fieldtype": "Data",
+   "label": "ED Request Reason"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "make_attachments_public": 1,
+ "modified": "2025-09-29 15:33:32.288693",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Education Allowance Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

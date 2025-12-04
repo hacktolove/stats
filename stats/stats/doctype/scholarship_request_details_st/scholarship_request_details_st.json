@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-10 12:17:57.721206",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "scholarship_request_reference",
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "column_break_azqj",
+  "specialisation_type",
+  "qualification",
+  "action",
+  "comment"
+ ],
+ "fields": [
+  {
+   "fieldname": "scholarship_request_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Scholarship Request Reference",
+   "options": "Scholarship Request ST"
+  },
+  {
+   "fetch_from": "scholarship_request_reference.employee_no",
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "scholarship_request_reference.specialisation_type",
+   "fieldname": "specialisation_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Specialisation Type",
+   "options": "Specialisation Type ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "scholarship_request_reference.qualification",
+   "fieldname": "qualification",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Qualification",
+   "options": "Qualification ST",
+   "read_only": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "action",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Action",
+   "options": "\nOpen\nAccepted\nRejected"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "column_break_azqj",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-10 16:08:10.872507",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Scholarship Request Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,192 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PAYR-.#####",
+ "creation": "2024-08-23 08:20:29.467341",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_jpvh",
+  "transaction_date",
+  "reference_name",
+  "reference_no",
+  "type",
+  "default_expense_account",
+  "default_chargeable_account",
+  "cost_center",
+  "column_break_akfy",
+  "party_type",
+  "party_name_employee",
+  "party_name_supplier",
+  "budget_account",
+  "total_amount",
+  "amended_from",
+  "employee_details_st_section",
+  "employees",
+  "section_break_qhkl",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_jpvh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payment Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_akfy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Classified\"",
+   "fieldname": "reference_name",
+   "fieldtype": "Link",
+   "label": "Reference Name",
+   "options": "DocType"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Classified\"",
+   "fieldname": "reference_no",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference No",
+   "options": "reference_name"
+  },
+  {
+   "fieldname": "budget_account",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Budget Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "employee_details_st_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Details ST"
+  },
+  {
+   "fieldname": "employees",
+   "fieldtype": "Table",
+   "label": "Employees",
+   "options": "Employee Details For Payment ST"
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Select",
+   "label": "Party Type",
+   "options": "\nSupplier\nEmployee"
+  },
+  {
+   "depends_on": "eval: doc.party_type == \"Employee\"",
+   "fieldname": "party_name_employee",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Party Name"
+  },
+  {
+   "depends_on": "eval: doc.party_type == \"Supplier\"",
+   "fieldname": "party_name_supplier",
+   "fieldtype": "Link",
+   "label": "Party Name",
+   "options": "Supplier"
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction Date"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "precision": "2",
+   "read_only_depends_on": "eval:doc.type == \"Classified\""
+  },
+  {
+   "description": "Type = \"Classified\" --&gt; From Other Doctypes <br>\nType = \"Unclassified\" --&gt; Direct",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\nClassified\nUnclassified"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Unclassified\"",
+   "fieldname": "default_expense_account",
+   "fieldtype": "Link",
+   "label": "Default Expense Account",
+   "mandatory_depends_on": "eval:doc.type == \"Unclassified\"",
+   "options": "Account"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Unclassified\"",
+   "fieldname": "default_chargeable_account",
+   "fieldtype": "Link",
+   "label": "Default Chargeable Account",
+   "mandatory_depends_on": "eval:doc.type == \"Unclassified\"",
+   "options": "Account"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Unclassified\"",
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "mandatory_depends_on": "eval:doc.type == \"Unclassified\"",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "section_break_qhkl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Journal Entry",
+   "link_fieldname": "custom_payment_request_reference"
+  },
+  {
+   "link_doctype": "Payment Procedure ST",
+   "link_fieldname": "payment_request_reference"
+  }
+ ],
+ "modified": "2025-06-05 12:41:05.630247",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Payment Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

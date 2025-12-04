@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OJ-.######",
+ "creation": "2024-08-05 15:11:45.882101",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "job_title",
+  "designation",
+  "main_department",
+  "sub_department",
+  "grade",
+  "section",
+  "branch",
+  "column_break_pmyh",
+  "posted_on",
+  "closed_on",
+  "status",
+  "employment_type",
+  "contract_type"
+ ],
+ "fields": [
+  {
+   "description": "Job Details Fetch From Man Power Planning's Job Details Table",
+   "fieldname": "job_title",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job No.",
+   "options": "Job No ST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Main Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Grade",
+   "options": "Employee Grade",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "column_break_pmyh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "posted_on",
+   "fieldtype": "Date",
+   "label": "Posted On"
+  },
+  {
+   "fieldname": "closed_on",
+   "fieldtype": "Date",
+   "label": "Closed On"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOpen\nClosed"
+  },
+  {
+   "fieldname": "employment_type",
+   "fieldtype": "Link",
+   "label": "Employment Type",
+   "options": "Employment Type"
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "label": "Contract Type",
+   "options": "Contract Type ST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Job Application ST",
+   "link_fieldname": "opening_job_reference"
+  }
+ ],
+ "modified": "2025-05-27 07:47:48.588033",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Opening Job ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

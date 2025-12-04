@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-24 11:00:31.067472",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "evaluation_classification",
+  "column_break_jrjt",
+  "lower_range",
+  "column_break_bmko",
+  "upper_range"
+ ],
+ "fields": [
+  {
+   "fieldname": "evaluation_classification",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Evaluation classification",
+   "options": "Evaluation Classification ST"
+  },
+  {
+   "fieldname": "column_break_jrjt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lower_range",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Lower Range",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_bmko",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "upper_range",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Upper Range",
+   "precision": "2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-21 08:34:46.509708",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Evaluation Slots Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

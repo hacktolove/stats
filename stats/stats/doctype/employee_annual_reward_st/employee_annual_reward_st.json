@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EAR-.#####",
+ "creation": "2024-11-28 10:08:15.096405",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_womp",
+  "creation_date",
+  "created_by",
+  "main_department",
+  "sub_department",
+  "fetch_employee",
+  "column_break_puzb",
+  "reward_year",
+  "select_evaluation",
+  "evaluation_type",
+  "amended_from",
+  "section_break_hfap",
+  "employee_annual_reward_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_womp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Annual Reward ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "description": "Payment rewards are based on salary assignment fetched as per the this creation date",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation date"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "depends_on": "eval: doc.docstatus == 0",
+   "fieldname": "fetch_employee",
+   "fieldtype": "Button",
+   "label": "Fetch Employee"
+  },
+  {
+   "fieldname": "column_break_puzb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reward_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reward Year",
+   "options": "Fiscal Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "select_evaluation",
+   "fieldtype": "Table MultiSelect",
+   "label": "Select Evaluation",
+   "options": "Multi Evaluation Alternatives Previous Year  ST",
+   "reqd": 1
+  },
+  {
+   "default": "Yearly",
+   "fieldname": "evaluation_type",
+   "fieldtype": "Data",
+   "label": "Evaluation Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_hfap",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_annual_reward_details",
+   "fieldtype": "Table",
+   "label": "Employee Annual Reward Details",
+   "options": "Employee Annual Reward Details ST"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Payment Request ST",
+   "link_fieldname": "reference_no"
+  }
+ ],
+ "modified": "2024-12-10 14:17:41.056550",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Annual Reward ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

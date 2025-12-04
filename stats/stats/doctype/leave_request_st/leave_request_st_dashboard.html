@@ -1,0 +1,42 @@
+{% if not jQuery.isEmptyObject(data) %}
+<div>
+	<p><b style="color:red">Note : </b>This available leave balance is based on below mentioned <b>Leave Cycle Year</b> Only.</p>
+</div>
+<table class="table table-bordered small">
+	<thead>
+		<tr>
+			<th style="width: 16%">{{ __("Leave Type") }}</th>
+			<th style="width: 16%" class="text-right">{{ __("Total Allocated Leaves") }}</th>
+			<!-- <th style="width: 16%" class="text-right">{{ __("Expired Leaves") }}</th> -->
+			<th style="width: 16%" class="text-right">{{ __("Used Leaves") }}</th>
+			<!-- <th style="width: 16%" class="text-right">{{ __("Leaves Pending Approval") }}</th> -->
+			<th style="width: 16%" class="text-right">{{ __("Available Leaves") }}</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for(const [key, value] of Object.entries(data["leave_allocation"])) { %}
+			{% let color = cint(value["remaining_leaves"]) > 0 ? "green" : "red" %}
+			<tr>
+				<td> {%= key %} </td>
+				<td class="text-right"> {%= value["total_leaves"] %} </td>
+				<td class="text-right"> {%= value["leaves_taken"] %} </td>
+				<td class="text-right" style="color: {{ color }}"> {%= value["remaining_leaves"] %} </td>
+			</tr>
+		{% } %}
+	</tbody>
+</table>
+<div>
+	{% if data["current_leave_type"]==data["leave_types_list"][1] %}
+	<!-- {{data["leave_types_list"][1]}} -->
+	<p><b style="color:red">Note : </b>Leave Type <b>{{data["current_leave_type"]}}</b> can be used after leaves of <b>{{data["leave_types_list"][0]}}</b> are fully consumed.</p>
+	{% endif %}
+
+	{% if data["current_leave_type"]==data["leave_types_list"][2] %}
+	<!-- {{data["leave_types_list"][2]}} -->
+	<p><b style="color:red">Note : </b>Leave Type <b>{{data["current_leave_type"]}}</b> can be used after leaves of <b>{{data["leave_types_list"][1]}}</b> are fully consumed.</p>
+	{% endif %}
+
+</div>
+{% else %}
+<p style="margin-top: 30px;"> {{ __("No leaves have been allocated.") }} </p>
+{% endif %}

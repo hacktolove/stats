@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "TNA-.#####",
+ "creation": "2024-09-03 08:10:18.424653",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "created_by",
+  "employee",
+  "main_department",
+  "sub_department",
+  "column_break_vhfu",
+  "request_from_date",
+  "request_to_date",
+  "training_event",
+  "amended_from",
+  "section_break_vxrh",
+  "training_needs_analysis_employee_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Training Needs Analysis ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "request_from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Request From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "request_to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Request To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vhfu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vxrh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "training_needs_analysis_employee_details",
+   "fieldtype": "Table",
+   "label": "Training Needs Analysis Employee Details",
+   "options": "Training Needs Analysis Employee Details ST"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "training_event",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Training Event",
+   "options": "Training Event ST"
+  },
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-18 13:08:02.486062",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Training Needs Analysis ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

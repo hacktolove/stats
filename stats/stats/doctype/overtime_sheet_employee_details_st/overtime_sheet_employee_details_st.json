@@ -1,0 +1,199 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-17 13:59:17.483748",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "overtime_request_reference",
+  "request_date",
+  "employee_no",
+  "employee_name",
+  "grade",
+  "required_days",
+  "no_of_vacation",
+  "no_of_absent",
+  "total_no_of_approved_days",
+  "no_of_hours_per_day",
+  "transport_per_day",
+  "column_break_zgak",
+  "required_extra_hours",
+  "actual_extra_hours",
+  "amount",
+  "overtime_rate_per_hour",
+  "due_amount_per_hour",
+  "idresidency_number",
+  "sub_department",
+  "basic_salary",
+  "transportation_amount",
+  "total_salary"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "overtime_request_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Overtime Request Reference",
+   "options": "Overtime Request ST"
+  },
+  {
+   "columns": 1,
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Request Date"
+  },
+  {
+   "columns": 1,
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee No",
+   "options": "Employee"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name"
+  },
+  {
+   "columns": 1,
+   "fieldname": "required_extra_hours",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Required Extra Hours",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "actual_extra_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Actual Extra Hours",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_zgak",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overtime_rate_per_hour",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Overtime Rate Per Hour",
+   "read_only": 1
+  },
+  {
+   "fieldname": "required_days",
+   "fieldtype": "Int",
+   "label": "Required Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_of_vacation",
+   "fieldtype": "Int",
+   "label": "No of Vacation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_no_of_approved_days",
+   "fieldtype": "Int",
+   "label": "Total No of Approved Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_of_hours_per_day",
+   "fieldtype": "Select",
+   "label": "No of Hours Per Day",
+   "options": "\n1\n1.5\n2\n2.5\n3\n3.5\n4\n4.5\n5\n5.5\n6\n6.5\n7\n7.5\n8",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.grade",
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_idresidency_number",
+   "fieldname": "idresidency_number",
+   "fieldtype": "Data",
+   "label": "ID/Residency Number",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "basic_salary",
+   "fieldtype": "Currency",
+   "label": "Basic Salary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transportation_amount",
+   "fieldtype": "Currency",
+   "label": "Transportation Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_salary",
+   "fieldtype": "Currency",
+   "label": "Total Salary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "due_amount_per_hour",
+   "fieldtype": "Currency",
+   "label": "Due Amount Per Hour",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_of_absent",
+   "fieldtype": "Int",
+   "label": "No of Absent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transport_per_day",
+   "fieldtype": "Currency",
+   "label": "Transport Per Day",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-25 10:54:17.190199",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Overtime Sheet Employee Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

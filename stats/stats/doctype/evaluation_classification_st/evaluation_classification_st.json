@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:evaluation_classification",
+ "creation": "2024-10-21 08:11:18.671799",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "evaluation_classification",
+  "meet_expectation",
+  "exceed_expectation",
+  "highly_exceed_expectation"
+ ],
+ "fields": [
+  {
+   "fieldname": "evaluation_classification",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Evaluation Classification",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "meet_expectation",
+   "fieldtype": "Check",
+   "label": "Meet Expectation"
+  },
+  {
+   "default": "0",
+   "fieldname": "exceed_expectation",
+   "fieldtype": "Check",
+   "label": "Exceed Expectation"
+  },
+  {
+   "default": "0",
+   "fieldname": "highly_exceed_expectation",
+   "fieldtype": "Check",
+   "label": "Highly Exceed Expectation"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-29 08:05:14.605585",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Evaluation Classification ST",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

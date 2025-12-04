@@ -1,0 +1,253 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ETR-.#####",
+ "creation": "2024-09-03 07:45:07.888194",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "date",
+  "training_event",
+  "training_type",
+  "training_classification",
+  "training_start_date",
+  "training_end_date",
+  "no_of_days",
+  "total_of_hours",
+  "column_break_waez",
+  "training_level",
+  "training_method",
+  "period",
+  "city",
+  "location",
+  "trainer",
+  "supplier",
+  "employee_checkin_required",
+  "employee_checkout_required",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Training Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "depends_on": "eval:doc.employee_no",
+   "fieldname": "training_event",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Training Event",
+   "mandatory_depends_on": "eval:doc.employee_no",
+   "options": "Training Event ST"
+  },
+  {
+   "fetch_from": "training_event.training_classification",
+   "fieldname": "training_classification",
+   "fieldtype": "Link",
+   "label": "Training Classification",
+   "options": "Training Classification ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.training_start_date",
+   "fieldname": "training_start_date",
+   "fieldtype": "Date",
+   "label": "Training Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.training_end_date",
+   "fieldname": "training_end_date",
+   "fieldtype": "Date",
+   "label": "Training End Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.no_of_days",
+   "fieldname": "no_of_days",
+   "fieldtype": "Int",
+   "label": "No of Days",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.total_of_hours",
+   "fieldname": "total_of_hours",
+   "fieldtype": "Int",
+   "label": "Total of Hours",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.training_level",
+   "fieldname": "training_level",
+   "fieldtype": "Link",
+   "label": "Training Level",
+   "options": "Training Level ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_waez",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "training_event.training_method",
+   "fieldname": "training_method",
+   "fieldtype": "Select",
+   "label": "Training Method",
+   "options": "\nOnline\nAttendance",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.period",
+   "fieldname": "period",
+   "fieldtype": "Select",
+   "label": "Period",
+   "options": "\nMorning\nEvening",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.training_method == \"Attendance\"",
+   "fetch_from": "training_event.city",
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "mandatory_depends_on": "eval: doc.training_method == \"Attendance\"",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.training_method == \"Attendance\"",
+   "fetch_from": "training_event.location",
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "mandatory_depends_on": "eval: doc.training_method == \"Attendance\"",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.employee_checkin_required",
+   "fieldname": "employee_checkin_required",
+   "fieldtype": "Select",
+   "label": "Employee Checkin Required",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.employee_checkout_required",
+   "fieldname": "employee_checkout_required",
+   "fieldtype": "Select",
+   "label": "Employee Checkout Required",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "no_copy": 1,
+   "options": "\nPending\nAccepted\nRejected\nFinished",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.training_type",
+   "fieldname": "training_type",
+   "fieldtype": "Link",
+   "label": "Training Type",
+   "options": "Training Type ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.trainer",
+   "fieldname": "trainer",
+   "fieldtype": "Data",
+   "label": "Trainer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.supplier",
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-18 13:35:44.310279",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Training Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

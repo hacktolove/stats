@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CL-.#####",
+ "creation": "2025-09-05 09:51:17.198459",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "competencies_library_details",
+  "competencies_elements_table"
+ ],
+ "fields": [
+  {
+   "fieldname": "competencies_library_details",
+   "fieldtype": "Table",
+   "label": "Competencies Library Details",
+   "options": "Competencies Library Details ST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "competencies_elements_table",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "label": "Competencies Elements Table",
+   "options": "Competencies Elements Table ST",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-05 12:04:07.683634",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Competencies Library ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

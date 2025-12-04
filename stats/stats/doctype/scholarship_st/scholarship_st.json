@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SCS-.#####",
+ "creation": "2024-09-10 10:16:22.937579",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "transaction_date",
+  "permission_days",
+  "scholarship_type",
+  "country",
+  "amended_from",
+  "column_break_jobh",
+  "apply_start_date",
+  "apply_end_date",
+  "status",
+  "scholarship_no",
+  "section_break_otfz",
+  "scholarship_details",
+  "section_break_bvmb",
+  "terms_and_conditions"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Scholarship ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Transaction Date",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.scholarship_type==\"External\"",
+   "fieldname": "country",
+   "fieldtype": "Table MultiSelect",
+   "label": "Country",
+   "mandatory_depends_on": "eval:doc.scholarship_type==\"External\"",
+   "options": "Multi Country ST"
+  },
+  {
+   "fieldname": "apply_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Apply Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "apply_end_date",
+   "fieldtype": "Date",
+   "label": "Apply End Date",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOpen\nClosed",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "scholarship_no",
+   "fieldtype": "Link",
+   "label": "Scholarship No",
+   "no_copy": 1,
+   "options": "Scholarship No ST",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_jobh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_otfz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "scholarship_details",
+   "fieldtype": "Table",
+   "label": "Scholarship Details",
+   "options": "Scholarship Details ST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_bvmb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Small Text",
+   "label": "Terms and Conditions"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "permission_days",
+   "fieldtype": "Int",
+   "label": "Permission Days"
+  },
+  {
+   "fieldname": "scholarship_type",
+   "fieldtype": "Select",
+   "label": "Scholarship Type",
+   "options": "\nInternal\nExternal"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-03 10:40:56.392649",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Scholarship ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

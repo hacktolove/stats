@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "HPE-.#####",
+ "creation": "2024-10-16 06:41:17.716517",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_jddh",
+  "created_by",
+  "department",
+  "fetch_employees",
+  "column_break_twrv",
+  "no_of_years_for_retirement",
+  "section",
+  "main_department",
+  "sub_department",
+  "amended_from",
+  "section_break_spvj",
+  "high_performance_employee_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_jddh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "High Potential ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "no_of_years_for_retirement",
+   "fieldtype": "Float",
+   "label": "No of Years for Retirement "
+  },
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department ",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_twrv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_spvj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "high_performance_employee_details",
+   "fieldtype": "Table",
+   "label": "High Performance Employee Details",
+   "options": "High Performance Employee Details ST"
+  },
+  {
+   "depends_on": "eval:doc.docstatus == 0",
+   "fieldname": "fetch_employees",
+   "fieldtype": "Button",
+   "label": "Fetch Employees"
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-22 15:33:03.561230",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "High Potential ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

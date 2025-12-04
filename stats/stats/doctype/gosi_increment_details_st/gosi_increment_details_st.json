@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-03 10:03:33.355602",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "from_date",
+  "column_break_qkgg",
+  "to_date",
+  "column_break_kyte",
+  "deduction_percentage"
+ ],
+ "fields": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qkgg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kyte",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deduction_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Deduction Percentage",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-03 10:10:05.329239",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "GOSI Increment Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

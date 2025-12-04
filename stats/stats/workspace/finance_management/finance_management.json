@@ -1,0 +1,393 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"95IO6wuh2Y\",\"type\":\"header\",\"data\":{\"text\":\"<br>\",\"col\":12}},{\"id\":\"EiBsIYIucI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"\u0627\u0644\u062f\u0644\u064a\u0644 \u0627\u0644\u0645\u062d\u0627\u0633\u0628\u064a\",\"col\":3}},{\"id\":\"cEekU5g9w7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Cost Center\",\"col\":3}},{\"id\":\"2wZdr0ro9D\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payment Request ST\",\"col\":3}},{\"id\":\"ZobfQYyiEj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payment Procedure ST\",\"col\":3}},{\"id\":\"IqxtqWE39_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Order\",\"col\":3}},{\"id\":\"AuQ8W7eHFy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overtime Sheet ST\",\"col\":3}},{\"id\":\"NnaD0U0T9e\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"E2Ea3p0__v\",\"type\":\"card\",\"data\":{\"card_name\":\"Budget\",\"col\":4}},{\"id\":\"VhuUehMgWI\",\"type\":\"card\",\"data\":{\"card_name\":\"Paid\",\"col\":4}},{\"id\":\"BHw1EqABQj\",\"type\":\"card\",\"data\":{\"card_name\":\"Operation Transactions\",\"col\":4}},{\"id\":\"N0l3GvPfFi\",\"type\":\"card\",\"data\":{\"card_name\":\"Petty Cash Operations\",\"col\":4}},{\"id\":\"lE0CAsfSIk\",\"type\":\"card\",\"data\":{\"card_name\":\"Assets\",\"col\":4}},{\"id\":\"lv6auKm__A\",\"type\":\"card\",\"data\":{\"card_name\":\"International Subscription Payment Request ST\",\"col\":4}},{\"id\":\"Le7YJ1FTnE\",\"type\":\"card\",\"data\":{\"card_name\":\"Financial Period \",\"col\":4}},{\"id\":\"D4hqOy-8w5\",\"type\":\"card\",\"data\":{\"card_name\":\"Sales\",\"col\":4}},{\"id\":\"YMj6jsvXMB\",\"type\":\"card\",\"data\":{\"card_name\":\"Purchases\",\"col\":4}}]",
+ "creation": "2025-04-15 18:42:02.374686",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "income",
+ "idx": 2,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Finance Management",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Budget",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Department Budget ST",
+   "link_count": 0,
+   "link_to": "Department Budget ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Accumulative Budget ST",
+   "link_count": 0,
+   "link_to": "Accumulative Budget ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Material Request",
+   "link_count": 0,
+   "link_to": "Material Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Petty Cash Operations",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Petty Cash Request ST",
+   "link_count": 0,
+   "link_to": "Petty Cash Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Petty Cash Closing ST",
+   "link_count": 0,
+   "link_to": "Petty Cash Closing ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Petty Cash Re-Payment ST",
+   "link_count": 0,
+   "link_to": "Petty Cash Re-Payment ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Deposit To MOF ST",
+   "link_count": 0,
+   "link_to": "Deposit To MOF ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "International Subscription Payment Request ST",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "International Subscription Payment Request ST",
+   "link_count": 0,
+   "link_to": "International Subscription Payment Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Achievement Certificate ST",
+   "link_count": 0,
+   "link_to": "Achievement Certificate ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Paid",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Journal Entry",
+   "link_count": 0,
+   "link_to": "Journal Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payment Entry",
+   "link_count": 0,
+   "link_to": "Payment Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Financial Period ",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Period Closing Voucher",
+   "link_count": 0,
+   "link_to": "Period Closing Voucher",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Operation Transactions",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Business Trip Request ST",
+   "link_count": 0,
+   "link_to": "Business Trip Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "International Subscription Payment Request ST",
+   "link_count": 0,
+   "link_to": "International Subscription Payment Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Assets",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset",
+   "link_count": 0,
+   "link_to": "Asset",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Category",
+   "link_count": 0,
+   "link_to": "Asset Category",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Movement",
+   "link_count": 0,
+   "link_to": "Asset Movement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchases",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Invoice",
+   "link_count": 0,
+   "link_to": "Purchase Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-05-19 13:53:55.550262",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Finance Management",
+ "number_cards": [],
+ "owner": "hametwally@stats.gov.sa",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Main Department Finance Manager"
+  },
+  {
+   "role": "Accounting Dep Manager"
+  },
+  {
+   "role": "Accounting Supervisor"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Report  Employee"
+  },
+  {
+   "role": "Report Dep Manager"
+  },
+  {
+   "role": "Report Supervisor Employee"
+  },
+  {
+   "role": "Senior Report Accountant"
+  },
+  {
+   "role": "Director General of Financial Affairs"
+  },
+  {
+   "role": "Report Dep Manager"
+  },
+  {
+   "role": "Human Affairs- lead Accountant"
+  },
+  {
+   "role": "Human Affairs- Accounting Supervisor"
+  },
+  {
+   "role": "Supplier Accountant"
+  },
+  {
+   "role": "Supplier Supervisor Accountant"
+  }
+ ],
+ "sequence_id": 42.1,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Overtime Sheet ST",
+   "link_to": "Overtime Sheet ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Purchase Order",
+   "link_to": "Purchase Order",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "\u0627\u0644\u062f\u0644\u064a\u0644 \u0627\u0644\u0645\u062d\u0627\u0633\u0628\u064a",
+   "link_to": "Account",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Cost Center",
+   "link_to": "Cost Center",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Payment Request ST",
+   "link_to": "Payment Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Payment Procedure ST",
+   "link_to": "Payment Procedure ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Finance Management"
+}

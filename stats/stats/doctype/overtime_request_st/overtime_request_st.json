@@ -1,0 +1,204 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OR-.#####",
+ "creation": "2024-10-10 10:57:25.998048",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_yiye",
+  "creation_date",
+  "main_department",
+  "sub_department",
+  "day_type",
+  "fetch_employee",
+  "column_break_itlz",
+  "overtime_start_date",
+  "overtime_end_date",
+  "total_no_of_days",
+  "total_no_of_hours",
+  "total_no_of_employees",
+  "status",
+  "created_by",
+  "employee",
+  "amended_from",
+  "section_break_kbpg",
+  "employee_overtime_request",
+  "section_break_pdov",
+  "total_due_amount",
+  "column_break_zais",
+  "request_reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_yiye",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Overtime Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Main Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_itlz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overtime_start_date",
+   "fieldtype": "Date",
+   "label": "Overtime Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "overtime_end_date",
+   "fieldtype": "Date",
+   "label": "Overtime End Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "fetch_employee",
+   "fieldtype": "Button",
+   "label": "Fetch Employee"
+  },
+  {
+   "fieldname": "section_break_kbpg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "employee_overtime_request",
+   "fieldtype": "Table",
+   "label": "Employee Overtime Request",
+   "options": "Employee Overtime Request Details ST"
+  },
+  {
+   "fieldname": "total_due_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Due Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "fieldname": "day_type",
+   "fieldtype": "Select",
+   "label": "Day Type",
+   "options": "\nWeek Days\nOff-Days",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_no_of_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No of Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_pdov",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_zais",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request_reason",
+   "fieldtype": "Small Text",
+   "label": "Request Reason",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_no_of_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "No of Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_no_of_employees",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No of Employees",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Overtime Approval Request ST",
+   "link_fieldname": "overtime_reference"
+  }
+ ],
+ "modified": "2025-08-28 15:25:26.065548",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Overtime Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

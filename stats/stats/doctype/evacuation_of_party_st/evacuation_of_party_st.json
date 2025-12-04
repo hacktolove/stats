@@ -1,0 +1,283 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EOP-.#####",
+ "creation": "2024-11-04 13:31:49.535047",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_lqvw",
+  "date",
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "section",
+  "branch",
+  "terms_and_conditions",
+  "i_agree_to_the_terms_and_conditions",
+  "column_break_sxzw",
+  "last_working_days",
+  "resignation_reference",
+  "retirement_reference",
+  "evacuate_attachment",
+  "cultural_organization",
+  "social_organization",
+  "construction_organization",
+  "amended_from",
+  "section_break_lnjh",
+  "first_level_task",
+  "column_break_iocs",
+  "direct_manager",
+  "direct_manager_name",
+  "column_break_ykcb",
+  "fl_status",
+  "column_break_gkdj",
+  "notes",
+  "section_break_fjwc",
+  "evacuation_second_level_tasks",
+  "section_break_oxpy",
+  "second_level_status",
+  "evacuation_third_level_tasks"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_lqvw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Evacuation of Party ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee_no.custom_section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  },
+  {
+   "fetch_from": "employee_no.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "column_break_sxzw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resignation_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Resignation Reference",
+   "options": "Employee Resignation ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "evacuate_attachment",
+   "fieldtype": "Attach",
+   "label": "Evacuate Attachment"
+  },
+  {
+   "fieldname": "retirement_reference",
+   "fieldtype": "Link",
+   "label": "Retirement Reference",
+   "options": "Retirement Request ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_lnjh",
+   "fieldtype": "Section Break",
+   "label": "<b>First Level: Direct Manager Approval</b>"
+  },
+  {
+   "fieldname": "first_level_task",
+   "fieldtype": "Data",
+   "label": "Task Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_iocs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.first_level_task",
+   "fetch_from": "employee_no.reports_to",
+   "fieldname": "direct_manager",
+   "fieldtype": "Link",
+   "label": "Direct Manager",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ykcb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Pending",
+   "depends_on": "eval:doc.first_level_task",
+   "fieldname": "fl_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nCompleted"
+  },
+  {
+   "fieldname": "column_break_gkdj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.first_level_task",
+   "fieldname": "notes",
+   "fieldtype": "Data",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "section_break_fjwc",
+   "fieldtype": "Section Break",
+   "label": "<b>Second Level: Direct Manager Approval</b>"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.fl_status==\"Completed\"",
+   "fieldname": "evacuation_second_level_tasks",
+   "fieldtype": "Table",
+   "label": "Evacuation Second Level Tasks",
+   "options": "Evacuation Task And Approval ST"
+  },
+  {
+   "fieldname": "section_break_oxpy",
+   "fieldtype": "Section Break",
+   "label": "<b>Third Level: Operation Manager Approval</b>"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.second_level_status==\"Completed\"",
+   "fieldname": "evacuation_third_level_tasks",
+   "fieldtype": "Table",
+   "label": "Evacuation Third Level Tasks",
+   "options": "Evacuation Task And Approval ST"
+  },
+  {
+   "fieldname": "last_working_days",
+   "fieldtype": "Date",
+   "label": "Last Working Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cultural_organization",
+   "fieldtype": "Attach",
+   "label": "Cultural Organization",
+   "reqd": 1
+  },
+  {
+   "fieldname": "social_organization",
+   "fieldtype": "Attach",
+   "label": "Social Organization",
+   "reqd": 1
+  },
+  {
+   "fieldname": "construction_organization",
+   "fieldtype": "Attach",
+   "label": "Construction Organization",
+   "reqd": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "second_level_status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Second Level Status",
+   "options": "Pending\nCompleted"
+  },
+  {
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Small Text",
+   "label": "Terms and Conditions",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "i_agree_to_the_terms_and_conditions",
+   "fieldtype": "Check",
+   "label": "I agree to the terms and conditions"
+  },
+  {
+   "fetch_from": "direct_manager.employee_name",
+   "fieldname": "direct_manager_name",
+   "fieldtype": "Data",
+   "label": "Direct Manager Name",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-20 14:56:32.275657",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Evacuation of Party ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

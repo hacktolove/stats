@@ -1,0 +1,338 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EVR-.###",
+ "creation": "2025-09-22 13:58:09.542525",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_k8as",
+  "creation_date",
+  "column_break_kzlb",
+  "created_by",
+  "event_details_section",
+  "event",
+  "event_creation_date",
+  "event_type",
+  "event_start_date",
+  "ignore_holidays_in_number_of_days",
+  "no_of_days",
+  "no_of_candidates",
+  "event_language",
+  "event_classification",
+  "organization_name",
+  "employee_check_in_required",
+  "employee_check_out_required",
+  "column_break_zpyc",
+  "event_name",
+  "validation",
+  "event_level",
+  "event_end_date",
+  "event_method",
+  "required_participation",
+  "period",
+  "training_place",
+  "saudi_city",
+  "country",
+  "section",
+  "section_break_xzoz",
+  "assign_to_gm",
+  "gm_details",
+  "assign_to_department_manager",
+  "department_manager_details",
+  "section_break_ooku",
+  "candidate_details",
+  "terms_and_conditions",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_k8as",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "column_break_kzlb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "event_details_section",
+   "fieldtype": "Section Break",
+   "label": "Event Details"
+  },
+  {
+   "fieldname": "event",
+   "fieldtype": "Link",
+   "label": "Event",
+   "options": "Event ST"
+  },
+  {
+   "fieldname": "column_break_zpyc",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.event_name",
+   "fieldname": "event_name",
+   "fieldtype": "Data",
+   "label": "Event Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.creation_date",
+   "fieldname": "event_creation_date",
+   "fieldtype": "Date",
+   "label": "Event Creation Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.event_type",
+   "fieldname": "event_type",
+   "fieldtype": "Link",
+   "label": "Event Type",
+   "options": "Events Type ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.validation",
+   "fieldname": "validation",
+   "fieldtype": "Int",
+   "label": "Validation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.event_level",
+   "fieldname": "event_level",
+   "fieldtype": "Link",
+   "label": "Event Level",
+   "options": "Event Level ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.event_start_date",
+   "fieldname": "event_start_date",
+   "fieldtype": "Date",
+   "label": "Event Start Date",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.event != null;",
+   "fetch_from": "event.ignore_holidays_in_number_of_days",
+   "fieldname": "ignore_holidays_in_number_of_days",
+   "fieldtype": "Check",
+   "label": "Ignore Holidays In Number Of Days",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.no_of_days",
+   "fieldname": "no_of_days",
+   "fieldtype": "Int",
+   "label": "No of Days",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.event_classification",
+   "fieldname": "event_classification",
+   "fieldtype": "Link",
+   "label": "Event Classification",
+   "options": "Event Classification ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.organization_name",
+   "fieldname": "organization_name",
+   "fieldtype": "Data",
+   "label": "Organization Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.event_end_date",
+   "fieldname": "event_end_date",
+   "fieldtype": "Date",
+   "label": "Event End Date",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.event != null;",
+   "fieldname": "no_of_candidates",
+   "fieldtype": "Int",
+   "label": "No of Candidates"
+  },
+  {
+   "fetch_from": "event.event_method",
+   "fieldname": "event_method",
+   "fieldtype": "Select",
+   "label": "Event Method",
+   "options": "\nOnline\nAttendance",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.required_participation",
+   "fieldname": "required_participation",
+   "fieldtype": "Select",
+   "label": "Required Participation",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.employee_check_in_required",
+   "fieldname": "employee_check_in_required",
+   "fieldtype": "Select",
+   "label": "Employee Check In Required",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.period",
+   "fieldname": "period",
+   "fieldtype": "Select",
+   "label": "Period",
+   "options": "\nMorning\nEvening",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.employee_check_out_required",
+   "fieldname": "employee_check_out_required",
+   "fieldtype": "Select",
+   "label": "Employee Check Out Required",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.training_place",
+   "fieldname": "training_place",
+   "fieldtype": "Select",
+   "label": "Training Place",
+   "options": "\nInside Stats\nOutside Stats Local\nOutside Stats International",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.event != null && doc.training_place == \"Outside Stats Local\";",
+   "fetch_from": "event.saudi_city",
+   "fieldname": "saudi_city",
+   "fieldtype": "Link",
+   "label": "Saudi City",
+   "options": "Saudi City ST",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.event != null && doc.training_place == \"Outside Stats International\";",
+   "fetch_from": "event.country",
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "event.event_language",
+   "fieldname": "event_language",
+   "fieldtype": "Select",
+   "label": "Event Language",
+   "options": "\nArabic\nEnglish",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.event != null;",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  },
+  {
+   "fieldname": "section_break_xzoz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "assign_to_gm",
+   "fieldtype": "Check",
+   "label": "Assign To GM"
+  },
+  {
+   "depends_on": "eval:doc.assign_to_gm == 1;",
+   "fieldname": "gm_details",
+   "fieldtype": "Table",
+   "label": "GM Details",
+   "options": "Event GM Details ST"
+  },
+  {
+   "default": "0",
+   "fieldname": "assign_to_department_manager",
+   "fieldtype": "Check",
+   "label": "Assign To Department Manager"
+  },
+  {
+   "fieldname": "section_break_ooku",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "candidate_details",
+   "fieldtype": "Table",
+   "label": "Candidate Details",
+   "options": "Event Candidate Details"
+  },
+  {
+   "depends_on": "eval:doc.assign_to_department_manager == 1;",
+   "fieldname": "department_manager_details",
+   "fieldtype": "Table",
+   "label": "Department Manager Details",
+   "options": "Event Dep Manager Details"
+  },
+  {
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Text Editor",
+   "label": "Terms and Conditions"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Event Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-23 07:46:46.949034",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Event Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

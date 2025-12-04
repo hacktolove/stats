@@ -1,0 +1,220 @@
+{
+ "charts": [
+  {
+   "chart_name": "Employee Section",
+   "label": "Employee Section"
+  }
+ ],
+ "content": "[{\"id\":\"2ZEglAJoLo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">BOD Team</span>\",\"col\":12}},{\"id\":\"f_HZB1Mfrz\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"fzG0Pp4Dg2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Employees\",\"col\":4}},{\"id\":\"yNBSHG0MRC\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Resigned Employee\",\"col\":4}},{\"id\":\"-xCy5YuZvk\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Applicants (This month)\",\"col\":4}},{\"id\":\"0NqeUvepLl\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hGn0KNT7AY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Man Power Planning ST\",\"col\":3}},{\"id\":\"nV4pxW9IHl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Man Power Plan Change Request ST\",\"col\":3}},{\"id\":\"9hKQWcix92\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Administrative Structure Updates Request ST\",\"col\":3}},{\"id\":\"Ck-AkJrt1d\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Inquiry ST\",\"col\":3}},{\"id\":\"GoOXP_9vdk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Exit Interview ST\",\"col\":3}},{\"id\":\"ojEZLLwMpa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"System Permission Management ST\",\"col\":3}},{\"id\":\"dd_IVo_Sbt\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Annual Reward ST\",\"col\":3}},{\"id\":\"3mKpP4ma0P\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Grade\",\"col\":3}},{\"id\":\"uV1x-8tVi6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Exit Interview St\",\"col\":3}},{\"id\":\"x0YuLHpOvE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employment Type\",\"col\":3}},{\"id\":\"MskCpgcts8\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0BkobNjo9r\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Employee Section\",\"col\":12}},{\"id\":\"Prg6zv3cm7\",\"type\":\"card\",\"data\":{\"card_name\":\"HR Setup\",\"col\":4}}]",
+ "creation": "2025-01-29 15:56:44.367114",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "unhide",
+ "idx": 1,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "BOD Team",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "HR Setup",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Grade",
+   "link_count": 0,
+   "link_to": "Employee Grade",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Designation",
+   "link_count": 0,
+   "link_to": "Designation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contract Type ST",
+   "link_count": 0,
+   "link_to": "Contract Type ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Step ST",
+   "link_count": 0,
+   "link_to": "Step ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Contract ST",
+   "link_count": 0,
+   "link_to": "Employee Contract ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Section ST",
+   "link_count": 0,
+   "link_to": "Section ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-04-24 14:27:31.548861",
+ "modified_by": "myahia@comtech.sa",
+ "module": "Stats",
+ "name": "BOD Team",
+ "number_cards": [
+  {
+   "label": "Total Employees",
+   "number_card_name": "Total Employees"
+  },
+  {
+   "label": "Resigned Employee",
+   "number_card_name": "Resigned Employee"
+  },
+  {
+   "label": "Total Applicants (This month)",
+   "number_card_name": "Total Applicants (This month)"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "BOD Admin"
+  },
+  {
+   "role": "BOD Manager"
+  },
+  {
+   "role": "HR Planning Specialist"
+  },
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "Vice President of Operations"
+  },
+  {
+   "role": "Chairman of the Authority"
+  },
+  {
+   "role": "HR Excellence Specialist"
+  }
+ ],
+ "sequence_id": 44.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Grade",
+   "link_to": "Employee Grade",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Exit Interview St",
+   "link_to": "Exit Interview ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Man Power Planning ST",
+   "link_to": "Man Power Planning ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Man Power Plan Change Request ST",
+   "link_to": "Man Power Plan Change Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Administrative Structure Updates Request ST",
+   "link_to": "Administrative Structure Updates Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Inquiry ST",
+   "link_to": "Employee Inquiry ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Exit Interview ST",
+   "link_to": "Exit Interview ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "System Permission Management ST",
+   "link_to": "System Permission Management ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Annual Reward ST",
+   "link_to": "Employee Annual Reward ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employment Type",
+   "link_to": "Employment Type",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "BOD Team"
+}

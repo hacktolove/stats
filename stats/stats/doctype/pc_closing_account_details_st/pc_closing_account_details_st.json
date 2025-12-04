@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-21 13:57:27.230827",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "column_break_qfpf",
+  "account_name",
+  "amount",
+  "column_break_btjh",
+  "paid_amount",
+  "unpaid_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_qfpf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account Name",
+   "options": "Account"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_btjh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Paid Amount",
+   "mandatory_depends_on": "eval:doc.status==\"Draft\"",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "unpaid_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Unpaid Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-22 11:59:23.808505",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "PC Closing Account Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

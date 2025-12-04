@@ -1,0 +1,90 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"kQVab-52gL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Talents Aquisition</span>\",\"col\":12}},{\"id\":\"ANYIhoTu7r\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Job Openings\",\"col\":4}},{\"id\":\"3Y1UxWpxKx\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ONghVD-LiL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Opening Job ST\",\"col\":3}},{\"id\":\"uBtcHRwImX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Opening Job ST\",\"col\":3}},{\"id\":\"YShb-ZTcud\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Job Application ST\",\"col\":3}},{\"id\":\"zfIHJdslOL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Job Offer ST\",\"col\":3}},{\"id\":\"XPBlDjoJjc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee\",\"col\":3}},{\"id\":\"AiakT0XPEC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Contract ST\",\"col\":3}},{\"id\":\"eHwrGB1A0V\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Onboarding ST\",\"col\":3}}]",
+ "creation": "2025-02-19 10:14:33.297491",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "external-link",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Talents Aquisition",
+ "links": [],
+ "modified": "2025-06-24 10:44:04.664711",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Talents Aquisition",
+ "number_cards": [
+  {
+   "label": "Job Openings",
+   "number_card_name": "Job Openings"
+  }
+ ],
+ "owner": "hametwally@stats.gov.sa",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Talent Acquisition Manager"
+  },
+  {
+   "role": "Talent Acquisition Officer"
+  }
+ ],
+ "sequence_id": 48.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Opening Job ST",
+   "link_to": "Opening Job ST",
+   "stats_filter": "[[\"Opening Job ST\",\"contract_type\",\"=\",\"\u0627\u0644\u0645\u062a\u0639\u0627\u0642\u062f\u064a\u0646\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee",
+   "link_to": "Employee",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Job Application ST",
+   "link_to": "Job Application ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Job Offer ST",
+   "link_to": "Job Offer ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Contract ST",
+   "link_to": "Employee Contract ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Onboarding ST",
+   "link_to": "Employee Onboarding ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Talents Aquisition"
+}

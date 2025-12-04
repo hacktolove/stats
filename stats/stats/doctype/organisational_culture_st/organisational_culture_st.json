@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OC-.#####",
+ "creation": "2024-08-28 14:59:21.667906",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "created_by",
+  "main_department",
+  "sub_department",
+  "employee",
+  "procedure_type",
+  "column_break_9nzk",
+  "project_type",
+  "project_name",
+  "project_goals",
+  "estimated_cost",
+  "project_description"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "procedure_type",
+   "fieldtype": "Link",
+   "label": "Procedure Type",
+   "options": "Procedure Type ST"
+  },
+  {
+   "fieldname": "column_break_9nzk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Data",
+   "label": "Project Type"
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name"
+  },
+  {
+   "fieldname": "project_goals",
+   "fieldtype": "Data",
+   "label": "Project Goals"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "project_description",
+   "fieldtype": "Small Text",
+   "label": "Project Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-28 15:28:58.017383",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Organisational Culture ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,1336 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-27 07:50:38.536051",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "account_tab",
+  "default_trip_cost_template",
+  "column_break_yxct",
+  "maximum_reallocation_amount",
+  "overtime_section",
+  "percentage_for_overtime",
+  "column_break_izgs",
+  "multiplication_factor_of_overtime_for_civil_contract",
+  "section_break_wroe",
+  "enable_hijri_date",
+  "shift_early_exit_allowed_mins",
+  "column_break_zedr",
+  "delete_custom_fields",
+  "petty_cash_grace_days",
+  "evaluation_tab",
+  "normal_employee_evaluation_percentage_section",
+  "normal_employee_personal_goals",
+  "column_break_gduf",
+  "normal_job_goals",
+  "management_team_section",
+  "management_employee_personal_goals",
+  "column_break_ldes",
+  "management_job_goals",
+  "column_break_epgv",
+  "management_skills",
+  "employee_annual_reward_section",
+  "salary_count_for_meet_expectation",
+  "column_break_ztks",
+  "salary_count_for_exceed_expectation",
+  "column_break_mujo",
+  "salary_count_for_highly_exceed_expectation",
+  "competencies_level_section",
+  "level_1",
+  "column_break_mfku",
+  "level_2",
+  "column_break_hafk",
+  "level_3",
+  "section_break_ncpb",
+  "evaluation_slots",
+  "degree_out_of",
+  "annual_evaluation_default_dates_section",
+  "annual_creation_date",
+  "column_break_jpgv",
+  "annual_evaluation_from",
+  "column_break_hpgl",
+  "annual_evaluation_to",
+  "half_yearly_evaluation_default_dates_section",
+  "half_yearly_creation_date",
+  "column_break_axhq",
+  "half_yearly_evaluation_from",
+  "column_break_zmap",
+  "half_yearly_evaluation_to",
+  "section_break_etcm",
+  "default_evaluation_template_for_test_period",
+  "section_break_ssda",
+  "job_volume",
+  "column_break_eqrg",
+  "scarcity_of_talent",
+  "column_break_uswn",
+  "strategic_impact",
+  "salary_component_tab",
+  "payroll_section",
+  "consider_incomplete_monthly_mins",
+  "every_month_payroll_date",
+  "earnings_section",
+  "default_new_hire_earning_component",
+  "salary_end_freezing_earning_component",
+  "column_break_oplc",
+  "overtime_transportation_earning_component",
+  "deductions_section",
+  "lwpabsent_deduction_component",
+  "penalty_deduction_component",
+  "resignation_deduction_component",
+  "default_new_hire_due_component",
+  "column_break_pejt",
+  "incomplete_monthly_mins_deduction_component",
+  "absent_deduction_component",
+  "salary_freezing_deduction_component",
+  "section_break_cxnc",
+  "max_bas_hal",
+  "section_break_bdfd",
+  "gosi_deduction_increment_details",
+  "statistics_management_tab",
+  "worker_cost_per_day",
+  "column_break_vzey",
+  "employee_cost_per_day",
+  "column_break_zgfj",
+  "reservation_cost",
+  "section_break_ytbw",
+  "default_budget_account",
+  "allowance_tab",
+  "section_break_ipjd",
+  "minimum_age_for_education_allowance",
+  "maximum_kids_allowed_for_education_allowance",
+  "column_break_ywio",
+  "maximum_age_for_education_allowance",
+  "check_against_grade_limit",
+  "section_break_sfge",
+  "payment_season_details",
+  "section_break_cshk",
+  "terms_and_conditions",
+  "portal_tab",
+  "enable_portal_login",
+  "erpnext_auth_url",
+  "portal_auth_url",
+  "portal_url_to_call_on_logout",
+  "hr_tab",
+  "work_from_home_section",
+  "allowed_work_from_home_per_month",
+  "employee_breast_feeding_grace_time",
+  "column_break_ptpy",
+  "employee_allowed_for_work_from_home_per_day",
+  "do_not_allow_past_attendance_request",
+  "attendance_section",
+  "permission_hours_per_request",
+  "allowed_attendance_grace_time",
+  "column_break_lzhe",
+  "maximum_extra_working_hours_allowed_per_day",
+  "section_break_lmuv",
+  "ignore_last_working_date",
+  "column_break_xxnx",
+  "eos_allowed_days_before_last_working_date",
+  "fix_section_section",
+  "delete_attendance",
+  "column_break_fulp",
+  "fix_checkin",
+  "column_break_ilox",
+  "delete_off_shift_checkin",
+  "section_break_qzuw",
+  "attendance_manager_role",
+  "attendance_hide_role",
+  "leave_year_count_for_civil_contact_employees",
+  "leave_year_count_for_fatal_sick_leave",
+  "column_break_irwd",
+  "deputy_required_for_no_of_days_of_leave",
+  "deputy_required_for_no_of_days_of_business_tripdays",
+  "deputy_required_for_no_of_days_of_work_out_office",
+  "apply_deputy_for_manager",
+  "apply_deputy_for_employee",
+  "leave_approver_role",
+  "leave_type_section",
+  "new_baby_leave_type",
+  "column_break_gnqz",
+  "baby_extended_leave_type",
+  "column_break_lfax",
+  "baby_health_leave_type",
+  "sick_leave_type_direct_section",
+  "sick_leave_type_1_direct",
+  "column_break_ctcw",
+  "sick_leave_type_2_direct",
+  "column_break_pvbg",
+  "sick_leave_type_3_direct",
+  "bsick_leave_type_civilb_section",
+  "sick_leave_type_1_civil",
+  "column_break_zfqj",
+  "sick_leave_type_2_civil",
+  "column_break_vcas",
+  "sick_leave_type_3_civil",
+  "column_break_rcnm",
+  "sick_leave_type_4_civil",
+  "bfatal_sick_leave_typesbbb_section",
+  "fatal_sick_leave_type_1",
+  "column_break_snwx",
+  "fatal_sick_leave_type_2",
+  "column_break_xivj",
+  "fatal_sick_leave_type_3",
+  "column_break_axim",
+  "fatal_sick_leave_type_4",
+  "section_break_nzim",
+  "stats_stamp",
+  "column_break_cgdb",
+  "signature",
+  "operational_hr_manager",
+  "btrainingb_section",
+  "no_of_days_for_personal_training",
+  "column_break_lvzz",
+  "section_break_auxc",
+  "first_level_task",
+  "evacuation_task_and_approval_second_level",
+  "evacuation_task_and_approval_third_level",
+  "evacuation_of_party_terms",
+  "notes_tab",
+  "instruction_leave_request",
+  "column_break_ncjg",
+  "instruction_overtime_request",
+  "section_break_jpnv",
+  "training_flow",
+  "section_break_nuuy",
+  "retirement_due_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_trip_cost_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Default Trip Cost Template",
+   "options": "Trip Cost Template ST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "maximum_reallocation_amount",
+   "fieldtype": "Currency",
+   "label": "Maximum Reallocation Amount",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "normal_employee_evaluation_percentage_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Normal Employee Evaluation Percentage"
+  },
+  {
+   "fieldname": "column_break_gduf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "normal_employee_personal_goals",
+   "fieldtype": "Percent",
+   "label": "Employee Personal Goals %"
+  },
+  {
+   "fieldname": "normal_job_goals",
+   "fieldtype": "Percent",
+   "label": "Job Goals %"
+  },
+  {
+   "bold": 1,
+   "fieldname": "management_team_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Management Team"
+  },
+  {
+   "fieldname": "column_break_ldes",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_epgv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "management_skills",
+   "fieldtype": "Percent",
+   "label": "Management Skills %"
+  },
+  {
+   "fieldname": "management_employee_personal_goals",
+   "fieldtype": "Percent",
+   "label": "Employee Personal Goals %"
+  },
+  {
+   "fieldname": "management_job_goals",
+   "fieldtype": "Percent",
+   "label": "Job Goals %"
+  },
+  {
+   "fieldname": "column_break_yxct",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ncpb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "range should not be overlap Ex. 0-0.99,1-1.99",
+   "fieldname": "evaluation_slots",
+   "fieldtype": "Table",
+   "label": "Evaluation Slots",
+   "options": "Evaluation Slots Details ST",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "annual_evaluation_default_dates_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "<b>Annual Evaluation Default Dates</b>"
+  },
+  {
+   "fieldname": "column_break_jpgv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "annual_creation_date",
+   "fieldtype": "Date",
+   "label": "Next Creation date"
+  },
+  {
+   "fieldname": "annual_evaluation_from",
+   "fieldtype": "Date",
+   "label": "Next Evaluation From"
+  },
+  {
+   "fieldname": "annual_evaluation_to",
+   "fieldtype": "Date",
+   "label": "Next Evaluation To"
+  },
+  {
+   "bold": 1,
+   "fieldname": "half_yearly_evaluation_default_dates_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "<b>Half-Yearly Evaluation Default Dates</b>"
+  },
+  {
+   "fieldname": "column_break_axhq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "half_yearly_creation_date",
+   "fieldtype": "Date",
+   "label": "Next Creation date"
+  },
+  {
+   "fieldname": "half_yearly_evaluation_from",
+   "fieldtype": "Date",
+   "label": "Next Evaluation From"
+  },
+  {
+   "fieldname": "half_yearly_evaluation_to",
+   "fieldtype": "Date",
+   "label": "Next Evaluation To"
+  },
+  {
+   "fieldname": "column_break_hpgl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zmap",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_evaluation_template_for_test_period",
+   "fieldtype": "Link",
+   "label": "Default Evaluation Template For Test Period",
+   "options": "Employee Evaluation Template ST"
+  },
+  {
+   "fieldname": "section_break_etcm",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "percentage_for_overtime",
+   "fieldtype": "Percent",
+   "label": "Percentage For Overtime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "account_tab",
+   "fieldtype": "Tab Break",
+   "label": "Account"
+  },
+  {
+   "fieldname": "evaluation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Evaluation"
+  },
+  {
+   "fieldname": "salary_component_tab",
+   "fieldtype": "Tab Break",
+   "label": "Salary"
+  },
+  {
+   "fieldname": "earnings_section",
+   "fieldtype": "Section Break",
+   "label": "Earnings"
+  },
+  {
+   "fieldname": "deductions_section",
+   "fieldtype": "Section Break",
+   "label": "Deductions"
+  },
+  {
+   "fieldname": "lwpabsent_deduction_component",
+   "fieldtype": "Link",
+   "label": "LWP Deduction Component",
+   "link_filters": "[[\"Salary Component\",\"type\",\"=\",\"Deduction\"]]",
+   "options": "Salary Component",
+   "reqd": 1
+  },
+  {
+   "fieldname": "penalty_deduction_component",
+   "fieldtype": "Link",
+   "label": "Penalty Deduction Component",
+   "link_filters": "[[\"Salary Component\",\"type\",\"=\",\"Deduction\"]]",
+   "options": "Salary Component",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pejt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "absent_deduction_component",
+   "fieldtype": "Link",
+   "label": "Absent Deduction Component",
+   "link_filters": "[[\"Salary Component\",\"type\",\"=\",\"Deduction\"]]",
+   "options": "Salary Component",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incomplete_monthly_mins_deduction_component",
+   "fieldtype": "Link",
+   "label": "Incomplete Monthly Mins Deduction Component",
+   "link_filters": "[[\"Salary Component\",\"type\",\"=\",\"Deduction\"]]",
+   "options": "Salary Component",
+   "reqd": 1
+  },
+  {
+   "fieldname": "resignation_deduction_component",
+   "fieldtype": "Link",
+   "label": "Resignation Deduction Component",
+   "link_filters": "[[\"Salary Component\",\"type\",\"=\",\"Deduction\"]]",
+   "options": "Salary Component",
+   "reqd": 1
+  },
+  {
+   "fieldname": "salary_freezing_deduction_component",
+   "fieldtype": "Link",
+   "label": "Salary Freezing Deduction Component",
+   "link_filters": "[[\"Salary Component\",\"type\",\"=\",\"Deduction\"]]",
+   "options": "Salary Component",
+   "reqd": 1
+  },
+  {
+   "fieldname": "statistics_management_tab",
+   "fieldtype": "Tab Break",
+   "label": "Statistics Management"
+  },
+  {
+   "fieldname": "worker_cost_per_day",
+   "fieldtype": "Currency",
+   "label": "Worker Cost Per Day",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vzey",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee_cost_per_day",
+   "fieldtype": "Currency",
+   "label": "Employee Cost Per Day",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zgfj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reservation_cost",
+   "fieldtype": "Percent",
+   "label": "Reservation Cost %",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ytbw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "default_budget_account",
+   "fieldtype": "Link",
+   "label": "Default Budget Account for Statistic Expense",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "allowance_tab",
+   "fieldtype": "Tab Break",
+   "label": "Allowance"
+  },
+  {
+   "fieldname": "section_break_ipjd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "minimum_age_for_education_allowance",
+   "fieldtype": "Int",
+   "label": "Minimum Age for Education Allowance",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ywio",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maximum_age_for_education_allowance",
+   "fieldtype": "Int",
+   "label": "Maximum Age for Education Allowance",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "check_against_grade_limit",
+   "fieldtype": "Check",
+   "label": "Check Against Grade Limit "
+  },
+  {
+   "default": "0",
+   "fieldname": "consider_incomplete_monthly_mins",
+   "fieldtype": "Check",
+   "label": "Consider Incomplete Monthly Mins?"
+  },
+  {
+   "fieldname": "payroll_section",
+   "fieldtype": "Section Break",
+   "label": "Payroll"
+  },
+  {
+   "fieldname": "every_month_payroll_date",
+   "fieldtype": "Select",
+   "label": "Every Month Payroll Date",
+   "options": "\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28",
+   "reqd": 1
+  },
+  {
+   "description": "It should NOT be basic salary component i.e. one mentioned in employee grade",
+   "fieldname": "default_new_hire_earning_component",
+   "fieldtype": "Link",
+   "label": "Default New Hire Earning Component",
+   "link_filters": "[[\"Salary Component\",\"type\",\"=\",\"Earning\"]]",
+   "options": "Salary Component",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_oplc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_new_hire_due_component",
+   "fieldtype": "Link",
+   "label": "Default New Hire Deduction Component",
+   "link_filters": "[[\"Salary Component\",\"type\",\"=\",\"Deduction\"]]",
+   "options": "Salary Component",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_wroe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_hijri_date",
+   "fieldtype": "Check",
+   "label": "Enable Hijri Date For Employee Profile"
+  },
+  {
+   "fieldname": "portal_tab",
+   "fieldtype": "Tab Break",
+   "label": "Portal"
+  },
+  {
+   "default": "https://gsn-prd.stats.gov.sa/stats/integration/api/v1/internal-integration/check",
+   "description": "(b) Portal URL called by ERPNext",
+   "fieldname": "portal_auth_url",
+   "fieldtype": "Data",
+   "label": "Portal Auth URL",
+   "options": "URL"
+  },
+  {
+   "description": "(a) URL called by portal<br>\n&lt;site_url&gt;/api/method/stats.auth.call_stats_erpnext",
+   "fieldname": "erpnext_auth_url",
+   "fieldtype": "Data",
+   "label": "ERPNext Authorize URL",
+   "options": "URL",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_portal_login",
+   "fieldtype": "Check",
+   "label": "Enable Portal Login"
+  },
+  {
+   "description": "(c) When user logsout of ERPNext they will be redirected to this URL",
+   "fieldname": "portal_url_to_call_on_logout",
+   "fieldtype": "Data",
+   "label": "Portal URL To Call On Logout"
+  },
+  {
+   "fieldname": "hr_tab",
+   "fieldtype": "Tab Break",
+   "label": "HR"
+  },
+  {
+   "fieldname": "work_from_home_section",
+   "fieldtype": "Section Break",
+   "label": "Work From Home"
+  },
+  {
+   "description": "Used in Attendance Request (per Employee)",
+   "fieldname": "allowed_work_from_home_per_month",
+   "fieldtype": "Int",
+   "label": "Allowed Work From Home Per Month"
+  },
+  {
+   "fieldname": "column_break_ptpy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Used in Attendance Request (Per Sub Department) (In Percentage)",
+   "fieldname": "employee_allowed_for_work_from_home_per_day",
+   "fieldtype": "Percent",
+   "label": "Employee Allowed For Work From Home Per Day"
+  },
+  {
+   "fieldname": "section_break_qzuw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "This role provides unrestricted access to check-in report and related details",
+   "fieldname": "attendance_manager_role",
+   "fieldtype": "Link",
+   "label": "Attendance Manager Role",
+   "options": "Role",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_nzim",
+   "fieldtype": "Section Break",
+   "label": "<b>Stamp &amp; Signature</b>"
+  },
+  {
+   "fieldname": "stats_stamp",
+   "fieldtype": "Attach",
+   "label": "Stats Stamp",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cgdb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Attach",
+   "label": "Signature",
+   "reqd": 1
+  },
+  {
+   "fieldname": "leave_type_section",
+   "fieldtype": "Section Break",
+   "label": "<b>Baby Leave Type</b>"
+  },
+  {
+   "description": "followed by 1",
+   "fieldname": "baby_health_leave_type",
+   "fieldtype": "Link",
+   "label": "3. Baby Health Leave Type",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lfax",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "followed by 1 OR 3",
+   "fieldname": "baby_extended_leave_type",
+   "fieldtype": "Link",
+   "label": "2. Baby Extended Leave Type",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "new_baby_leave_type",
+   "fieldtype": "Link",
+   "label": "1. New Baby Leave Type",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gnqz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes_tab",
+   "fieldtype": "Tab Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_ncjg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "instruction_leave_request",
+   "fieldtype": "HTML",
+   "label": "Instruction Leave Request",
+   "options": "<b><u>Leave Request Setup :</u></b><br><br>\n\n<b>Leave Type</b>\n<ul>\n<li>custom_once_in_company_life=1 or 0</li>\n<li>custom_based_on_leave_request=1</li>\n<li>is_lwp=0</li>\n<li>set max_leaves_allowed and max_continuous_days_allowed</li>\n<li>If you create New baby leave type, New baby extended and New baby Medical leave request can create from Button in New baby Leave Request</li>\n</ul>\n<b>Stats setings</b><br>\n<ul><li>Set all 3 baby leave type in HR tab</li></ul><br>"
+  },
+  {
+   "fieldname": "instruction_overtime_request",
+   "fieldtype": "HTML",
+   "label": "Instruction Overtime Request",
+   "options": "<b><u>Overtime Request Logic : </u></b><br><br>\n<ul>\n<li>Overtime amount calculation is done on save of overtime request.</li>\n<li>pre-requisite : latest salary structure assignment</li>\n<li>Overtime amount calculation : <b>Direct Contract</b><br>\novertime amount per hour = Per hour salary of total salary + (50% of per hour basic salary)<br>\n<ol type=\"a\">\n\t<li>% for overtime : from stat settings</li>\n\t<li>Basic Per hour = Basic Salary / (30 * No of hours as per contract type)</li>\n\t<li>Total Salary Per hour = Total Salary / (30 * No of hours as per contract type)</li>\n\t<li>Overtime Rate Per hour = Total Salary Per hour(c)  + (a)*(b)</li>\n</ol>\n<b>Overtime Due Amount Direct : (d) * hrs * days</b>\n</li><br>\n<li>Overtime amount calculation : <b>Civil Contract</b><br>\n<ol type=\"a\">\n\t<li>overtime_rate_per_hour :  Basic Salary / 155 (Multiblication Factor Civil Overtime &lt;-- From Stats Settings) </li>\n\t<li> transport per day : Transportation / 30</li>\n</ol>\n<b>Overtime Due Amount Civil : (a) * hrs * days  +  (b) * days</b>\n</li>\n</ul>\n<b>Payment flow:</b><br>\nOvertime Sheet (on submit) --&gt; Payment Request (on submit) --&gt; 2 JV &amp; 1 Payment Procedure (On submit of Payment Procedure) --&gt; 3 JV"
+  },
+  {
+   "fieldname": "delete_attendance",
+   "fieldtype": "Button",
+   "label": "Delete Attendance",
+   "options": "delete_attendance_and_employee_checkins"
+  },
+  {
+   "fieldname": "column_break_irwd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fix_checkin",
+   "fieldtype": "Button",
+   "label": "Fix Checkin",
+   "options": "fix_checkin_for_old"
+  },
+  {
+   "fieldname": "petty_cash_grace_days",
+   "fieldtype": "Int",
+   "label": "Petty Cash Grace Days",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "do_not_allow_past_attendance_request",
+   "fieldtype": "Check",
+   "label": "Do Not  Allow Past Attendance Request"
+  },
+  {
+   "description": "In Hours",
+   "fieldname": "employee_breast_feeding_grace_time",
+   "fieldtype": "Int",
+   "label": "Employee Breast Feeding Grace Time",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "description": "Shift : \u0627\u0644\u0645\u0646\u0627\u0648\u0628\u0629 \u0627\u0644\u0635\u0628\u0627\u062d\u064a\u0629 and \u0627\u0644\u0645\u0646\u0627\u0648\u0628\u0629 \u0627\u0644\u0635\u0628\u0627\u062d\u064a\u0629 - \u0627\u0644\u0631\u0633\u0645\u064a\u064a\u0646",
+   "fieldname": "delete_off_shift_checkin",
+   "fieldtype": "Button",
+   "label": "Delete Off-Shift Checkin",
+   "options": "delete_off_shift_employee_checkin_for_two_shift_types"
+  },
+  {
+   "description": "For this role, attendance data will be hide for all reports",
+   "fieldname": "attendance_hide_role",
+   "fieldtype": "Link",
+   "label": "Attendance Hide Role",
+   "options": "Role",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_cxnc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "max_bas_hal",
+   "fieldtype": "Currency",
+   "label": "Maximum Amount Allowed For Basic And Housing"
+  },
+  {
+   "fieldname": "overtime_section",
+   "fieldtype": "Section Break",
+   "label": "Overtime"
+  },
+  {
+   "fieldname": "column_break_izgs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "multiplication_factor_of_overtime_for_civil_contract",
+   "fieldtype": "Int",
+   "label": "Multiplication Factor of Overtime for Civil Contract",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "description": "Used in overtime amount calculation only for Civil Contract",
+   "fieldname": "overtime_transportation_earning_component",
+   "fieldtype": "Link",
+   "label": "Overtime Transportation Earning Component",
+   "link_filters": "[[\"Salary Component\",\"type\",\"=\",\"Earning\"]]",
+   "options": "Salary Component",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_jpnv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "training_flow",
+   "fieldtype": "HTML",
+   "label": "Training Flow",
+   "options": "<b><u>Training Flow : </u></b><br><br>\n<ol type=\"1\">\n<li>Training Event --&gt; Save</li>\n<li>Training Announcement --&gt; Submit</li>\n\n<li>Training Request --&gt; <b>Notes :</b> On submit if training method == \"Attendance\" and check in and checkout is required and status == \"Accepted\" then it will create future present attendance of training duration --&gt; Submit</li>\n\n<li>Training Needs Analysis --&gt; <b>Notes :</b> Fetch all submitted Training Request using button and accept or reject training request before submit --&gt; Submit --&gt; <b>Notes :</b> On submit of training needs analysis it will change status of training request</li>\n\n<li>Go To Training Event Again</li>\n\n<li>Training Event --&gt; <b>Notes :</b> Fetch all submitted and accepted Training Request in child table using button. Change training statsu to \"Close\". On submit of training event, if training status is closed then training evaluation is created for all employees of child table. Status of training request and training event will automatically changed to 'Finished'.</li>\n</ol>"
+  },
+  {
+   "fieldname": "column_break_zedr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delete_custom_fields",
+   "fieldtype": "Button",
+   "label": "Delete Custom Fields",
+   "options": "delete_custom_fields_of_custom_doctypes"
+  },
+  {
+   "fieldname": "no_of_days_for_personal_training",
+   "fieldtype": "Int",
+   "label": "No of Days for Personal Training",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "btrainingb_section",
+   "fieldtype": "Section Break",
+   "label": "<b>Training</b>"
+  },
+  {
+   "fieldname": "section_break_ssda",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "It will use in Important Role Calculation",
+   "fieldname": "job_volume",
+   "fieldtype": "Percent",
+   "label": "Job Volume ( % )"
+  },
+  {
+   "fieldname": "column_break_eqrg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "It will use in Important Role Calculation",
+   "fieldname": "scarcity_of_talent",
+   "fieldtype": "Percent",
+   "label": "Scarcity of Talent ( % )"
+  },
+  {
+   "fieldname": "column_break_uswn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "It will use in Important Role Calculation",
+   "fieldname": "strategic_impact",
+   "fieldtype": "Percent",
+   "label": "Strategic Impact ( % )"
+  },
+  {
+   "fieldname": "column_break_ctcw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pvbg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salary_end_freezing_earning_component",
+   "fieldtype": "Link",
+   "label": "Salary End Freezing Earning Component",
+   "link_filters": "[[\"Salary Component\",\"type\",\"=\",\"Earning\"]]",
+   "options": "Salary Component",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_auxc",
+   "fieldtype": "Section Break",
+   "label": "<b>Employee Evacuation Task And Approval</b>"
+  },
+  {
+   "fieldname": "evacuation_task_and_approval_second_level",
+   "fieldtype": "Table",
+   "label": "Evacuation Task And Approval Second Level",
+   "options": "Evacuation Task And Approval Settings ST"
+  },
+  {
+   "fieldname": "evacuation_task_and_approval_third_level",
+   "fieldtype": "Table",
+   "label": "Evacuation Task And Approval Third Level",
+   "options": "Evacuation Task And Approval Settings ST"
+  },
+  {
+   "fieldname": "first_level_task",
+   "fieldtype": "Data",
+   "label": "First Level Task"
+  },
+  {
+   "fieldname": "shift_early_exit_allowed_mins",
+   "fieldtype": "Int",
+   "label": "Shift Early Exit Allowed Mins"
+  },
+  {
+   "fieldname": "fix_section_section",
+   "fieldtype": "Section Break",
+   "label": "Fix Section"
+  },
+  {
+   "fieldname": "column_break_fulp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ilox",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "i..e if 2 days means when leave is 2 or more days",
+   "fieldname": "deputy_required_for_no_of_days_of_leave",
+   "fieldtype": "Int",
+   "label": "Deputy required for no. of days of leave(days)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "description": "i..e if 2 days means when leave is 2 or more days",
+   "fieldname": "deputy_required_for_no_of_days_of_work_out_office",
+   "fieldtype": "Int",
+   "label": "Deputy required for no. of days of Work Out Office(days)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "apply_deputy_for_manager",
+   "fieldtype": "Check",
+   "label": "Apply Deputy For Manager"
+  },
+  {
+   "default": "0",
+   "fieldname": "apply_deputy_for_employee",
+   "fieldtype": "Check",
+   "label": "Apply Deputy for Employee"
+  },
+  {
+   "bold": 1,
+   "fieldname": "sick_leave_type_direct_section",
+   "fieldtype": "Section Break",
+   "label": "<b>Sick Leave Type (Direct)</b>"
+  },
+  {
+   "fieldname": "bsick_leave_type_civilb_section",
+   "fieldtype": "Section Break",
+   "label": "<b>Sick Leave Type (Civil)</b>"
+  },
+  {
+   "fieldname": "sick_leave_type_1_civil",
+   "fieldtype": "Link",
+   "label": "Sick Leave Type 1 Civil",
+   "link_filters": "[[\"Leave Type\",\"custom_based_on_leave_request\",\"=\",1],[\"Leave Type\",\"custom_is_applicable_for_contract_type\",\"=\",1],[\"Leave Type\",\"custom_contract_type\",\"=\",\"Civil\"]]",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zfqj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "This Leave Type you can use after consuming Sick Leave Type 1 Civil",
+   "fieldname": "sick_leave_type_2_civil",
+   "fieldtype": "Link",
+   "label": "Sick Leave Type 2 Civil",
+   "link_filters": "[[\"Leave Type\",\"custom_based_on_leave_request\",\"=\",1],[\"Leave Type\",\"custom_is_applicable_for_contract_type\",\"=\",1],[\"Leave Type\",\"custom_contract_type\",\"=\",\"Civil\"]]",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vcas",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "This Leave Type you can use after consuming Sick Leave Type 2 Civil",
+   "fieldname": "sick_leave_type_3_civil",
+   "fieldtype": "Link",
+   "label": "Sick Leave Type 3 Civil",
+   "link_filters": "[[\"Leave Type\",\"custom_based_on_leave_request\",\"=\",1],[\"Leave Type\",\"custom_is_applicable_for_contract_type\",\"=\",1],[\"Leave Type\",\"custom_contract_type\",\"=\",\"Civil\"]]",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rcnm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "This Leave Type you can use after consuming Sick Leave Type 3 Civil",
+   "fieldname": "sick_leave_type_4_civil",
+   "fieldtype": "Link",
+   "label": "Sick Leave Type 4 Civil",
+   "link_filters": "[[\"Leave Type\",\"custom_based_on_leave_request\",\"=\",1],[\"Leave Type\",\"custom_is_applicable_for_contract_type\",\"=\",1],[\"Leave Type\",\"custom_contract_type\",\"=\",\"Civil\"]]",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sick_leave_type_1_direct",
+   "fieldtype": "Link",
+   "label": "Sick Leave Type 1 Direct",
+   "link_filters": "[[\"Leave Type\",\"custom_based_on_leave_request\",\"=\",1],[\"Leave Type\",\"custom_is_applicable_for_contract_type\",\"=\",1],[\"Leave Type\",\"custom_contract_type\",\"=\",\"Direct\"]]",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "description": "This Leave Type you can use after consuming Sick Leave Type 1",
+   "fieldname": "sick_leave_type_2_direct",
+   "fieldtype": "Link",
+   "label": "Sick Leave Type 2 Direct",
+   "link_filters": "[[\"Leave Type\",\"custom_based_on_leave_request\",\"=\",1],[\"Leave Type\",\"custom_is_applicable_for_contract_type\",\"=\",1],[\"Leave Type\",\"custom_contract_type\",\"=\",\"Direct\"]]",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fatal_sick_leave_type_1",
+   "fieldtype": "Link",
+   "label": "Fatal Sick Leave Type 1 Civil",
+   "link_filters": "[[\"Leave Type\",\"custom_based_on_leave_request\",\"=\",1],[\"Leave Type\",\"custom_is_applicable_for_contract_type\",\"=\",1],[\"Leave Type\",\"custom_contract_type\",\"=\",\"Civil\"]]",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_snwx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "This Leave Type you can use after consuming Fatal Sick Leave Type 1",
+   "fieldname": "fatal_sick_leave_type_2",
+   "fieldtype": "Link",
+   "label": "Fatal Sick Leave Type 2 Civil",
+   "link_filters": "[[\"Leave Type\",\"custom_based_on_leave_request\",\"=\",1],[\"Leave Type\",\"custom_is_applicable_for_contract_type\",\"=\",1],[\"Leave Type\",\"custom_contract_type\",\"=\",\"Civil\"]]",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xivj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "This Leave Type you can use after consuming Fatal Sick Leave Type 2",
+   "fieldname": "fatal_sick_leave_type_3",
+   "fieldtype": "Link",
+   "label": "Fatal Sick Leave Type 3 Civil",
+   "link_filters": "[[\"Leave Type\",\"custom_based_on_leave_request\",\"=\",1],[\"Leave Type\",\"custom_is_applicable_for_contract_type\",\"=\",1],[\"Leave Type\",\"custom_contract_type\",\"=\",\"Civil\"]]",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_axim",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "This Leave Type you can use after consuming Fatal Sick Leave Type 3",
+   "fieldname": "fatal_sick_leave_type_4",
+   "fieldtype": "Link",
+   "label": "Fatal Sick Leave Type 4 Civil",
+   "link_filters": "[[\"Leave Type\",\"custom_based_on_leave_request\",\"=\",1],[\"Leave Type\",\"custom_is_applicable_for_contract_type\",\"=\",1],[\"Leave Type\",\"custom_contract_type\",\"=\",\"Civil\"]]",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "description": "This Leave Type you can use after consuming Sick Leave Type 2",
+   "fieldname": "sick_leave_type_3_direct",
+   "fieldtype": "Link",
+   "label": "Sick Leave Type 3 Direct",
+   "link_filters": "[[\"Leave Type\",\"custom_based_on_leave_request\",\"=\",1],[\"Leave Type\",\"custom_is_applicable_for_contract_type\",\"=\",1],[\"Leave Type\",\"custom_contract_type\",\"=\",\"Direct\"]]",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "leave_year_count_for_civil_contact_employees",
+   "fieldtype": "Int",
+   "label": "Leave Year Count For Civil Contact Employees",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "bfatal_sick_leave_typesbbb_section",
+   "fieldtype": "Section Break",
+   "label": "<b>Fatal Sick Leave Types (Civil)</b>"
+  },
+  {
+   "fieldname": "leave_year_count_for_fatal_sick_leave",
+   "fieldtype": "Int",
+   "label": "Leave Year Count For Fatal Sick Leave",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lvzz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operational_hr_manager",
+   "fieldtype": "Attach",
+   "label": "Operational HR Manager",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_sfge",
+   "fieldtype": "Section Break",
+   "label": "Education Allowance "
+  },
+  {
+   "fieldname": "payment_season_details",
+   "fieldtype": "Table",
+   "label": "Payment Season Details",
+   "options": "Payment Season Details ST"
+  },
+  {
+   "description": "Only this role will be able to select sick leave type for civil contract employees",
+   "fieldname": "leave_approver_role",
+   "fieldtype": "Link",
+   "label": "Leave Approver Role",
+   "options": "Role",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_cshk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Small Text",
+   "label": "Terms and Conditions",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_bdfd",
+   "fieldtype": "Section Break",
+   "label": "GOSI Deduction"
+  },
+  {
+   "description": "Notes:<br>\n<ul>\n<li>Do not override the <b>From</b> and <b>To</b> dates.</li>\n<li>In Employee doctype, Make sure the GOSI registration date and employee grade are set correctly.</li>\n</ul>",
+   "fieldname": "gosi_deduction_increment_details",
+   "fieldtype": "Table",
+   "label": "GOSI Deduction Increment Details",
+   "options": "GOSI Increment Details ST"
+  },
+  {
+   "fieldname": "maximum_kids_allowed_for_education_allowance",
+   "fieldtype": "Int",
+   "label": "Maximum Kids Allowed for Education Allowance",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "description": "This value will be set in Employee Evaluation Competencies",
+   "fieldname": "degree_out_of",
+   "fieldtype": "Int",
+   "label": "Degree Out Of",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "competencies_level_section",
+   "fieldtype": "Section Break",
+   "label": "Competencies Level"
+  },
+  {
+   "description": "This Level will auto set in Competencies Element Child table",
+   "fieldname": "level_1",
+   "fieldtype": "Select",
+   "label": "Level 1",
+   "options": "\nDeveloping\nProficient\nAdvanced",
+   "reqd": 1
+  },
+  {
+   "description": "This Level will auto set in Competencies Element Child table",
+   "fieldname": "level_2",
+   "fieldtype": "Select",
+   "label": "Level 2",
+   "options": "\nDeveloping\nProficient\nAdvanced",
+   "reqd": 1
+  },
+  {
+   "description": "This Level will auto set in Competencies Element Child table",
+   "fieldname": "level_3",
+   "fieldtype": "Select",
+   "label": "Level 3",
+   "options": "\nDeveloping\nProficient\nAdvanced",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_mfku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hafk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee_annual_reward_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Annual Reward"
+  },
+  {
+   "description": "Reward amount will be multiplied by this value in Employee Annual Reward ST",
+   "fieldname": "salary_count_for_meet_expectation",
+   "fieldtype": "Int",
+   "label": "Salary Count for Meet Expectation",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ztks",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mujo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Reward amount will be multiplied by this value in Employee Annual Reward ST",
+   "fieldname": "salary_count_for_highly_exceed_expectation",
+   "fieldtype": "Int",
+   "label": "Salary Count for Highly Exceed Expectation",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "description": "Reward amount will be multiplied by this value in Employee Annual Reward ST",
+   "fieldname": "salary_count_for_exceed_expectation",
+   "fieldtype": "Int",
+   "label": "Salary Count for Exceed Expectation",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_lmuv",
+   "fieldtype": "Section Break",
+   "label": "Employee Resignation"
+  },
+  {
+   "default": "0",
+   "description": "If checked, Last Working Date validations are ignored.\nUser manually take care of salary.",
+   "fieldname": "ignore_last_working_date",
+   "fieldtype": "Check",
+   "label": "Ignore Resignation Last Working Date Validations"
+  },
+  {
+   "fieldname": "column_break_xxnx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "2",
+   "fieldname": "eos_allowed_days_before_last_working_date",
+   "fieldtype": "Int",
+   "label": "EOS Allowed Days Before Last Working Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Attendance"
+  },
+  {
+   "fieldname": "permission_hours_per_request",
+   "fieldtype": "Int",
+   "label": "Permission Hours Per Request",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lzhe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "to add maximum extra working allowed to generate Compensatory balance",
+   "fieldname": "maximum_extra_working_hours_allowed_per_day",
+   "fieldtype": "Int",
+   "label": "Maximum Extra Working Hours Allowed Per Day",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "description": "(in mins) this minutes will be added to working minutes in attendance if required",
+   "fieldname": "allowed_attendance_grace_time",
+   "fieldtype": "Int",
+   "label": "Allowed Attendance Grace Time",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "description": "i..e if 2 days means when leave is 2 or more days",
+   "fieldname": "deputy_required_for_no_of_days_of_business_tripdays",
+   "fieldtype": "Int",
+   "label": "Deputy required for no. of days of Business trip(days)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "evacuation_of_party_terms",
+   "fieldtype": "Small Text",
+   "label": "Evacuation of Party Terms",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "section_break_nuuy",
+   "fieldtype": "Section Break",
+   "label": "Retirement Request"
+  },
+  {
+   "fieldname": "retirement_due_amount",
+   "fieldtype": "HTML",
+   "label": "Retirement Due Amount",
+   "options": "<b><u>Retirement Due Amount:</u></b><br><br>\nContract Type : Civil <br>\nType of Retirement : Normal (Age &gt;= Settings.Normal Years Of Retirement) <br>\nRetirement Due Amount :  (sum of Earning Components which are include in retirement calculation) * 6 <br>\nVacation Due Amount: (Total Earnings / 30) * Minimum Vacation Days <br>\n<br>\nType of Retirement : Early (Age &lt; Settings.Normal Years Of Retirement) <br>\nRetirement Due Amount : (sum of Earning Components which are include in retirement calculation) * 4"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-11-20 15:15:29.870137",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Stats Settings ST",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

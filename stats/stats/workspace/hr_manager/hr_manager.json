@@ -1,0 +1,102 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"-h7dwiMVWM\",\"type\":\"header\",\"data\":{\"text\":\"<br>\",\"col\":12}},{\"id\":\"i9KfdQqnA1\",\"type\":\"card\",\"data\":{\"card_name\":\"Budget\",\"col\":4}},{\"id\":\"pnpbIckAmn\",\"type\":\"card\",\"data\":{\"card_name\":\"Operation Transactions\",\"col\":4}}]",
+ "creation": "2025-01-23 13:52:03.798266",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "share",
+ "idx": 1,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "HR Manager",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Budget",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Department Budget ST",
+   "link_count": 0,
+   "link_to": "Department Budget ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Material Request",
+   "link_count": 0,
+   "link_to": "Material Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Operation Transactions",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Business Trip Processing ST",
+   "link_count": 0,
+   "link_to": "Business Trip Processing ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Leave Application",
+   "link_count": 0,
+   "link_to": "Leave Application",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Post Request ST",
+   "link_count": 0,
+   "link_to": "Post Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-04-17 07:39:40.529279",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "HR Manager",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Main Department HR Manager"
+  }
+ ],
+ "sequence_id": 40.0,
+ "shortcuts": [],
+ "title": "HR Manager"
+}

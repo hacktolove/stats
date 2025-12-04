@@ -1,0 +1,340 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "MPCR-.######",
+ "creation": "2024-08-06 13:32:28.505939",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "request_date",
+  "main_department",
+  "sub_department",
+  "department_manager",
+  "column_break_ewqa",
+  "request_type",
+  "new_job_no",
+  "man_power_planning_reference",
+  "job_no",
+  "previous_job_details_section",
+  "previous_job_details_column",
+  "designation",
+  "pre_main_department",
+  "pre_sub_department",
+  "grade",
+  "salary",
+  "section",
+  "employee_unit",
+  "column_break_momr",
+  "designation_cp",
+  "main_department_cp",
+  "sub_department_cp",
+  "grade_cp",
+  "salary_cp",
+  "section_cp",
+  "employee_unit_cp",
+  "new_job_details_section",
+  "designation_nj",
+  "main_department_nj",
+  "column_break_vhpu",
+  "grade_np",
+  "sub_department_nj",
+  "column_break_aipy",
+  "salary_nj",
+  "section_nj",
+  "employee_unit_nj",
+  "finance_impact_section",
+  "original_budget_amount",
+  "column_break_opie",
+  "new_budgeted_amount",
+  "column_break_cgiv",
+  "finance_impact",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Request Date"
+  },
+  {
+   "fieldname": "request_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Request Type",
+   "options": "Update Existing Job\nNew Job",
+   "reqd": 1
+  },
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "sub_department.custom_direct_manager",
+   "fieldname": "department_manager",
+   "fieldtype": "Link",
+   "label": "Department Manager",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_ewqa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "depends_on": "eval: doc.request_type=='Update Existing Job'",
+   "fieldname": "previous_job_details_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval: doc.request_type=='Update Existing Job'",
+   "fieldname": "job_no",
+   "fieldtype": "Link",
+   "label": "Job No",
+   "mandatory_depends_on": "eval: doc.request_type=='Update Existing Job'",
+   "options": "Job No ST"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pre_main_department",
+   "fieldtype": "Link",
+   "label": "Pre Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pre_sub_department",
+   "fieldtype": "Data",
+   "label": "Pre Sub Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "salary",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Salary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_momr",
+   "fieldtype": "Column Break",
+   "label": "Change to Previous  Job Details"
+  },
+  {
+   "fieldname": "finance_impact_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Finance Impact"
+  },
+  {
+   "fieldname": "finance_impact",
+   "fieldtype": "Currency",
+   "label": "Finance Impact",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_opie",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cgiv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation_cp",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "main_department_cp",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "grade_cp",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade"
+  },
+  {
+   "fieldname": "sub_department_cp",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "salary_cp",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Salary"
+  },
+  {
+   "depends_on": "eval: doc.request_type=='New Job'",
+   "fieldname": "new_job_details_section",
+   "fieldtype": "Section Break",
+   "label": "New Job Details"
+  },
+  {
+   "fieldname": "designation_nj",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "main_department_nj",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_vhpu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grade_np",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade"
+  },
+  {
+   "fieldname": "sub_department_nj",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_aipy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salary_nj",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Salary"
+  },
+  {
+   "depends_on": "eval: doc.request_type=='New Job'",
+   "fieldname": "new_job_no",
+   "fieldtype": "Data",
+   "label": "New Job No",
+   "mandatory_depends_on": "eval: doc.request_type=='New Job'"
+  },
+  {
+   "fieldname": "previous_job_details_column",
+   "fieldtype": "Column Break",
+   "label": "Previous Job Details"
+  },
+  {
+   "fieldname": "man_power_planning_reference",
+   "fieldtype": "Link",
+   "label": "Man Power Planning Reference",
+   "options": "Man Power Planning ST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Man Power Plan Change Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "original_budget_amount",
+   "fieldtype": "Currency",
+   "label": "Original Budget Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "new_budgeted_amount",
+   "fieldtype": "Currency",
+   "label": "New Budgeted Amount"
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  },
+  {
+   "fieldname": "section_cp",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  },
+  {
+   "fieldname": "employee_unit",
+   "fieldtype": "Link",
+   "label": "Employee Unit",
+   "options": "Employee Unit ST"
+  },
+  {
+   "fieldname": "employee_unit_cp",
+   "fieldtype": "Link",
+   "label": "Employee Unit",
+   "options": "Employee Unit ST"
+  },
+  {
+   "fieldname": "section_nj",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  },
+  {
+   "fieldname": "employee_unit_nj",
+   "fieldtype": "Link",
+   "label": "Employee Unit",
+   "options": "Employee Unit ST"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-06 14:28:48.293086",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Man Power Plan Change Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "DTM-.#####",
+ "creation": "2024-11-21 14:15:41.644260",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_fz0m",
+  "creation_date",
+  "created_by",
+  "main_department",
+  "sub_department",
+  "total_unpaid",
+  "column_break_ndyh",
+  "petty_cash_request_reference",
+  "petty_cash_closing_reference",
+  "petty_cash_repayment_reference",
+  "payment_proof_attachment",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_fz0m",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Deposit To MOF ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "total_unpaid",
+   "fieldtype": "Currency",
+   "label": "Total Unpaid"
+  },
+  {
+   "fieldname": "column_break_ndyh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "petty_cash_request_reference",
+   "fieldtype": "Link",
+   "label": "Petty Cash Request Reference",
+   "options": "Petty Cash Request ST"
+  },
+  {
+   "fieldname": "petty_cash_closing_reference",
+   "fieldtype": "Link",
+   "label": "Petty Cash Closing Reference",
+   "options": "Petty Cash Closing ST"
+  },
+  {
+   "fieldname": "petty_cash_repayment_reference",
+   "fieldtype": "Link",
+   "label": "Petty Cash Re-Payment Reference",
+   "options": "Petty Cash Re-Payment ST"
+  },
+  {
+   "fieldname": "payment_proof_attachment",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Payment Proof Attachment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Journal Entry",
+   "link_fieldname": "custom_deposit_to_mof_reference"
+  }
+ ],
+ "modified": "2024-11-25 07:47:18.638135",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Deposit To MOF ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

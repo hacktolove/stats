@@ -1,0 +1,179 @@
+{
+ "actions": [],
+ "autoname": "PR-.######",
+ "creation": "2024-08-05 14:22:20.865655",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ffot",
+  "amended_from",
+  "pr_date",
+  "employee",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "email",
+  "phone",
+  "post_type",
+  "address",
+  "content",
+  "column_break_gnre",
+  "number_of_attendees",
+  "goals",
+  "next_steps",
+  "required_service",
+  "request_date",
+  "request_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ffot",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Post Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "pr_date",
+   "fieldtype": "Date",
+   "label": "PR Date"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "employee.personal_email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Small Text",
+   "label": "Content"
+  },
+  {
+   "fieldname": "number_of_attendees",
+   "fieldtype": "Data",
+   "label": "Number Of Attendees"
+  },
+  {
+   "fieldname": "column_break_gnre",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "goals",
+   "fieldtype": "Data",
+   "label": "Goals"
+  },
+  {
+   "fieldname": "next_steps",
+   "fieldtype": "Data",
+   "label": "Next Steps"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "post_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Post Type",
+   "options": "Post Type ST"
+  },
+  {
+   "fieldname": "required_service",
+   "fieldtype": "Link",
+   "label": "Required Service",
+   "options": "Required Service ST"
+  },
+  {
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Request Date"
+  },
+  {
+   "fieldname": "request_time",
+   "fieldtype": "Time",
+   "label": "Request Time"
+  },
+  {
+   "fetch_from": "employee.cell_number",
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Post Approval ST",
+   "link_fieldname": "post_request_reference"
+  }
+ ],
+ "modified": "2025-07-11 12:49:19.434524",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Post Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-29 15:06:45.101346",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "statistic_request_reference",
+  "sub_department",
+  "statistic_name",
+  "statistics_priority",
+  "planned_start_date",
+  "planned_end_date",
+  "no_of_days",
+  "column_break_fbqm",
+  "statistics_method",
+  "total_no_team",
+  "final_cost",
+  "created_by",
+  "creation_date",
+  "action"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "statistic_request_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Statistic Request Reference",
+   "options": "Statistic Request ST"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "statistic_request_reference.sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "statistic_request_reference.statistic_name",
+   "fieldname": "statistic_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Statistic Name"
+  },
+  {
+   "columns": 1,
+   "fieldname": "statistics_priority",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Statistics Priority"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "statistic_request_reference.planned_start_date",
+   "fieldname": "planned_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Planned Start Date"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "statistic_request_reference.planned_end_date",
+   "fieldname": "planned_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Planned End Date"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "statistic_request_reference.no_of_days",
+   "fieldname": "no_of_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No of Days"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "statistic_request_reference.statistics_method",
+   "fieldname": "statistics_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Statistics Method",
+   "options": "\nBy Phone\nBy Field\nBy Record\nBy Mail"
+  },
+  {
+   "fieldname": "column_break_fbqm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "statistic_request_reference.total_no_team",
+   "fieldname": "total_no_team",
+   "fieldtype": "Int",
+   "label": "Total No Team"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "statistic_request_reference.final_cost",
+   "fieldname": "final_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Final Cost"
+  },
+  {
+   "fetch_from": "statistic_request_reference.created_by",
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fetch_from": "statistic_request_reference.creation_date",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "columns": 1,
+   "default": "Pending",
+   "fieldname": "action",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Action",
+   "options": "Pending\nApprove\nReject"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-30 13:08:51.614421",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Statistic Sub Department Processing Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

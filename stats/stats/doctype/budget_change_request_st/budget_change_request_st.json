@@ -1,0 +1,226 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "BCR-.######",
+ "creation": "2024-08-23 07:57:15.645056",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "transaction_date",
+  "fiscal_year",
+  "budget_change_type",
+  "column_break_tnjn",
+  "employee",
+  "created_by",
+  "main_department",
+  "section_break_llhr",
+  "internal_amount",
+  "column_break_lhfs",
+  "enhancement_amount",
+  "budget_updates_section",
+  "from_column",
+  "from",
+  "from_main_department",
+  "from_account",
+  "from_amount",
+  "available_amount",
+  "to_column",
+  "to",
+  "to_main_department",
+  "to_account",
+  "to_amount",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "label": "Fiscal Year",
+   "options": "Fiscal Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_tnjn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "budget_change_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Budget Change Type",
+   "options": "\nEnhancement\nInternal Transfer",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction Date"
+  },
+  {
+   "fieldname": "budget_updates_section",
+   "fieldtype": "Section Break",
+   "label": "Budget Updates "
+  },
+  {
+   "depends_on": "eval:doc.budget_change_type==\"Internal Transfer\"",
+   "fieldname": "from_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.budget_change_type==\"Internal Transfer\"",
+   "fieldname": "from_main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "mandatory_depends_on": "eval:doc.budget_change_type==\"Internal Transfer\"",
+   "options": "Department"
+  },
+  {
+   "fieldname": "to_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.budget_change_type!=\"\"",
+   "fieldname": "to_main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.budget_change_type==\"Internal Transfer\"",
+   "fieldname": "from_account",
+   "fieldtype": "Link",
+   "label": "Account",
+   "mandatory_depends_on": "eval:doc.budget_change_type==\"Internal Transfer\"",
+   "options": "Account"
+  },
+  {
+   "depends_on": "eval:doc.budget_change_type!=\"\"",
+   "fieldname": "to_account",
+   "fieldtype": "Link",
+   "label": "Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "non_negative": 1,
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "depends_on": "eval:doc.budget_change_type==\"Internal Transfer\"",
+   "fieldname": "from_amount",
+   "fieldtype": "Currency",
+   "label": "Transfer Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_llhr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.budget_change_type==\"Internal Transfer\"",
+   "fieldname": "internal_amount",
+   "fieldtype": "Currency",
+   "label": "Internal Transfer Amount",
+   "mandatory_depends_on": "eval:doc.budget_change_type==\"Internal Transfer\"",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_lhfs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.budget_change_type==\"Enhancement\"",
+   "fieldname": "enhancement_amount",
+   "fieldtype": "Currency",
+   "label": "Enhancement Amount",
+   "mandatory_depends_on": "eval:doc.budget_change_type==\"Enhancement\"",
+   "non_negative": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Budget Change Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval:doc.budget_change_type==\"Internal Transfer\"",
+   "fieldname": "available_amount",
+   "fieldtype": "Currency",
+   "label": "Available Amount ",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.budget_change_type==\"Internal Transfer\"",
+   "fieldname": "from",
+   "fieldtype": "HTML",
+   "label": "From",
+   "options": "<h5><b>From</b></h5>"
+  },
+  {
+   "depends_on": "eval:doc.budget_change_type!=\"\"",
+   "fieldname": "to",
+   "fieldtype": "HTML",
+   "label": "To",
+   "options": "<h5><b>To</b></h5>"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-04 13:48:38.667659",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Budget Change Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

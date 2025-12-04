@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PCR-.#####",
+ "creation": "2024-11-21 13:14:35.426630",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_w0qe",
+  "creation_date",
+  "created_by",
+  "total_loan_amount",
+  "decision_reference",
+  "total_requested_amount",
+  "remaining_days_to_close_request",
+  "column_break_ylki",
+  "loan_purpose",
+  "payment_status",
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "grade",
+  "loan_status",
+  "amended_from",
+  "section_break_vkqn",
+  "pc_request_account_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_w0qe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Petty Cash Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "total_loan_amount",
+   "fieldtype": "Currency",
+   "label": "Total Loan Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "decision_reference",
+   "fieldtype": "Data",
+   "label": "Decision Reference"
+  },
+  {
+   "fieldname": "column_break_ylki",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "loan_purpose",
+   "fieldtype": "Small Text",
+   "label": "Loan Purpose"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Not Paid",
+   "description": "change on submit of Payment Procedure",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "\nNot Paid\nPaid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee No",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Open",
+   "description": "change on submit of Petty Cash Closing",
+   "fieldname": "loan_status",
+   "fieldtype": "Select",
+   "label": "Loan Status",
+   "options": "\nOpen\nClosed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_vkqn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pc_request_account_details",
+   "fieldtype": "Table",
+   "label": "PC Request Account Details",
+   "options": "PC Request Account Details ST"
+  },
+  {
+   "fieldname": "total_requested_amount",
+   "fieldtype": "Currency",
+   "label": "Total Requested Amount",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.grade",
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade",
+   "read_only": 1
+  },
+  {
+   "description": "-ve value indicates pending to close request more than grace period  days.",
+   "fieldname": "remaining_days_to_close_request",
+   "fieldtype": "Int",
+   "label": "Remaining Days to Close Request",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Payment Request ST",
+   "link_fieldname": "reference_no"
+  },
+  {
+   "link_doctype": "Petty Cash Closing ST",
+   "link_fieldname": "petty_cash_request_reference"
+  }
+ ],
+ "modified": "2025-06-18 10:31:10.252515",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Petty Cash Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

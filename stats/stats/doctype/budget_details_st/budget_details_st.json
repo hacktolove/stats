@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-06 12:28:59.087858",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "year",
+  "planned_budget",
+  "column_break_pfey",
+  "consumed_budget",
+  "remaining_budget"
+ ],
+ "fields": [
+  {
+   "fieldname": "year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Year"
+  },
+  {
+   "fieldname": "planned_budget",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Planned Budget"
+  },
+  {
+   "fieldname": "consumed_budget",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Consumed Budget"
+  },
+  {
+   "fieldname": "remaining_budget",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Remaining Budget"
+  },
+  {
+   "fieldname": "column_break_pfey",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-06 12:34:05.965138",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Budget Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

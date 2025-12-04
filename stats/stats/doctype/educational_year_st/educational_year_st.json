@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:educational_year_name",
+ "creation": "2024-12-10 09:56:53.779710",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "educational_year_name",
+  "educational_year_start_date",
+  "column_break_wcje",
+  "educational_year_end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_wcje",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "educational_year_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Educational Year Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "educational_year_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Educational Year End Date",
+   "reqd": 1
+  },
+  {
+   "description": "ex. 2025-2026",
+   "fieldname": "educational_year_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Educational Year Name",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-29 13:13:51.807484",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Educational Year ST",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

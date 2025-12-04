@@ -1,0 +1,32 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2024-10-15 13:21:49.851681",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Employee Attendance Checkup ST",
+ "enabled": 1,
+ "event": "Submit",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Dear Member,\n    You must have to join office on {{ frappe.format_date(doc.attendance_date) }} in between {{ doc.attendance_from }} to {{ doc.attendance_to }}</p>\n\n<p>Thanks.</p>\n",
+ "message_type": "HTML",
+ "modified": "2024-10-18 11:22:07.707473",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Attendance marked",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "cc": "{{get_employee_emails(doc.employee_attendance_checkup_details)}}",
+   "receiver_by_document_field": "owner",
+   "receiver_by_role": ""
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "HR",
+ "sender_email": "company.hr@gmail.com",
+ "subject": "Employee Attendance Checkup on {{frappe.format_date( doc.attendance_date) }}"
+}

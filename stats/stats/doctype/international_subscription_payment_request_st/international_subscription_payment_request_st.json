@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ISP-.#####",
+ "creation": "2024-11-25 08:14:39.528328",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_36hg",
+  "creation_date",
+  "created_by",
+  "main_department",
+  "sub_department",
+  "reference_no",
+  "certificate_status",
+  "amended_from",
+  "column_break_qelx",
+  "subscription_type",
+  "description",
+  "subscription_amount",
+  "supplier",
+  "project_owner",
+  "project_manager",
+  "department_request",
+  "contract_date",
+  "contract_period"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_36hg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "International Subscription Payment Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "reference_no",
+   "fieldtype": "Data",
+   "label": "Reference No"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "certificate_status",
+   "fieldtype": "Select",
+   "label": "Certificate Status",
+   "options": "\nPending\nDone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_qelx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subscription_type",
+   "fieldtype": "Data",
+   "label": "Subscription Type"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "subscription_amount",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Subscription Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supplier",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_owner",
+   "fieldtype": "Link",
+   "label": "Project Owner",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "project_manager",
+   "fieldtype": "Link",
+   "label": "Project Manager",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "project_owner.department",
+   "fieldname": "department_request",
+   "fieldtype": "Link",
+   "label": "Department Request",
+   "link_filters": "[[\"Department\",\"is_group\",\"=\",1]]",
+   "options": "Department"
+  },
+  {
+   "fieldname": "contract_date",
+   "fieldtype": "Date",
+   "label": "Contract Date"
+  },
+  {
+   "fieldname": "contract_period",
+   "fieldtype": "Data",
+   "label": "Contract Period"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Achievement Certificate ST",
+   "link_fieldname": "request_reference"
+  }
+ ],
+ "modified": "2024-11-25 11:14:22.099553",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "International Subscription Payment Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

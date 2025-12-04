@@ -1,0 +1,641 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"1dVfdsVMLt\",\"type\":\"header\",\"data\":{\"text\":\"<br>\",\"col\":12}},{\"id\":\"njGQb0O7ty\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"RN8I1uozRv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee\",\"col\":3}},{\"id\":\"uso-pfa5HW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Contract St\",\"col\":3}},{\"id\":\"DXLDj5G8cx\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Checkin\",\"col\":3}},{\"id\":\"lkIslbz2xC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Penalty St\",\"col\":3}},{\"id\":\"9ebqpje4aU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Loan Reimbursement ST\",\"col\":3}},{\"id\":\"OXlvamoxWA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Salary Freezing St\",\"col\":3}},{\"id\":\"oet0tCLriB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overtime Request St\",\"col\":3}},{\"id\":\"tGLoGfX4Yz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overtime Sheet St\",\"col\":3}},{\"id\":\"HateIJUY-4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overtime Sheet St\",\"col\":3}},{\"id\":\"-Va1p-tW9L\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shift Assignment\",\"col\":3}},{\"id\":\"pMiUywXCqZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stats Settings St\",\"col\":3}},{\"id\":\"gSuBbLEINh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Important Role ST\",\"col\":3}},{\"id\":\"i_I5YW0lpA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Job Offer ST\",\"col\":3}},{\"id\":\"myBs88HArC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Salary Structure\",\"col\":3}},{\"id\":\"zmM0OFfnt1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"NzNJmbqbVv\",\"type\":\"card\",\"data\":{\"card_name\":\"Attendance Transactions\",\"col\":4}},{\"id\":\"R7Wpbwfi13\",\"type\":\"card\",\"data\":{\"card_name\":\"Attendance Reports\",\"col\":4}},{\"id\":\"_YIW78O3RE\",\"type\":\"card\",\"data\":{\"card_name\":\"Employee Overtime\",\"col\":4}},{\"id\":\"2S84W7cptt\",\"type\":\"card\",\"data\":{\"card_name\":\"Employee Vacations\",\"col\":4}},{\"id\":\"oe82_of3id\",\"type\":\"card\",\"data\":{\"card_name\":\"Business Trip\",\"col\":4}},{\"id\":\"kUDr7bTTpX\",\"type\":\"card\",\"data\":{\"card_name\":\"Employee Transfer\",\"col\":4}},{\"id\":\"qVk07gBZhG\",\"type\":\"card\",\"data\":{\"card_name\":\"Education Allownce\",\"col\":4}},{\"id\":\"xFF96PCocx\",\"type\":\"card\",\"data\":{\"card_name\":\"Resignation and Retirment\",\"col\":4}}]",
+ "creation": "2025-04-30 15:51:28.373211",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "table_2",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Operation Department",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Resignation and Retirment",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Resignation ST",
+   "link_count": 0,
+   "link_to": "Employee Resignation ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "End of Service Calculation ST",
+   "link_count": 0,
+   "link_to": "End of Service Calculation ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "End Of Service Sheet ST",
+   "link_count": 0,
+   "link_to": "End Of Service Sheet ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Retirement Request ST",
+   "link_count": 0,
+   "link_to": "Retirement Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vacation Encashment Sheet ST",
+   "link_count": 0,
+   "link_to": "Vacation Encashment Sheet ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Exit Interview ST",
+   "link_count": 0,
+   "link_to": "Exit Interview ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Business Trip",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Business Trip Request ST",
+   "link_count": 0,
+   "link_to": "Business Trip Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Business Trip Processing ST",
+   "link_count": 0,
+   "link_to": "Business Trip Processing ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Task Completion ST",
+   "link_count": 0,
+   "link_to": "Employee Task Completion ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Ticket Request ST",
+   "link_count": 0,
+   "link_to": "Ticket Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Business Trip Sheet ST",
+   "link_count": 0,
+   "link_to": "Business Trip Sheet ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Overtime",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Overtime Request ST",
+   "link_count": 0,
+   "link_to": "Overtime Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Overtime Sheet ST",
+   "link_count": 0,
+   "link_to": "Overtime Sheet ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Transfer",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Reallocation Sheet ST",
+   "link_count": 0,
+   "link_to": "Employee Reallocation Sheet ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Transfer",
+   "link_count": 0,
+   "link_to": "Employee Transfer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Reallocation ST",
+   "link_count": 0,
+   "link_to": "Employee Reallocation ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Education Allownce",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Education Allowance Request ST",
+   "link_count": 0,
+   "link_to": "Education Allowance Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Education Allowance Sheet ST",
+   "link_count": 0,
+   "link_to": "Education Allowance Sheet ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Educational Year ST",
+   "link_count": 0,
+   "link_to": "Educational Year ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance Transactions",
+   "link_count": 8,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance Request",
+   "link_count": 0,
+   "link_to": "Attendance Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance Request ST",
+   "link_count": 0,
+   "link_to": "Attendance Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Checkin",
+   "link_count": 0,
+   "link_to": "Employee Checkin",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance",
+   "link_count": 0,
+   "link_to": "Attendance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance Reconciliation ST",
+   "link_count": 0,
+   "link_to": "Attendance Reconciliation ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Breast Feeding Request ST",
+   "link_count": 0,
+   "link_to": "Employee Breast Feeding Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Work Out of Office ST",
+   "link_count": 0,
+   "link_to": "Employee Work Out of Office ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Permission Request ST",
+   "link_count": 0,
+   "link_to": "Employee Permission Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Vacations",
+   "link_count": 7,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Leave Allocation",
+   "link_count": 0,
+   "link_to": "Leave Allocation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Leave Application",
+   "link_count": 0,
+   "link_to": "Leave Application",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Leave Block List",
+   "link_count": 0,
+   "link_to": "Leave Block List",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Control ",
+   "link_count": 0,
+   "link_to": "Leave Control Panel",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Leave Change Request ST",
+   "link_count": 0,
+   "link_to": "Leave Change Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Employee Leave Balance Summary",
+   "link_count": 0,
+   "link_to": "Employee Leave Balance Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Employee Leave Balance",
+   "link_count": 0,
+   "link_to": "Employee Leave Balance",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance Reports",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Daily Attendance Report",
+   "link_count": 0,
+   "link_to": "Daily Attendance Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "General Attendance Report",
+   "link_count": 0,
+   "link_to": "General Attendance Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Employee Absent Report",
+   "link_count": 0,
+   "link_to": "Employee Absent Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Employee Continuous Absent Report",
+   "link_count": 0,
+   "link_to": "Employee Continuous Absent Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Monthly Delay Report",
+   "link_count": 0,
+   "link_to": "Monthly Delay Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Daily Checkin Report",
+   "link_count": 0,
+   "link_to": "Daily Checkin Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Employee Checkin",
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-05-19 13:54:02.725644",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Operation Department",
+ "number_cards": [],
+ "owner": "hametwally@stats.gov.sa",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Salary Employee"
+  },
+  {
+   "role": "Salary Supervisor"
+  },
+  {
+   "role": "Senior HR Services Employee"
+  },
+  {
+   "role": "HR Operation Manager"
+  },
+  {
+   "role": "HR Service Specialist"
+  },
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "HR Operation Manager"
+  },
+  {
+   "role": "Senior HR Services Spcialist"
+  },
+  {
+   "role": "HR Service Specialist"
+  },
+  {
+   "role": "Vice President of Operations"
+  },
+  {
+   "role": "Salary Structure"
+  },
+  {
+   "role": "Senior HR Services Spcialist - Attendance"
+  }
+ ],
+ "sequence_id": 45.1,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Loan Reimbursement ST",
+   "link_to": "Loan Reimbursement ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee",
+   "link_to": "Employee",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Salary Freezing St",
+   "link_to": "Salary Freezing ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Job Offer ST",
+   "link_to": "Job Offer ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Important Role ST",
+   "link_to": "Important Role ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Salary Structure",
+   "link_to": "Salary Structure",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Contract St",
+   "link_to": "Employee Contract ST",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Overtime Request St",
+   "link_to": "Overtime Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Overtime Sheet St",
+   "link_to": "Overtime Sheet ST",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Checkin",
+   "link_to": "Employee Checkin",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Shift Assignment",
+   "link_to": "Shift Assignment",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Penalty St",
+   "link_to": "Employee Penalty ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Stats Settings St",
+   "link_to": "Stats Settings ST",
+   "type": "DocType"
+  }
+ ],
+ "title": "Operation Department"
+}

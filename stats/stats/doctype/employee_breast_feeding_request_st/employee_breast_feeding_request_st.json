@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EBFR-.######",
+ "creation": "2025-04-25 15:17:18.628921",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_5gky",
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "early_late_time",
+  "column_break_lkvp",
+  "from_date",
+  "to_date",
+  "total_no_of_days",
+  "request_attachment",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_5gky",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_lkvp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Breast Feeding Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "request_attachment",
+   "fieldtype": "Attach",
+   "label": "Request Attachment",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "description": "Holidays are ignored between from date & to date",
+   "fieldname": "total_no_of_days",
+   "fieldtype": "Int",
+   "label": "Total No of Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "early_late_time",
+   "fieldtype": "Select",
+   "label": "Early Or Late Time",
+   "options": "\nMorning\nAfternoon",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-27 07:54:01.387780",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Breast Feeding Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

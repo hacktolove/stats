@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:DB-{main_department}-{fiscal_year}",
+ "creation": "2024-08-23 06:55:38.587530",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_w7ts",
+  "transaction_date",
+  "fiscal_year",
+  "amended_from",
+  "total_requested_amount",
+  "column_break_hnfw",
+  "requested_by",
+  "main_department",
+  "cost_center",
+  "account_details_section",
+  "account_table",
+  "budget_update_section",
+  "budget_update"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_w7ts",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Department Budget ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fiscal Year",
+   "options": "Fiscal Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hnfw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "label": "Requested By",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "requested_by.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "main_department.custom_department_cost_center",
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center",
+   "reqd": 1
+  },
+  {
+   "fieldname": "account_details_section",
+   "fieldtype": "Section Break",
+   "label": "Account Details"
+  },
+  {
+   "fieldname": "budget_update_section",
+   "fieldtype": "Section Break",
+   "label": "Budget Update"
+  },
+  {
+   "fieldname": "account_table",
+   "fieldtype": "Table",
+   "label": "Account Table",
+   "options": "Accounts Details ST"
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "budget_update",
+   "fieldtype": "Table",
+   "label": "Budget Update",
+   "options": "Department Budget Update Details ST"
+  },
+  {
+   "fieldname": "total_requested_amount",
+   "fieldtype": "Currency",
+   "label": "Total Requested Amount",
+   "non_negative": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-20 08:21:40.109251",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Department Budget ST",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

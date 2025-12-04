@@ -1,0 +1,108 @@
+<head>
+    <style>
+:root {
+--page-max-width: 90%;
+}
+
+
+.line {
+            width: 120px;
+            height: 6px;
+            background: #63d19e;
+        }
+
+.progresses {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin: 5% auto;
+}
+
+.step-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    width: 250px;
+}
+
+.steps {
+    width: 40px;
+    height: 40px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.step-label {
+    margin-top: 8px;
+}
+
+.step-container .fa::after{
+    content: '';
+    background: #63d19e;
+    height: 5px;
+    width: 250px;
+    display: block;
+    position: absolute;
+    top: 16px;
+    z-index: -1;
+}
+
+.step-container .fa.changed::after{
+    content: '';
+    background: #63d19e;
+    height: 5px;
+    width: 150px;
+    display: block;
+    position: absolute;
+    top: 16px;
+    z-index: -1;
+}
+
+
+.step-container:last-child .fa::after{
+    width: 0px;
+}
+
+  </style>
+</head>
+
+
+<body>
+<div class="progresses">
+    {% for state in workflow_states %}
+
+        {% if state == doc.workflow_state%}
+            <div class="step-container">
+            <div class="steps" style="background-color: coral;">
+                <span><i class="fa fa-check"></i></span>
+            </div>
+            <div class="step-label">{{state}}</div>
+        </div>
+        {% else %}
+            <div class="step-container">
+            <div class="steps">
+                <span><i class="fa fa-check"></i></span>
+            </div>
+            <div class="step-label">{{state}}</div>
+        </div>
+        {% endif%}
+
+        
+
+    {% endfor %}
+</div>
+
+{% if workflow_states|len > 4%}
+<script>
+    $('.step-container .fa').toggleClass('changed');
+    console.log("=========hellloooo!!====", $(`.step-container .fa`))
+</script>
+{% endif%}
+
+
+</body>

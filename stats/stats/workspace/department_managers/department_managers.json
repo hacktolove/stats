@@ -1,0 +1,93 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"av4qzaw4Uk\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Department Manager</span>\",\"col\":12}},{\"id\":\"cCsLqhy5Cb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Request\",\"col\":3}},{\"id\":\"FgAhY7KhbN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Man Power Plan Change Request ST\",\"col\":3}},{\"id\":\"NTmIJdoWFc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Internal Campaign ST\",\"col\":3}},{\"id\":\"CblJR052Ed\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Post Request ST\",\"col\":3}},{\"id\":\"lH690TYVbP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Important Role ST\",\"col\":3}},{\"id\":\"9aGNY6cH_0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"International Subscription Payment Request ST\",\"col\":3}},{\"id\":\"ug93VvurH9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overtime Request ST\",\"col\":3}}]",
+ "creation": "2025-04-29 13:34:27.054853",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "users",
+ "idx": 1,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Department Managers",
+ "links": [],
+ "modified": "2025-05-19 13:54:15.652502",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Department Managers",
+ "number_cards": [],
+ "owner": "hametwally@stats.gov.sa",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Department Manager"
+  },
+  {
+   "role": "Sub Department Manager"
+  }
+ ],
+ "sequence_id": 39.1,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Man Power Plan Change Request ST",
+   "link_to": "Man Power Plan Change Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "International Subscription Payment Request ST",
+   "link_to": "International Subscription Payment Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Material Request",
+   "link_to": "Material Request",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Important Role ST",
+   "link_to": "Important Role ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Internal Campaign ST",
+   "link_to": "Internal Campaign ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Overtime Request ST",
+   "link_to": "Overtime Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Post Request ST",
+   "link_to": "Post Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Department Managers"
+}

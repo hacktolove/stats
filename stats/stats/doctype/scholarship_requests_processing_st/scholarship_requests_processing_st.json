@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SCSRP-.#####",
+ "creation": "2024-09-10 12:12:11.330285",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "transaction_date",
+  "scholarship_no",
+  "country",
+  "scholarship_start_date",
+  "scholarship_end_date",
+  "fetch_scholarship_requests",
+  "column_break_agnc",
+  "from_date",
+  "to_date",
+  "main_department",
+  "sub_department",
+  "specialisation_type",
+  "amended_from",
+  "section_break_lxpu",
+  "scholarship_request_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Scholarship Requests Processing ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction date"
+  },
+  {
+   "fieldname": "scholarship_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Scholarship No",
+   "options": "Scholarship No ST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country",
+   "read_only": 1
+  },
+  {
+   "description": "This date will check with transaction date of Scholarship request",
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Request From Date"
+  },
+  {
+   "description": "This date will check with transaction date of Scholarship request",
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Request To Date"
+  },
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "specialisation_type",
+   "fieldtype": "Link",
+   "label": "Specialisation Type",
+   "options": "Specialisation Type ST"
+  },
+  {
+   "fieldname": "column_break_agnc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_lxpu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "scholarship_request_details",
+   "fieldtype": "Table",
+   "label": "Scholarship Request Details",
+   "options": "Scholarship Request Details ST"
+  },
+  {
+   "depends_on": "eval:doc.docstatus == 0",
+   "fieldname": "fetch_scholarship_requests",
+   "fieldtype": "Button",
+   "label": "Fetch Scholarship Requests"
+  },
+  {
+   "description": "Salary will be calculate based on this date",
+   "fieldname": "scholarship_start_date",
+   "fieldtype": "Date",
+   "label": "Scholarship Start Date",
+   "reqd": 1
+  },
+  {
+   "description": "Salary will be calculate based on this date",
+   "fieldname": "scholarship_end_date",
+   "fieldtype": "Date",
+   "label": "Scholarship End Date",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-17 10:11:59.101854",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Scholarship Requests Processing ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

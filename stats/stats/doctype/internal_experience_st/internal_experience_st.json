@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-21 13:09:57.337573",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "designation",
+  "department",
+  "grade",
+  "total_salary",
+  "procedure_type",
+  "decision_number",
+  "date_of_decision"
+ ],
+ "fields": [
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade"
+  },
+  {
+   "fieldname": "total_salary",
+   "fieldtype": "Data",
+   "label": "Total Salary"
+  },
+  {
+   "fieldname": "procedure_type",
+   "fieldtype": "Link",
+   "label": "Procedure Type",
+   "options": "Procedure Type ST"
+  },
+  {
+   "fieldname": "decision_number",
+   "fieldtype": "Link",
+   "label": "Decision Number",
+   "options": "Decision Number ST"
+  },
+  {
+   "fieldname": "date_of_decision",
+   "fieldtype": "Date",
+   "label": "Date of Decision"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-21 13:17:17.109645",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Internal Experience ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

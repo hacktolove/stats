@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-16 11:00:43.328535",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "position",
+  "relationship",
+  "place_of_work"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Position"
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Relationship"
+  },
+  {
+   "fieldname": "place_of_work",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Place of Work"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-16 11:02:43.968907",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Candidate Relatives In Stats Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

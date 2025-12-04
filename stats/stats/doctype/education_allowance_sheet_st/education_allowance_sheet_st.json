@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EDAS-.#####",
+ "creation": "2024-12-09 13:01:30.348589",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_iusi",
+  "creation_date",
+  "created_by",
+  "main_department",
+  "sub_department",
+  "column_break_qfdf",
+  "request_date_from",
+  "request_date_to",
+  "season",
+  "total_approved_amount",
+  "fetch_approved_request",
+  "amended_from",
+  "section_break_lrbz",
+  "education_allowance_sheet_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_iusi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Education Allowance Sheet ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_qfdf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request_date_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Request Date From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "request_date_to",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Request Date To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "season",
+   "fieldtype": "Select",
+   "label": "Season",
+   "options": "\nFirst Season\nSecond Season\nThird Season"
+  },
+  {
+   "depends_on": "eval: doc.docstatus == 0",
+   "fieldname": "fetch_approved_request",
+   "fieldtype": "Button",
+   "label": "Fetch Approved Request"
+  },
+  {
+   "fieldname": "section_break_lrbz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "education_allowance_sheet_details",
+   "fieldtype": "Table",
+   "label": "Education Allowance Sheet Details",
+   "options": "Education Allowance Sheet Details ST"
+  },
+  {
+   "fieldname": "total_approved_amount",
+   "fieldtype": "Currency",
+   "label": "Total Approved Amount",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Payment Request ST",
+   "link_fieldname": "reference_no"
+  }
+ ],
+ "modified": "2025-09-19 12:52:30.374579",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Education Allowance Sheet ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

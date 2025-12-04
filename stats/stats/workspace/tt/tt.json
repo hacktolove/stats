@@ -1,0 +1,214 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"I73KU5uAQW\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Talent Development Team</span>\",\"col\":12}},{\"id\":\"pq4NodFkXl\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Trainings (This Month)\",\"col\":3}},{\"id\":\"sUpHWKdVZF\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"3FvP5kog2k\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Training Event ST\",\"col\":3}},{\"id\":\"cUI8_GxlSQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Training Announcement ST\",\"col\":3}},{\"id\":\"ROFV_NLpLn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Training Request ST\",\"col\":3}},{\"id\":\"n8Ns6fSkCi\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Training Needs Analysis ST\",\"col\":3}},{\"id\":\"4aqSHqGEQF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Training Evaluation ST\",\"col\":3}},{\"id\":\"wwkg-nuPna\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Important Role ST\",\"col\":3}},{\"id\":\"3Ai6aWdD5u\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Alternatives ST\",\"col\":3}},{\"id\":\"BcfOpS2LYE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"High Performance Employee ST\",\"col\":3}},{\"id\":\"NirtdbIX8H\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Acting ST\",\"col\":3}},{\"id\":\"gVdpqr76gW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Job Application ST\",\"col\":3}},{\"id\":\"YpG5cGkHwn\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"__AivRLY-c\",\"type\":\"card\",\"data\":{\"card_name\":\"Employee Evaluation ST\",\"col\":4}},{\"id\":\"ThXTWrYETT\",\"type\":\"card\",\"data\":{\"card_name\":\"ScholarShip\",\"col\":4}}]",
+ "creation": "2024-12-22 11:25:51.473939",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "both",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 1,
+ "label": "tt",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ScholarShip",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Scholarship ST",
+   "link_count": 0,
+   "link_to": "Scholarship ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Scholarship Request ST",
+   "link_count": 0,
+   "link_to": "Scholarship Request ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Scholarship Requests Processing ST",
+   "link_count": 0,
+   "link_to": "Scholarship Requests Processing ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Evaluation ST",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bulk Employee Evaluation ST",
+   "link_count": 0,
+   "link_to": "Bulk Employee Evaluation ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Evaluation ST",
+   "link_count": 0,
+   "link_to": "Employee Evaluation ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Evaluation Template ST",
+   "link_count": 0,
+   "link_to": "Employee Evaluation Template ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Personal Goals ST",
+   "link_count": 0,
+   "link_to": "Employee Personal Goals ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-07-22 15:17:01.229313",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "tt",
+ "number_cards": [
+  {
+   "label": "Trainings (This Month)",
+   "number_card_name": "Trainings (This Month)"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Talent Development Officer"
+  },
+  {
+   "role": "Talent Acquisition Manager"
+  },
+  {
+   "role": "Talent Acquisition Officer"
+  }
+ ],
+ "sequence_id": 23.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Training Announcement ST",
+   "link_to": "Training Announcement ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Job Application ST",
+   "link_to": "Job Application ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Acting ST",
+   "link_to": "Employee Acting ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Training Event ST",
+   "link_to": "Training Event ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Training Request ST",
+   "link_to": "Training Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Important Role ST",
+   "link_to": "Important Role ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Training Needs Analysis ST",
+   "link_to": "Training Needs Analysis ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Training Evaluation ST",
+   "link_to": "Training Evaluation ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Alternatives ST",
+   "link_to": "Employee Alternatives ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": " High Potential ST",
+   "link_to": "High Potential ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "tt"
+}

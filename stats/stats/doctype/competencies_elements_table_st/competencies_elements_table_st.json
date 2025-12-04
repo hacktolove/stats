@@ -1,0 +1,35 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-05 08:01:57.846835",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "elements"
+ ],
+ "fields": [
+  {
+   "fieldname": "elements",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Elements",
+   "options": "Competencies Elements ST",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-05 08:02:29.266678",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Competencies Elements Table ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

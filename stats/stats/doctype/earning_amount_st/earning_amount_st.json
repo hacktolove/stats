@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-13 07:36:49.598011",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "earning",
+  "abbr",
+  "column_break_ozjh",
+  "formula",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "earning",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Earning",
+   "link_filters": "[[\"Salary Component\",\"type\",\"=\",\"Earning\"],[\"Salary Component\",\"disabled\",\"=\",0]]",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "column_break_ozjh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "precision": "2"
+  },
+  {
+   "fetch_from": "earning.salary_component_abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Abbr",
+   "read_only": 1
+  },
+  {
+   "fieldname": "formula",
+   "fieldtype": "Code",
+   "in_list_view": 1,
+   "label": "Formula",
+   "options": "PythonExpression"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-17 13:40:21.688052",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Earning Amount ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

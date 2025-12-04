@@ -1,0 +1,66 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"f0Oj4n74pU\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Vice President of Operations</span>\",\"col\":12}},{\"id\":\"JfH-LfRxi8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Scholarship Requests Processing ST\",\"col\":3}},{\"id\":\"ussTOTm2PH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Request\",\"col\":3}},{\"id\":\"ZqbkDbm18g\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Training Needs Analysis ST\",\"col\":3}},{\"id\":\"apQUn17MBH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Important Role ST\",\"col\":3}}]",
+ "creation": "2025-01-26 11:11:05.816165",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "pen",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Vice President of Operations",
+ "links": [],
+ "modified": "2025-04-17 07:39:07.358885",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Vice President of Operations",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Vice President of Operations"
+  }
+ ],
+ "sequence_id": 43.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Training Needs Analysis ST",
+   "link_to": "Training Needs Analysis ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Scholarship Requests Processing ST",
+   "link_to": "Scholarship Requests Processing ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Important Role ST",
+   "link_to": "Important Role ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Material Request",
+   "link_to": "Material Request",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Vice President of Operations"
+}

@@ -1,0 +1,457 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RR-.#####",
+ "creation": "2024-11-27 07:50:55.635723",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_retirement_request",
+  "creation_date",
+  "column_break_lnqe",
+  "retirement_type",
+  "section_break_wivo",
+  "employee_no",
+  "employee_name",
+  "contract_type",
+  "job_no",
+  "designation",
+  "grade",
+  "employee_number",
+  "column_break_zagd",
+  "employee_joining_date",
+  "main_department",
+  "sub_department",
+  "branch",
+  "section",
+  "step",
+  "id_residency_number",
+  "column_break_dcpb",
+  "birth_date_hijri",
+  "birth_date_gregorian",
+  "retirement_date_gregorian",
+  "retirement_date_hijri",
+  "work_duration_days",
+  "age_duration_days",
+  "age_duration_years",
+  "section_break_jbns",
+  "social_dev_bank_deduction",
+  "column_break_mfnz",
+  "agricalture_dev_bank_deduction",
+  "column_break_ldbh",
+  "real_stat_dev_bank_deduction",
+  "section_break_kedk",
+  "due_vacation_balance",
+  "column_break_tcxw",
+  "considered_vacation_days",
+  "section_break_zsdy",
+  "retirement_due_amount",
+  "new_retirement_due_amount",
+  "column_break_yzju",
+  "vacation_due_amount",
+  "column_break_yufc",
+  "total_due_amount",
+  "section_break_ikzh",
+  "earning",
+  "salary_structure_assignment_reference",
+  "basic_salary",
+  "total_monthly_salary",
+  "net_salary",
+  "column_break_dcoh",
+  "deduction",
+  "total_monthly_deduction",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_contract_type",
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "label": "Contract Type",
+   "options": "Contract Type ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_job_no",
+   "fieldname": "job_no",
+   "fieldtype": "Link",
+   "label": "Job No",
+   "options": "Job No ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.grade",
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_step",
+   "fieldname": "step",
+   "fieldtype": "Link",
+   "label": "Step",
+   "options": "Step ST"
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_lnqe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "ex: 30-3-1403 i.e. (Hijri Day)-(Hijri Month)-(Hijri Year)",
+   "fetch_from": "employee_no.custom_hijri_birth_date",
+   "fieldname": "birth_date_hijri",
+   "fieldtype": "Data",
+   "label": "Birth Date Hijri"
+  },
+  {
+   "fieldname": "retirement_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Retirement Type",
+   "options": "\nNormal Retirement\nEarly Retirement",
+   "read_only": 1
+  },
+  {
+   "fieldname": "retirement_due_amount",
+   "fieldtype": "Currency",
+   "label": "Retirement Due Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "due_vacation_balance",
+   "fieldtype": "Int",
+   "label": "Due Vacation Balance",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_due_amount",
+   "fieldtype": "Currency",
+   "label": "Total Due Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "social_dev_bank_deduction",
+   "fieldtype": "Currency",
+   "label": "Social Dev Bank Deduction",
+   "precision": "2"
+  },
+  {
+   "fieldname": "real_stat_dev_bank_deduction",
+   "fieldtype": "Currency",
+   "label": "Real Stat Dev Bank Deduction",
+   "precision": "2"
+  },
+  {
+   "fieldname": "agricalture_dev_bank_deduction",
+   "fieldtype": "Currency",
+   "label": "Agricalture Dev Bank Deduction",
+   "precision": "2"
+  },
+  {
+   "fieldname": "section_break_ikzh",
+   "fieldtype": "Section Break",
+   "label": "Salary Details"
+  },
+  {
+   "fieldname": "earning",
+   "fieldtype": "Table",
+   "label": "Earning",
+   "options": "EOS Earnings ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deduction",
+   "fieldtype": "Table",
+   "label": "Deduction",
+   "options": "EOS Deductions ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_dcoh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_monthly_salary",
+   "fieldtype": "Currency",
+   "label": "Total Monthly Salary",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_salary",
+   "fieldtype": "Currency",
+   "label": "Net Salary",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_monthly_deduction",
+   "fieldtype": "Currency",
+   "label": "Total Monthly Deduction",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_wivo",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "column_break_dcpb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zagd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jbns",
+   "fieldtype": "Section Break",
+   "label": "Retirement Deduction"
+  },
+  {
+   "fieldname": "section_break_kedk",
+   "fieldtype": "Section Break",
+   "label": "Vacation  Balance"
+  },
+  {
+   "fieldname": "column_break_ldbh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "considered_vacation_days",
+   "fieldtype": "Int",
+   "label": "Considered Vacation Days",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mfnz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tcxw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zsdy",
+   "fieldtype": "Section Break",
+   "label": "Due Amount"
+  },
+  {
+   "fieldname": "column_break_yzju",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yufc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salary_structure_assignment_reference",
+   "fieldtype": "Link",
+   "label": "Salary  Structure  Assignment Reference",
+   "options": "Salary Structure Assignment",
+   "read_only": 1
+  },
+  {
+   "description": "(Basic Salary / 30) * Minimum Vacation Days",
+   "fieldname": "vacation_due_amount",
+   "fieldtype": "Currency",
+   "label": "<b>Vacation Due Amount</b>",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "age_duration_days",
+   "fieldtype": "Int",
+   "label": "Age Duration (In Gregorian Days)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "age_duration_years",
+   "fieldtype": "Int",
+   "label": "Age Duration (In Hijri Years)",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.date_of_birth",
+   "fieldname": "birth_date_gregorian",
+   "fieldtype": "Date",
+   "label": "Birth Date Gregorian",
+   "reqd": 1
+  },
+  {
+   "fieldname": "retirement_date_gregorian",
+   "fieldtype": "Date",
+   "label": "Retirement Date Gregorian",
+   "reqd": 1
+  },
+  {
+   "description": "Retirement Due Amount - Total Retirement Deduction",
+   "fieldname": "new_retirement_due_amount",
+   "fieldtype": "Currency",
+   "label": "<b>New Retirement Due Amount</b>",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "description": "ex: 1403-3-30 i.e.(Hijri Year)-(Hijri Month)-(Hijri Day)\n",
+   "fieldname": "retirement_date_hijri",
+   "fieldtype": "Data",
+   "label": "Retirement Date Hijri",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Retirement Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee_retirement_request",
+   "fieldtype": "Link",
+   "label": "Employee Retirement Request",
+   "options": "Employee Retirement Request ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.date_of_joining",
+   "fieldname": "employee_joining_date",
+   "fieldtype": "Date",
+   "label": "Employee Joining Date"
+  },
+  {
+   "fetch_from": "employee_no.employee_number",
+   "fieldname": "employee_number",
+   "fieldtype": "Data",
+   "label": "Employee Number"
+  },
+  {
+   "fetch_from": "employee_no.custom_idresidency_number",
+   "fieldname": "id_residency_number",
+   "fieldtype": "Data",
+   "label": "ID Residency Number"
+  },
+  {
+   "fieldname": "work_duration_days",
+   "fieldtype": "Int",
+   "label": "Work Duration (In Days)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "basic_salary",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Basic Salary",
+   "precision": "2",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Evacuation of Party ST",
+   "link_fieldname": "retirement_reference"
+  },
+  {
+   "link_doctype": "Exit Interview ST",
+   "link_fieldname": "retirement_reference"
+  }
+ ],
+ "modified": "2025-11-24 12:37:25.028023",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Retirement Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "COA-.#####",
+ "creation": "2024-08-28 12:25:49.313507",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "created_by",
+  "main_department",
+  "sub_department",
+  "employee",
+  "column_break_uyik",
+  "title",
+  "goals",
+  "suggested_date",
+  "event_location",
+  "party_classification",
+  "section_break_ger0",
+  "employee_certificate_detail",
+  "invite_details_section",
+  "the_president",
+  "section_break_ffr6",
+  "main_department_invitation",
+  "section_break_scs7",
+  "sub_department_invitation"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_uyik",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "goals",
+   "fieldtype": "Data",
+   "label": "Goals"
+  },
+  {
+   "fieldname": "suggested_date",
+   "fieldtype": "Date",
+   "label": "Suggested Date"
+  },
+  {
+   "fieldname": "event_location",
+   "fieldtype": "Data",
+   "label": "Event Location"
+  },
+  {
+   "fieldname": "party_classification",
+   "fieldtype": "Link",
+   "label": "Party Classification",
+   "options": "Party Classification ST"
+  },
+  {
+   "fieldname": "section_break_ger0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_certificate_detail",
+   "fieldtype": "Table",
+   "label": "Employee Certificate Detail",
+   "options": "Employee Certificate Details ST"
+  },
+  {
+   "fieldname": "invite_details_section",
+   "fieldtype": "Section Break",
+   "label": "Invite Details"
+  },
+  {
+   "fieldname": "the_president",
+   "fieldtype": "Select",
+   "label": "The President",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "section_break_ffr6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "main_department_invitation",
+   "fieldtype": "Table",
+   "label": "Main Department Invitation",
+   "options": "Main Department Invitation ST"
+  },
+  {
+   "fieldname": "section_break_scs7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sub_department_invitation",
+   "fieldtype": "Table",
+   "label": "Sub Department Invitation",
+   "options": "Sub Department Invitation ST"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-28 14:07:57.037285",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Certificate of Appreciation ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

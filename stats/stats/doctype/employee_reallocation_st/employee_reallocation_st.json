@@ -1,0 +1,205 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ERA-.#####",
+ "creation": "2024-09-12 07:42:04.109506",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "transaction_date",
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "branch",
+  "section",
+  "amended_from",
+  "column_break_uqeb",
+  "new_branch",
+  "new_sub_department",
+  "new_main_department",
+  "new_section",
+  "assign_current_tasks_to",
+  "created_by",
+  "add_reallocation_amount",
+  "due_amount",
+  "process_status",
+  "section_break_nkru",
+  "reasons_for_reallocation"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Reallocation ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction Date"
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_uqeb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "new_branch",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "New Branch",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "new_sub_department.parent_department",
+   "fieldname": "new_main_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "New Main Department",
+   "options": "Department",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "new_sub_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "New Sub Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "new_main_department.custom_section",
+   "fieldname": "new_section",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "New Section",
+   "options": "Section ST",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "assign_current_tasks_to",
+   "fieldtype": "Link",
+   "label": "Assign Current Tasks To",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "add_reallocation_amount",
+   "fieldtype": "Select",
+   "label": "Add Reallocation Amount",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "due_amount",
+   "fieldtype": "Currency",
+   "label": "Due Amount",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "process_status",
+   "fieldtype": "Select",
+   "label": "Process Status",
+   "options": "\nPending\nProcessed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_nkru",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reasons_for_reallocation",
+   "fieldtype": "Small Text",
+   "label": "Reasons For Reallocation"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-03 12:42:14.109986",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Reallocation ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

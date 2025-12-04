@@ -1,0 +1,212 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SCSR-.#####",
+ "creation": "2024-09-10 10:57:04.575203",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "transaction_date",
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "section",
+  "last_qualification",
+  "column_break_xufn",
+  "scholarship_no",
+  "specialisation_type",
+  "qualification",
+  "acceptance_status",
+  "english_required",
+  "english_language_attachment",
+  "scholarship_start_date",
+  "scholarship_end_date",
+  "amended_from",
+  "section_break_mwza",
+  "terms_and_conditions",
+  "i_agree_to_the_terms_and_conditions"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Scholarship Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction Date"
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  },
+  {
+   "fieldname": "last_qualification",
+   "fieldtype": "Attach",
+   "label": "Last Qualification",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "scholarship_no",
+   "fieldtype": "Link",
+   "label": "Scholarship No",
+   "options": "Scholarship No ST"
+  },
+  {
+   "fieldname": "specialisation_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Specialisation Type",
+   "options": "Specialisation Type ST"
+  },
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Link",
+   "label": "Qualification",
+   "options": "Qualification ST",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Open",
+   "fieldname": "acceptance_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Acceptance Status",
+   "options": "\nOpen\nAccepted\nRejected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "english_language_attachment",
+   "fieldtype": "Attach",
+   "label": "English Language Attachment",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "column_break_xufn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "english_required",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "English Required",
+   "options": "\nYes\nNo"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "scholarship_start_date",
+   "fieldtype": "Date",
+   "label": "Scholarship Start Date",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "scholarship_end_date",
+   "fieldtype": "Date",
+   "label": "Scholarship End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_mwza",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Small Text",
+   "label": "Terms and Conditions",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "i_agree_to_the_terms_and_conditions",
+   "fieldtype": "Check",
+   "label": "I agree to the Terms and Conditions"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Return From Scholarship ST",
+   "link_fieldname": "scholarship_request_reference"
+  },
+  {
+   "link_doctype": "Scholarship Extend ST",
+   "link_fieldname": "scholarship_request_reference"
+  }
+ ],
+ "modified": "2025-09-03 12:54:29.277083",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Scholarship Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

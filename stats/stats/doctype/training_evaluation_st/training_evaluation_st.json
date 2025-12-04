@@ -1,0 +1,887 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "TEV-.#####",
+ "creation": "2024-09-03 09:24:53.508674",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1qoy",
+  "employee_no",
+  "employee_name",
+  "date",
+  "personal_training_event",
+  "training_event",
+  "training_classification",
+  "training_start_date",
+  "training_end_date",
+  "no_of_days",
+  "implementing_agency",
+  "training_event_date",
+  "column_break_lahv",
+  "total_of_hours",
+  "training_level",
+  "training_method",
+  "coachs_name",
+  "period",
+  "city",
+  "location",
+  "certificate_attachment",
+  "amended_from",
+  "required_certificate",
+  "personal_training_request_reference",
+  "first_evaluation_of_the_content_of_the_training_program_section",
+  "first_evaluation_of_the_content_of_the_training_program",
+  "achieving_the_goals_of_the_program_training",
+  "adapting_content_to_business_needs",
+  "clarity_and_organization_of_scientific_material",
+  "diversity_of_presentation_and_explanation_methods",
+  "column_break_lpwb",
+  "excellent",
+  "achieving_the_goals_of_the_program_training_ex",
+  "adapting_content_to_business_needs_ex",
+  "clarity_and_organization_of_scientific_material_ex",
+  "diversity_of_presentation_and_explanation_methods_ex",
+  "column_break_stgg",
+  "very_good",
+  "achieving_the_goals_of_the_program_training_vg",
+  "adapting_content_to_business_needs_vg",
+  "clarity_and_organization_of_scientific_material_vg",
+  "diversity_of_presentation_and_explanation_methods_vg",
+  "column_break_vyju",
+  "good",
+  "achieving_the_goals_of_the_program_training_go",
+  "adapting_content_to_business_needs_go",
+  "clarity_and_organization_of_scientific_material_go",
+  "diversity_of_presentation_and_explanation_methods_go",
+  "column_break_vxka",
+  "acceptable",
+  "achieving_the_goals_of_the_program_training_ac",
+  "adapting_content_to_business_needs_ac",
+  "clarity_and_organization_of_scientific_material_ac",
+  "diversity_of_presentation_and_explanation_methods_ac",
+  "column_break_hmko",
+  "weak",
+  "achieving_the_goals_of_the_program_training_wk",
+  "adapting_content_to_business_needs_wk",
+  "clarity_and_organization_of_scientific_material_wk",
+  "diversity_of_presentation_and_explanation_methods_wk",
+  "second_trainer_evaluation_section",
+  "second_trainer_evaluation",
+  "the_trainer_mastered_the_scientific_material",
+  "delivery_and_communication_style",
+  "ability_to_motivate_trainees",
+  "effective_time_management",
+  "column_break_ilsl",
+  "excellent_second",
+  "the_trainer_mastered_the_scientific_material_ex",
+  "delivery_and_communication_style_ex",
+  "ability_to_motivate_trainees_ex",
+  "effective_time_management_ex",
+  "column_break_qdvr",
+  "very_good_second",
+  "the_trainer_mastered_the_scientific_material_vg",
+  "delivery_and_communication_style_vg",
+  "ability_to_motivate_trainees_vg",
+  "effective_time_management_vg",
+  "column_break_awle",
+  "good_second",
+  "the_trainer_mastered_the_scientific_material_go",
+  "delivery_and_communication_style_go",
+  "ability_to_motivate_trainees_go",
+  "effective_time_management_go",
+  "column_break_snob",
+  "acceptable_second",
+  "the_trainer_mastered_the_scientific_material_ac",
+  "delivery_and_communication_style_ac",
+  "ability_to_motivate_trainees_ac",
+  "effective_time_management_ac",
+  "column_break_xtii",
+  "weak_second",
+  "the_trainer_mastered_the_scientific_material_wk",
+  "delivery_and_communication_style_wk",
+  "ability_to_motivate_trainees_wk",
+  "effective_time_management_wk",
+  "third_evaluation_of_organization_and_preparation_section",
+  "third_evaluation_of_organization_and_preparation",
+  "organizing_the_workshop_and_the_schedule",
+  "suitability_of_the_workshop_location",
+  "support_means_technical_service_communication_tools",
+  "column_break_oqbj",
+  "excellent_third",
+  "organizing_the_workshop_and_the_schedule_ex",
+  "suitability_of_the_workshop_location_ex",
+  "support_ex",
+  "column_break_pxmp",
+  "very_good_third",
+  "organizing_the_workshop_and_the_schedule_vg",
+  "suitability_of_the_workshop_location_vg",
+  "support_vg",
+  "column_break_saoj",
+  "good_third",
+  "organizing_the_workshop_and_the_schedule_go",
+  "suitability_of_the_workshop_location_go",
+  "support_go",
+  "column_break_gjhp",
+  "acceptable_third",
+  "organizing_the_workshop_and_the_schedule_ac",
+  "suitability_of_the_workshop_location_ac",
+  "support_ac",
+  "column_break_vitn",
+  "weak_third",
+  "organizing_the_workshop_and_the_schedule_wk",
+  "suitability_of_the_workshop_location_wk",
+  "support_wk",
+  "section_break_uwbo",
+  "do_you_have_any_comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1qoy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Training Evaluation ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "depends_on": "eval: !doc.personal_training_request_reference",
+   "fieldname": "training_event",
+   "fieldtype": "Link",
+   "label": "Training Event",
+   "options": "Training Event ST"
+  },
+  {
+   "fetch_from": "training_event.training_classification",
+   "fetch_if_empty": 1,
+   "fieldname": "training_classification",
+   "fieldtype": "Link",
+   "label": "Training Classification",
+   "options": "Training Classification ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.training_start_date",
+   "fetch_if_empty": 1,
+   "fieldname": "training_start_date",
+   "fieldtype": "Date",
+   "label": "Training Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.training_end_date",
+   "fetch_if_empty": 1,
+   "fieldname": "training_end_date",
+   "fieldtype": "Date",
+   "label": "Training End Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.no_of_days",
+   "fetch_if_empty": 1,
+   "fieldname": "no_of_days",
+   "fieldtype": "Int",
+   "label": "No of Days",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.total_of_hours",
+   "fetch_if_empty": 1,
+   "fieldname": "total_of_hours",
+   "fieldtype": "Int",
+   "label": "Total of Hours",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.training_level",
+   "fetch_if_empty": 1,
+   "fieldname": "training_level",
+   "fieldtype": "Link",
+   "label": "Training Level",
+   "options": "Training Level ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.training_method",
+   "fetch_if_empty": 1,
+   "fieldname": "training_method",
+   "fieldtype": "Select",
+   "label": "Training Method",
+   "options": "\nOnline\nAttendance",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.period",
+   "fetch_if_empty": 1,
+   "fieldname": "period",
+   "fieldtype": "Select",
+   "label": "Period",
+   "options": "\nMorning\nEvening",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.training_method == \"Attendance\"",
+   "fetch_from": "training_event.city",
+   "fetch_if_empty": 1,
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "mandatory_depends_on": "eval: doc.training_method == \"Attendance\"",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.training_method == \"Attendance\"",
+   "fetch_from": "training_event.location",
+   "fetch_if_empty": 1,
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "mandatory_depends_on": "eval: doc.training_method == \"Attendance\"",
+   "read_only": 1
+  },
+  {
+   "fieldname": "certificate_attachment",
+   "fieldtype": "Attach",
+   "label": "Certificate Attachment",
+   "mandatory_depends_on": "eval: doc.required_certificate == \"Yes\""
+  },
+  {
+   "fieldname": "column_break_lahv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "training_event.required_certificate",
+   "fetch_if_empty": 1,
+   "fieldname": "required_certificate",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Required Certificate",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_uwbo",
+   "fieldtype": "Section Break",
+   "label": "<b>\u0631\u0627\u0628\u0639\u0627\u064b: \u0645\u0644\u0627\u062d\u0638\u0627\u062a</b>"
+  },
+  {
+   "fieldname": "first_evaluation_of_the_content_of_the_training_program",
+   "fieldtype": "HTML",
+   "label": "First Evaluation of the content of the Training program"
+  },
+  {
+   "fieldname": "achieving_the_goals_of_the_program_training",
+   "fieldtype": "HTML",
+   "label": "Achieving the goals of the program training",
+   "options": "<h5 style=\"padding-top:20px;\">\u062a\u062d\u0642\u064a\u0642 \u0623\u0647\u062f\u0627\u0641 \u0627\u0644\u0628\u0631\u0646\u0627\u0645\u062c \u0627\u0644\u062a\u062f\u0631\u064a\u0628\u064a</h5>"
+  },
+  {
+   "fieldname": "adapting_content_to_business_needs",
+   "fieldtype": "HTML",
+   "label": "Adapting content to business needs",
+   "options": "<h5 style=\"padding-top:15px;\">\u0645\u0644\u0627\u0621\u0645\u0629 \u0627\u0644\u0645\u062d\u062a\u0648\u0649 \u0644\u0627\u062d\u062a\u064a\u0627\u062c\u0627\u062a \u0627\u0644\u0639\u0645\u0644</h5>"
+  },
+  {
+   "fieldname": "clarity_and_organization_of_scientific_material",
+   "fieldtype": "HTML",
+   "label": "Clarity and organization of scientific material",
+   "options": "<h5 style=\"padding-top:13px;\">\u0648\u0636\u0648\u062d \u0648\u062a\u0646\u0638\u064a\u0645 \u0627\u0644\u0645\u0627\u062f\u0629 \u0627\u0644\u0639\u0644\u0645\u064a\u0629</h5>"
+  },
+  {
+   "fieldname": "diversity_of_presentation_and_explanation_methods",
+   "fieldtype": "HTML",
+   "label": "Diversity of presentation and explanation methods",
+   "options": "<h5 style=\"padding-top:13px;\">\u062a\u0646\u0648\u0639 \u0648\u0633\u0627\u0626\u0644 \u0627\u0644\u0639\u0631\u0636 \u0648\u0627\u0644\u0634\u0631\u062d</h5>"
+  },
+  {
+   "fieldname": "excellent",
+   "fieldtype": "HTML",
+   "label": "Excellent",
+   "options": "<h5>\u0645\u0645\u062a\u0627\u0632</h5>"
+  },
+  {
+   "fieldname": "very_good",
+   "fieldtype": "HTML",
+   "label": "Very Good",
+   "options": "<h5>\u062c\u064a\u062f \u062c\u062f\u0623</h5>"
+  },
+  {
+   "fieldname": "good",
+   "fieldtype": "HTML",
+   "label": "Good",
+   "options": "<h5>\u062c\u064a\u062f</h5>"
+  },
+  {
+   "fieldname": "acceptable",
+   "fieldtype": "HTML",
+   "label": "Acceptable",
+   "options": "<h5>\u0645\u0642\u0628\u0648\u0644</h5>"
+  },
+  {
+   "fieldname": "weak",
+   "fieldtype": "HTML",
+   "label": "Weak",
+   "options": "<h5>\u0636\u0639\u064a\u0641</h5>"
+  },
+  {
+   "fieldname": "column_break_lpwb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_stgg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vyju",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vxka",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hmko",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "achieving_the_goals_of_the_program_training_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "achieving_the_goals_of_the_program_training_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "achieving_the_goals_of_the_program_training_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "achieving_the_goals_of_the_program_training_ac",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "achieving_the_goals_of_the_program_training_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "adapting_content_to_business_needs_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "adapting_content_to_business_needs_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "adapting_content_to_business_needs_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "adapting_content_to_business_needs_ac",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "adapting_content_to_business_needs_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "clarity_and_organization_of_scientific_material_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "diversity_of_presentation_and_explanation_methods_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "clarity_and_organization_of_scientific_material_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "diversity_of_presentation_and_explanation_methods_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "clarity_and_organization_of_scientific_material_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "diversity_of_presentation_and_explanation_methods_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "clarity_and_organization_of_scientific_material_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "diversity_of_presentation_and_explanation_methods_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "clarity_and_organization_of_scientific_material_ac",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "diversity_of_presentation_and_explanation_methods_ac",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "second_trainer_evaluation_section",
+   "fieldtype": "Section Break",
+   "label": "<b>\u062b\u0627\u0646\u064a\u0627\u064b: \u062a\u0642\u064a\u064a\u0645 \u0627\u0644\u0645\u062f\u0631\u0628:</b>"
+  },
+  {
+   "fieldname": "second_trainer_evaluation",
+   "fieldtype": "HTML",
+   "label": "Second Trainer evaluation"
+  },
+  {
+   "fieldname": "first_evaluation_of_the_content_of_the_training_program_section",
+   "fieldtype": "Section Break",
+   "label": "<b>\u0623\u0648\u0644\u0627\u064b: \u062a\u0642\u064a\u064a\u0645 \u0645\u062d\u062a\u0648\u0649 \u0627\u0644\u0628\u0631\u0646\u0627\u0645\u062c \u0627\u0644\u062a\u062f\u0631\u064a\u0628\u064a:</b>"
+  },
+  {
+   "fieldname": "column_break_ilsl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "excellent_second",
+   "fieldtype": "HTML",
+   "label": "Excellent Second",
+   "options": "<h5>\u0645\u0645\u062a\u0627\u0632</h5>"
+  },
+  {
+   "fieldname": "column_break_qdvr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "very_good_second",
+   "fieldtype": "HTML",
+   "label": "Very Good Second",
+   "options": "<h5>\u062c\u064a\u062f \u062c\u062f\u0623</h5>"
+  },
+  {
+   "fieldname": "column_break_awle",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "good_second",
+   "fieldtype": "HTML",
+   "label": "Good Second",
+   "options": "<h5>\u062c\u064a\u062f</h5>"
+  },
+  {
+   "fieldname": "column_break_snob",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "acceptable_second",
+   "fieldtype": "HTML",
+   "label": "Acceptable Second",
+   "options": "<h5>\u0645\u0642\u0628\u0648\u0644</h5>"
+  },
+  {
+   "fieldname": "column_break_xtii",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weak_second",
+   "fieldtype": "HTML",
+   "label": "Weak Second",
+   "options": "<h5>\u0636\u0639\u064a\u0641</h5>"
+  },
+  {
+   "fieldname": "the_trainer_mastered_the_scientific_material",
+   "fieldtype": "HTML",
+   "label": "The trainer mastered the scientific material",
+   "options": "<h5 style=\"padding-top:22px;\">\u062a\u0645\u0643\u0646 \u0627\u0644\u0645\u062f\u0631\u0628 \u0645\u0646 \u0627\u0644\u0645\u0627\u062f\u0629 \u0627\u0644\u0639\u0644\u0645\u064a\u0629</h5>"
+  },
+  {
+   "fieldname": "delivery_and_communication_style",
+   "fieldtype": "HTML",
+   "label": "Delivery and communication style",
+   "options": "<h5 style=\"padding-top:16px;\">\u0623\u0633\u0644\u0648\u0628 \u0627\u0644\u0625\u0644\u0642\u0627\u0621 \u0648\u0627\u0644\u062a\u0648\u0627\u0635\u0644</h5>"
+  },
+  {
+   "fieldname": "ability_to_motivate_trainees",
+   "fieldtype": "HTML",
+   "label": "Ability to motivate trainees",
+   "options": "<h5 style=\"padding-top:15px;\">\u0627\u0644\u0642\u062f\u0631\u0629 \u0639\u0644\u0649 \u062a\u062d\u0641\u064a\u0632 \u0627\u0644\u0645\u062a\u062f\u0631\u0628\u064a\u0646</h5>"
+  },
+  {
+   "fieldname": "effective_time_management",
+   "fieldtype": "HTML",
+   "label": "Effective time management",
+   "options": "<h5 style=\"padding-top:11px;\">\u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0648\u0642\u062a \u0628\u0641\u0639\u0627\u0644\u064a\u0629</h5>"
+  },
+  {
+   "default": "0",
+   "fieldname": "the_trainer_mastered_the_scientific_material_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "the_trainer_mastered_the_scientific_material_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "the_trainer_mastered_the_scientific_material_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "the_trainer_mastered_the_scientific_material_ac",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "the_trainer_mastered_the_scientific_material_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "delivery_and_communication_style_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "ability_to_motivate_trainees_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "delivery_and_communication_style_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "ability_to_motivate_trainees_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "delivery_and_communication_style_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "ability_to_motivate_trainees_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "delivery_and_communication_style_ac",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "ability_to_motivate_trainees_ac",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "delivery_and_communication_style_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "ability_to_motivate_trainees_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "effective_time_management_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "effective_time_management_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "effective_time_management_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "effective_time_management_ac",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "effective_time_management_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "third_evaluation_of_organization_and_preparation_section",
+   "fieldtype": "Section Break",
+   "label": "<b>\u062b\u0627\u0644\u062b\u0627\u064b: \u062a\u0642\u064a\u064a\u0645 \u0627\u0644\u062a\u0646\u0638\u064a\u0645 \u0648\u0627\u0644\u0625\u0639\u062f\u0627\u062f</b>"
+  },
+  {
+   "fieldname": "third_evaluation_of_organization_and_preparation",
+   "fieldtype": "HTML",
+   "label": "Third Evaluation of organization and preparation"
+  },
+  {
+   "fieldname": "organizing_the_workshop_and_the_schedule",
+   "fieldtype": "HTML",
+   "label": "Organizing the workshop and the schedule",
+   "options": "<h5 style=\"padding-top:22px;\">\u062a\u0646\u0638\u064a\u0645 \u0627\u0644\u0648\u0631\u0634\u0629 \u0648\u0627\u0644\u062c\u062f\u0648\u0644 \u0627\u0644\u0632\u0645\u0646\u064a</h5>"
+  },
+  {
+   "fieldname": "suitability_of_the_workshop_location",
+   "fieldtype": "HTML",
+   "label": "Suitability of the workshop location",
+   "options": "<h5 style=\"padding-top:16px;\">\u0645\u062f\u0649 \u0645\u0646\u0627\u0633\u0628\u0629 \u0645\u0648\u0642\u0639 \u0639\u0642\u062f \u0627\u0644\u0648\u0631\u0634\u0629</h5>"
+  },
+  {
+   "fieldname": "support_means_technical_service_communication_tools",
+   "fieldtype": "HTML",
+   "label": "Support means (technical service, communication, tools)",
+   "options": "<h5 style=\"padding-top:12px;\">\u0648\u0633\u0627\u0626\u0644 \u0627\u0644\u062f\u0639\u0645 (\u062e\u062f\u0645\u0629 \u0641\u0646\u064a\u0629\u060c \u062a\u0648\u0627\u0635\u0644\u060c \u0623\u062f\u0648\u0627\u062a)</h5>"
+  },
+  {
+   "fieldname": "column_break_oqbj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pxmp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "very_good_third",
+   "fieldtype": "HTML",
+   "label": "Very Good Third",
+   "options": "<h5>\u062c\u064a\u062f \u062c\u062f\u0623</h5>"
+  },
+  {
+   "fieldname": "column_break_saoj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "good_third",
+   "fieldtype": "HTML",
+   "label": "Good Third",
+   "options": "<h5>\u062c\u064a\u062f</h5>"
+  },
+  {
+   "fieldname": "column_break_gjhp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "acceptable_third",
+   "fieldtype": "HTML",
+   "label": "Acceptable Third",
+   "options": "<h5>\u0645\u0642\u0628\u0648\u0644</h5>"
+  },
+  {
+   "fieldname": "column_break_vitn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weak_third",
+   "fieldtype": "HTML",
+   "label": "Weak Third",
+   "options": "<h5>\u0636\u0639\u064a\u0641</h5>"
+  },
+  {
+   "fieldname": "excellent_third",
+   "fieldtype": "HTML",
+   "label": "Excellent Third",
+   "options": "<h5>\u0645\u0645\u062a\u0627\u0632</h5>"
+  },
+  {
+   "default": "0",
+   "fieldname": "organizing_the_workshop_and_the_schedule_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "suitability_of_the_workshop_location_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "support_ex",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "organizing_the_workshop_and_the_schedule_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "suitability_of_the_workshop_location_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "support_vg",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "organizing_the_workshop_and_the_schedule_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "suitability_of_the_workshop_location_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "support_go",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "organizing_the_workshop_and_the_schedule_ac",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "suitability_of_the_workshop_location_ac",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "support_ac",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "organizing_the_workshop_and_the_schedule_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "suitability_of_the_workshop_location_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "support_wk",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "do_you_have_any_comments",
+   "fieldtype": "Small Text",
+   "label": "1. \u0647\u0644 \u0644\u062f\u064a\u0643 \u0623\u064a \u0645\u0644\u0627\u062d\u0638\u0627\u062a\u061f"
+  },
+  {
+   "fetch_from": "training_event.supplier",
+   "fetch_if_empty": 1,
+   "fieldname": "implementing_agency",
+   "fieldtype": "Link",
+   "label": "Implementing agency",
+   "options": "Supplier",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.trainer",
+   "fetch_if_empty": 1,
+   "fieldname": "coachs_name",
+   "fieldtype": "Data",
+   "label": "Coach's name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.date",
+   "fetch_if_empty": 1,
+   "fieldname": "training_event_date",
+   "fieldtype": "Date",
+   "label": "Training Event Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "personal_training_event",
+   "fieldtype": "Data",
+   "label": "Personal Training Event",
+   "read_only": 1
+  },
+  {
+   "fieldname": "personal_training_request_reference",
+   "fieldtype": "Link",
+   "label": "Personal Training Request Reference",
+   "options": "Personal Training Request ST",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "make_attachments_public": 1,
+ "modified": "2025-07-16 09:40:32.925572",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Training Evaluation ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

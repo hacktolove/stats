@@ -1,0 +1,117 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"cLp7Cn5Mi1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Recruitment Team</span>\",\"col\":12}},{\"id\":\"plJG8lu7DS\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Job Openings\",\"col\":4}},{\"id\":\"2HluuQn-V8\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"TFt8FJ5OAl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Opening Job ST\",\"col\":3}},{\"id\":\"V1B2reh9Eq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Job Application ST\",\"col\":3}},{\"id\":\"JeGiut8luh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Job Offer ST\",\"col\":3}},{\"id\":\"YNFi44TsMI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Contract ST\",\"col\":3}},{\"id\":\"K_F6_1AlDn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Onboarding ST\",\"col\":3}},{\"id\":\"vy_d1KeBZN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Talent WorkFlow\",\"col\":3}},{\"id\":\"pNAvj2LMfb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Onboarding Template ST\",\"col\":3}},{\"id\":\"fGDjAJs-i0\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"FkBicKeUqr\",\"type\":\"card\",\"data\":{\"card_name\":\"Recruitment Setup\",\"col\":4}}]",
+ "creation": "2024-12-22 11:22:28.856562",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 1,
+ "icon": "change",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Recruitment Team",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Recruitment Setup",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Onboarding Template ST",
+   "link_count": 0,
+   "link_to": "Employee Onboarding Template ST",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-04-17 07:38:43.769226",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Recruitment Team",
+ "number_cards": [
+  {
+   "label": "Job Openings",
+   "number_card_name": "Job Openings"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Talent Acquisition Manager"
+  },
+  {
+   "role": "Talent Acquisition Officer"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Onboarding Template ST",
+   "link_to": "Employee Onboarding Template ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Onboarding ST",
+   "link_to": "Employee Onboarding ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Talent WorkFlow",
+   "type": "URL",
+   "url": "https://stats15.greycube.in/app/user-document-st/Talent%20Acquisition"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Opening Job ST",
+   "link_to": "Opening Job ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Job Application ST",
+   "link_to": "Job Application ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Job Offer ST",
+   "link_to": "Job Offer ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Contract ST",
+   "link_to": "Employee Contract ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Recruitment Team"
+}

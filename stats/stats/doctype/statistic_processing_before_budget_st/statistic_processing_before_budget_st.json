@@ -1,0 +1,635 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SPB-.##### ",
+ "creation": "2024-11-29 15:14:46.280594",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_qlxr",
+  "creation_date",
+  "created_by",
+  "total_request_cost",
+  "column_break_ahqu",
+  "from_date",
+  "to_date",
+  "fetch_statistic_request",
+  "no_of_department",
+  "section_break_yvai",
+  "sub_department_name1",
+  "column_break_nkdj",
+  "total_cost_1",
+  "column_break_lyer",
+  "percentage_1",
+  "section_break_xxmz",
+  "sub_department_1",
+  "section_break_oaea",
+  "sub_department_name2",
+  "column_break_yrmq",
+  "total_cost_2",
+  "column_break_ezbs",
+  "percentage_2",
+  "section_break_hmvk",
+  "sub_department_2",
+  "section_break_ysgg",
+  "sub_department_name3",
+  "column_break_sfnv",
+  "total_cost_3",
+  "column_break_rper",
+  "percentage_3",
+  "section_break_bxxj",
+  "sub_department_3",
+  "section_break_fpgc",
+  "sub_department_name4",
+  "column_break_gped",
+  "total_cost_4",
+  "column_break_ewsa",
+  "percentage_4",
+  "section_break_vsbd",
+  "sub_department_4",
+  "section_break_osnx",
+  "sub_department_name5",
+  "column_break_bauy",
+  "total_cost_5",
+  "column_break_lzfk",
+  "percentage_5",
+  "section_break_ilac",
+  "sub_department_5",
+  "section_break_tcqr",
+  "sub_department_name6",
+  "column_break_qbed",
+  "total_cost_6",
+  "column_break_iour",
+  "percentage_6",
+  "section_break_mxsk",
+  "sub_department_6",
+  "section_break_odmu",
+  "sub_department_name7",
+  "column_break_umet",
+  "total_cost_7",
+  "column_break_bljy",
+  "percentage_7",
+  "section_break_xhvv",
+  "sub_department_7",
+  "section_break_bice",
+  "sub_department_name8",
+  "column_break_hyxn",
+  "total_cost_8",
+  "column_break_jkao",
+  "percentage_8",
+  "section_break_laik",
+  "sub_department_8",
+  "section_break_kacm",
+  "sub_department_name9",
+  "column_break_oceu",
+  "total_cost_9",
+  "column_break_tatp",
+  "percentage_9",
+  "section_break_zfgt",
+  "sub_department_9",
+  "section_break_vwkj",
+  "sub_department_name10",
+  "column_break_aejz",
+  "total_cost_10",
+  "column_break_acph",
+  "percentage_10",
+  "section_break_xwyk",
+  "sub_department_10",
+  "section_break_gcej",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_qlxr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Statistic Processing Before Budget ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "total_request_cost",
+   "fieldtype": "Currency",
+   "label": "Total Request Cost"
+  },
+  {
+   "fieldname": "column_break_ahqu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_gcej",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department<11",
+   "fieldname": "section_break_yvai",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.docstatus==0",
+   "description": "Statistic Request ST filtered by Creation Date and Approval Status=Pending and Status=Submit",
+   "fieldname": "fetch_statistic_request",
+   "fieldtype": "Button",
+   "label": "Fetch Statistic Request"
+  },
+  {
+   "fieldname": "sub_department_1",
+   "fieldtype": "Table",
+   "label": "Sub Department 1",
+   "options": "Statistic Sub Department Processing Details ST"
+  },
+  {
+   "fieldname": "no_of_department",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "no of department"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>0",
+   "fieldname": "sub_department_name1",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "link_filters": "[[\"Department\",\"is_group\",\"=\",0]]",
+   "options": "Department"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>0",
+   "fieldname": "total_cost_1",
+   "fieldtype": "Currency",
+   "label": "Total Cost"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>0",
+   "fieldname": "percentage_1",
+   "fieldtype": "Percent",
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "column_break_nkdj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lyer",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>0",
+   "fieldname": "section_break_xxmz",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "fieldname": "section_break_oaea",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>1",
+   "fieldname": "sub_department_name2",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_yrmq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>1",
+   "fieldname": "total_cost_2",
+   "fieldtype": "Currency",
+   "label": "Total Cost"
+  },
+  {
+   "fieldname": "column_break_ezbs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>1",
+   "fieldname": "percentage_2",
+   "fieldtype": "Percent",
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "section_break_hmvk",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>1",
+   "fieldname": "sub_department_2",
+   "fieldtype": "Table",
+   "label": "Sub Department 2",
+   "options": "Statistic Sub Department Processing Details ST"
+  },
+  {
+   "fieldname": "section_break_ysgg",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>2",
+   "fieldname": "sub_department_name3",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_sfnv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>2",
+   "fieldname": "total_cost_3",
+   "fieldtype": "Currency",
+   "label": "Total Cost"
+  },
+  {
+   "fieldname": "column_break_rper",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>2",
+   "fieldname": "percentage_3",
+   "fieldtype": "Percent",
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "section_break_bxxj",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>2",
+   "fieldname": "sub_department_3",
+   "fieldtype": "Table",
+   "label": "Sub Department 3",
+   "options": "Statistic Sub Department Processing Details ST"
+  },
+  {
+   "fieldname": "section_break_fpgc",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>3",
+   "fieldname": "sub_department_name4",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_gped",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>3",
+   "fieldname": "total_cost_4",
+   "fieldtype": "Currency",
+   "label": "Total Cost"
+  },
+  {
+   "fieldname": "column_break_ewsa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>3",
+   "fieldname": "percentage_4",
+   "fieldtype": "Percent",
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "section_break_vsbd",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>3",
+   "fieldname": "sub_department_4",
+   "fieldtype": "Table",
+   "label": "Sub Department 4",
+   "options": "Statistic Sub Department Processing Details ST"
+  },
+  {
+   "fieldname": "section_break_osnx",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>4",
+   "fieldname": "sub_department_name5",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_bauy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>4",
+   "fieldname": "total_cost_5",
+   "fieldtype": "Currency",
+   "label": "Total Cost"
+  },
+  {
+   "fieldname": "column_break_lzfk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>4",
+   "fieldname": "percentage_5",
+   "fieldtype": "Percent",
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "section_break_ilac",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>4",
+   "fieldname": "sub_department_5",
+   "fieldtype": "Table",
+   "label": "Sub Department 5",
+   "options": "Statistic Sub Department Processing Details ST"
+  },
+  {
+   "fieldname": "section_break_tcqr",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>5",
+   "fieldname": "sub_department_name6",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_qbed",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>5",
+   "fieldname": "total_cost_6",
+   "fieldtype": "Currency",
+   "label": "Total Cost"
+  },
+  {
+   "fieldname": "column_break_iour",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>5",
+   "fieldname": "percentage_6",
+   "fieldtype": "Percent",
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "section_break_mxsk",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>5",
+   "fieldname": "sub_department_6",
+   "fieldtype": "Table",
+   "label": "Sub Department 6",
+   "options": "Statistic Sub Department Processing Details ST"
+  },
+  {
+   "fieldname": "section_break_odmu",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>6",
+   "fieldname": "sub_department_name7",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_umet",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>6",
+   "fieldname": "total_cost_7",
+   "fieldtype": "Currency",
+   "label": "Total Cost"
+  },
+  {
+   "fieldname": "column_break_bljy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>6",
+   "fieldname": "percentage_7",
+   "fieldtype": "Percent",
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "section_break_xhvv",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>6",
+   "fieldname": "sub_department_7",
+   "fieldtype": "Table",
+   "label": "Sub Department 7",
+   "options": "Statistic Sub Department Processing Details ST"
+  },
+  {
+   "fieldname": "section_break_bice",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>7",
+   "fieldname": "sub_department_name8",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_hyxn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>7",
+   "fieldname": "total_cost_8",
+   "fieldtype": "Currency",
+   "label": "Total Cost"
+  },
+  {
+   "fieldname": "column_break_jkao",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>7",
+   "fieldname": "percentage_8",
+   "fieldtype": "Percent",
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "section_break_laik",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>7",
+   "fieldname": "sub_department_8",
+   "fieldtype": "Table",
+   "label": "Sub Department 8",
+   "options": "Statistic Sub Department Processing Details ST"
+  },
+  {
+   "fieldname": "section_break_kacm",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>8",
+   "fieldname": "sub_department_name9",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_oceu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>8",
+   "fieldname": "total_cost_9",
+   "fieldtype": "Currency",
+   "label": "Total Cost"
+  },
+  {
+   "fieldname": "column_break_tatp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>8",
+   "fieldname": "percentage_9",
+   "fieldtype": "Percent",
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "section_break_zfgt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>8",
+   "fieldname": "sub_department_9",
+   "fieldtype": "Table",
+   "label": "Sub Department 9",
+   "options": "Statistic Sub Department Processing Details ST"
+  },
+  {
+   "fieldname": "section_break_vwkj",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>9",
+   "fieldname": "sub_department_name10",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_aejz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>9",
+   "fieldname": "total_cost_10",
+   "fieldtype": "Currency",
+   "label": "Total Cost"
+  },
+  {
+   "fieldname": "column_break_acph",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>9",
+   "fieldname": "percentage_10",
+   "fieldtype": "Percent",
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "section_break_xwyk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.no_of_department>9",
+   "fieldname": "sub_department_10",
+   "fieldtype": "Table",
+   "label": "Sub Department 10",
+   "options": "Statistic Sub Department Processing Details ST"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-02 08:32:24.672003",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Statistic Processing Before Budget ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

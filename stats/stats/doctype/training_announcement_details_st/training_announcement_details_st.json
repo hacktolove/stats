@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-03 08:04:06.344336",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "training_event",
+  "training_type",
+  "apply_start_date",
+  "apply_end_date",
+  "column_break_ktlw",
+  "training_classification",
+  "training_level",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "training_event",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Training Event",
+   "options": "Training Event ST"
+  },
+  {
+   "fetch_from": "training_event.training_type",
+   "fieldname": "training_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Training Type",
+   "options": "Training Type ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.training_classification",
+   "fieldname": "training_classification",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Training Classification",
+   "options": "Training Classification ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "training_event.training_level",
+   "fieldname": "training_level",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Training Level",
+   "options": "Training Level ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ktlw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Note"
+  },
+  {
+   "fieldname": "apply_start_date",
+   "fieldtype": "Date",
+   "label": "Apply Start Date"
+  },
+  {
+   "fieldname": "apply_end_date",
+   "fieldtype": "Date",
+   "label": "Apply End Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-23 13:54:32.546388",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Training Announcement Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

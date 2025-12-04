@@ -1,0 +1,29 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.reference_type==\"Employee Onboarding ST\" and doc.custom_send_email_notification_to!=None",
+ "creation": "2025-08-06 09:24:07.002491",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "ToDo",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Dear Gents,</p>\n\n<p>Task for new employee {{doc.custom_candidate_namein_english}} is created\nPlease do your action.</p>\n\n<p>Thanks\nERPNext Notification</p>\n",
+ "message_type": "Markdown",
+ "modified": "2025-08-06 12:36:30.882150",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "task notification based on employee onboarding",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "custom_send_email_notification_to"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Task {{doc.description}}"
+}

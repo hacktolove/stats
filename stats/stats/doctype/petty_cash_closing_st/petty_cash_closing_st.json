@@ -1,0 +1,174 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PCC-.#####",
+ "creation": "2024-11-21 13:44:18.296182",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_sgbu",
+  "creation_date",
+  "total_requested_amount",
+  "created_by",
+  "petty_cash_request_reference",
+  "column_break_qivp",
+  "loan_purpose",
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "total_paid_amount",
+  "total_unpaid_amount",
+  "amended_from",
+  "section_break_pyyw",
+  "expense_account_details",
+  "section_break_igxy",
+  "pc_closing_account_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_sgbu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Petty Cash Closing ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "petty_cash_request_reference",
+   "fieldtype": "Link",
+   "label": "Petty Cash Request Reference",
+   "options": "Petty Cash Request ST",
+   "unique": 1
+  },
+  {
+   "fetch_from": "petty_cash_request_reference.employee_no",
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "column_break_qivp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "petty_cash_request_reference.loan_purpose",
+   "fieldname": "loan_purpose",
+   "fieldtype": "Data",
+   "label": "Loan Purpose"
+  },
+  {
+   "fieldname": "total_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Total Paid Amount"
+  },
+  {
+   "fieldname": "total_unpaid_amount",
+   "fieldtype": "Currency",
+   "label": "Total Unpaid Amount"
+  },
+  {
+   "fieldname": "section_break_pyyw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pc_closing_account_details",
+   "fieldtype": "Table",
+   "label": "PC Closing Account Details",
+   "options": "PC Closing Account Details ST"
+  },
+  {
+   "fetch_from": "petty_cash_request_reference.total_requested_amount",
+   "fieldname": "total_requested_amount",
+   "fieldtype": "Currency",
+   "label": "Total Requested Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expense_account_details",
+   "fieldtype": "Table",
+   "label": "Expense Account Details",
+   "options": "Expense Account Details ST"
+  },
+  {
+   "fieldname": "section_break_igxy",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Petty Cash Re-Payment ST",
+   "link_fieldname": "petty_cash_closing_reference"
+  },
+  {
+   "link_doctype": "Journal Entry",
+   "link_fieldname": "custom_petty_cash_closing_reference"
+  }
+ ],
+ "modified": "2025-08-25 12:14:34.685797",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Petty Cash Closing ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

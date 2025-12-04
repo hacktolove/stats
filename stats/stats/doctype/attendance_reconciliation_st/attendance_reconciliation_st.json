@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:AR-{employee_no}-{#####}",
+ "creation": "2024-10-25 09:50:28.017507",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "current_year_month",
+  "total_available_permission_balance",
+  "fetch",
+  "column_break_pxfv",
+  "employee_no",
+  "employee_name",
+  "total_to_be_consumed_balance",
+  "section_break_doqi",
+  "html_xzbd",
+  "section_break_vaig",
+  "attendance_reconciliation_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee No",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_pxfv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.docstatus == 0",
+   "fieldname": "fetch",
+   "fieldtype": "Button",
+   "label": "Fetch"
+  },
+  {
+   "fieldname": "section_break_vaig",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attendance_reconciliation_details",
+   "fieldtype": "Table",
+   "label": "Attendance Reconciliation Details",
+   "options": "Attendance Reconciliation Details ST"
+  },
+  {
+   "fieldname": "current_year_month",
+   "fieldtype": "Select",
+   "label": "Current Year Month",
+   "options": "\nJanuary\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_available_permission_balance",
+   "fieldtype": "Int",
+   "label": "Total Available Permission Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_to_be_consumed_balance",
+   "fieldtype": "Int",
+   "label": "Total To Be Consumed Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Attendance Reconciliation ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_doqi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "html_xzbd",
+   "fieldtype": "HTML",
+   "options": "<ol>\n  <li>purpose :(a)to cover less working hours in present (b) to convert attendance status from absent to present</li>\n  <li>This works only if there are both in and out records and attendance status is either present/absent</li>\n  <li>PP : Personal Permission : Rule--Depends on manager, there is no rule.Shortfall In Working Minutes&lt;0 <br>Impact--attendance[absent/present] changes to attendance[present] and attendance[Net Working Minutes] = Expected Working Minutes per Day</li>\n  <li>EB : Extra Balance : Rule--attendance[absent and Extra Minutes and Early Exit]. <br>Impact-- attendance[absent] changes to attendance[present] and attendance[Net Working Minutes] = Actual Working Minutes</li>\n   <li>PB : Permission Balance : Rule--Depends on available balance,Shortfall In Working Minutes&lt;0, Balance To Be Consumed In Minutes &gt;= Shortfall In Working Minutes<br>Impact--attendance[absent/present] change to attendance[present] and attendance[Net Working Minutes] = Actual Working Minutes + Balance To Be Consumed In Minutes</li>\n</ol>"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-10 14:18:03.110145",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Attendance Reconciliation ST",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

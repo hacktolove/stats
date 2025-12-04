@@ -1,0 +1,69 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-12 13:01:57.912180",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "budget_account",
+  "payment_value",
+  "percentage",
+  "column_break_idpt",
+  "plan_date",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "budget_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Budget Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "payment_value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Payment Value",
+   "precision": "2"
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Percentage",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "plan_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Plan Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nPaid\nPartial\nNot-Paid"
+  },
+  {
+   "fieldname": "column_break_idpt",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-12 13:06:35.901356",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Payment Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

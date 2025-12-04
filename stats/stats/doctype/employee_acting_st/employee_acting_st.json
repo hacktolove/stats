@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EAD-.#####",
+ "creation": "2024-11-27 12:13:36.847723",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_robb",
+  "creation_date",
+  "request_by",
+  "main_department",
+  "amended_from",
+  "column_break_ywkn",
+  "selected_employee",
+  "current_designation",
+  "current_grade",
+  "current_main_department",
+  "current_sub_department",
+  "new_designation",
+  "new_grade",
+  "new_main_department",
+  "new_sub_department",
+  "acting_from",
+  "acting_to",
+  "renew_acting",
+  "renew_till",
+  "request_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_robb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Acting ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "request_by",
+   "fieldtype": "Data",
+   "label": "Request By"
+  },
+  {
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_ywkn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "selected_employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Selected Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "selected_employee.designation",
+   "fieldname": "current_designation",
+   "fieldtype": "Link",
+   "label": "Current Designation",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "selected_employee.grade",
+   "fieldname": "current_grade",
+   "fieldtype": "Link",
+   "label": "Current Grade",
+   "options": "Employee Grade",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "selected_employee.department",
+   "fieldname": "current_main_department",
+   "fieldtype": "Link",
+   "label": "Current Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "selected_employee.custom_sub_department",
+   "fieldname": "current_sub_department",
+   "fieldtype": "Link",
+   "label": "Current Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "new_designation",
+   "fieldtype": "Link",
+   "label": "New Designation",
+   "options": "Designation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "new_grade",
+   "fieldtype": "Link",
+   "label": "New Grade",
+   "options": "Employee Grade",
+   "reqd": 1
+  },
+  {
+   "fieldname": "new_main_department",
+   "fieldtype": "Link",
+   "label": "New Main Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "new_sub_department",
+   "fieldtype": "Link",
+   "label": "New Sub Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "acting_from",
+   "fieldtype": "Date",
+   "label": "Acting From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "acting_to",
+   "fieldtype": "Date",
+   "label": "Acting To",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "No",
+   "fieldname": "renew_acting",
+   "fieldtype": "Select",
+   "label": "Renew Acting",
+   "options": "\nYes\nNo"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.renew_acting == \"Yes\"",
+   "fieldname": "renew_till",
+   "fieldtype": "Date",
+   "label": "Renew Till",
+   "mandatory_depends_on": "eval:doc.renew_acting == \"Yes\""
+  },
+  {
+   "default": "Pending",
+   "fieldname": "request_status",
+   "fieldtype": "Select",
+   "label": "Request Status",
+   "options": "\nPending\nRejected\nApproved"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-03 11:04:17.371890",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Acting ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

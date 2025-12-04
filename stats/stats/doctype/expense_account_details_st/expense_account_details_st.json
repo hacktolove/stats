@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-22 14:40:48.113854",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "account_name",
+  "column_break_egdd",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account Name",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_egdd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "non_negative": 1,
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-22 14:41:28.068278",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Expense Account Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

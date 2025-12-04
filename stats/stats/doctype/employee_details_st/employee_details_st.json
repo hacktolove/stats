@@ -1,0 +1,239 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-22 13:52:01.807143",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_task_completion_reference",
+  "business_trip_reference",
+  "business_trip_start_date",
+  "business_trip_end_date",
+  "employee_no",
+  "employee_name",
+  "idresidency_number",
+  "grade",
+  "trip_classification",
+  "location",
+  "contract_type",
+  "employee_salary",
+  "contract",
+  "column_break_fbsn",
+  "main_department",
+  "sub_department",
+  "no_of_days",
+  "approved_days",
+  "per_diem_amount",
+  "ticket_amount",
+  "total_amount",
+  "transportation_amount",
+  "transportation_amount_per_day",
+  "transportation_due_amount",
+  "approved_amount"
+ ],
+ "fields": [
+  {
+   "fetch_from": "employee_task_completion_reference.business_trip_reference",
+   "fieldname": "business_trip_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Business Trip Reference",
+   "options": "Business Trip Request ST"
+  },
+  {
+   "fetch_from": "employee_task_completion_reference.business_trip_start_date",
+   "fieldname": "business_trip_start_date",
+   "fieldtype": "Date",
+   "label": "Business Trip Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_task_completion_reference.business_trip_end_date",
+   "fieldname": "business_trip_end_date",
+   "fieldtype": "Date",
+   "label": "Business Trip End Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_task_completion_reference.employee_no",
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee No",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_task_completion_reference.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_task_completion_reference.sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_task_completion_reference.no_of_days",
+   "fieldname": "no_of_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No of Days",
+   "read_only": 1
+  },
+  {
+   "description": "fetch from business trip request : total_no_of_days",
+   "fieldname": "approved_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Approved Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Approved Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fbsn",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee_task_completion_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee Task Completion Reference",
+   "options": "Employee Task Completion ST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ticket_amount",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Ticket Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_task_completion_reference.main_department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.grade",
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade",
+   "read_only": 1
+  },
+  {
+   "description": "Based on this, City or Country will be shown below in Location field as data.<br>External --&gt; Country<br>Internal --&gt; Saudi City",
+   "fetch_from": "business_trip_reference.trip_classification",
+   "fieldname": "trip_classification",
+   "fieldtype": "Select",
+   "label": "Trip Classification",
+   "options": "\nInternal\nExternal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "business_trip_reference.per_diem_amount",
+   "fieldname": "per_diem_amount",
+   "fieldtype": "Currency",
+   "label": "Per Diem Amount",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_idresidency_number",
+   "fieldname": "idresidency_number",
+   "fieldtype": "Data",
+   "label": "ID/Residency Number",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_contract_type",
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "label": "Contract Type",
+   "options": "Contract Type ST",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "business_trip_reference.employee_salary",
+   "fieldname": "employee_salary",
+   "fieldtype": "Currency",
+   "label": "Employee Salary",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.contract==\"Civil\"",
+   "fieldname": "transportation_amount",
+   "fieldtype": "Currency",
+   "label": "Transportation Amount",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.contract==\"Civil\"",
+   "fieldname": "transportation_amount_per_day",
+   "fieldtype": "Currency",
+   "label": "Transportation Amount Per Day",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.contract==\"Civil\"",
+   "fieldname": "transportation_due_amount",
+   "fieldtype": "Currency",
+   "label": "Transportation Due Amount",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contract_type.contract",
+   "fieldname": "contract",
+   "fieldtype": "Select",
+   "label": "Contract",
+   "options": "\nDirect\nCivil"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-10-01 15:22:14.653306",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

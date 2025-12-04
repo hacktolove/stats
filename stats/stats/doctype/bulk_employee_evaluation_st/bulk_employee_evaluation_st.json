@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "BEE-.#####",
+ "creation": "2025-01-03 15:01:11.305770",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "creation_date",
+  "created_by",
+  "evaluation_type",
+  "from_date",
+  "to_date",
+  "fetch_employee",
+  "column_break_wwbm",
+  "selection_type",
+  "section",
+  "main_department",
+  "sub_department",
+  "create_evaluation",
+  "section_break_kmku",
+  "bulk_evaluation_details"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "evaluation_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Evaluation Type",
+   "options": "\nYearly\nHalf Yearly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "selection_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Selection Type",
+   "options": "\nAll Employee\nFilters",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wwbm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.selection_type == \"Filters\"",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  },
+  {
+   "depends_on": "eval:doc.selection_type == \"Filters\"",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "depends_on": "eval:doc.selection_type == \"Filters\"",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "depends_on": "eval:(doc.bulk_evaluation_details).length < 1",
+   "fieldname": "fetch_employee",
+   "fieldtype": "Button",
+   "label": "Fetch Employee"
+  },
+  {
+   "fieldname": "create_evaluation",
+   "fieldtype": "Button",
+   "label": "Create Evaluation"
+  },
+  {
+   "fieldname": "section_break_kmku",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bulk_evaluation_details",
+   "fieldtype": "Table",
+   "label": "Bulk Evaluation Details",
+   "options": "Bulk Evaluation Details ST"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-06 15:42:52.399037",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Bulk Employee Evaluation ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

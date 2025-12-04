@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-06 10:17:38.133297",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "offer_term",
+  "column_break_sjbx",
+  "value"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_sjbx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "offer_term",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Offer Term",
+   "options": "Offer Term"
+  },
+  {
+   "default": "0",
+   "fieldname": "value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Value/Description",
+   "non_negative": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-13 09:13:41.225486",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Job Offer Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

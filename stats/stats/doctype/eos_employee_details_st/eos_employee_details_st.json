@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-26 14:23:08.173303",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "grade",
+  "reference",
+  "column_break_ltmt",
+  "eos_type",
+  "total_salary",
+  "due_amount",
+  "bank_name",
+  "iban_no",
+  "note"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee No",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reference",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_salary",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Salary",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "due_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Due Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.bank_name",
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.iban",
+   "fieldname": "iban_no",
+   "fieldtype": "Data",
+   "label": "IBAN No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ltmt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "eos_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "EOS type",
+   "options": "\nResignation\nRetirement",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.grade",
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade",
+   "read_only": 1
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Data",
+   "label": "Note"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-11 14:03:42.473688",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "EOS Employee Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

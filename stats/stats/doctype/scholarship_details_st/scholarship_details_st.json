@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-10 10:33:07.203874",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "specialisation_type",
+  "qualification",
+  "column_break_kqqk",
+  "scholarship_period",
+  "english_required",
+  "scholarship_start_date",
+  "scholarship_end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "specialisation_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Specialisation Type",
+   "options": "Specialisation Type ST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Qualification",
+   "options": "Qualification ST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kqqk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scholarship_period",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Scholarship Period"
+  },
+  {
+   "default": "Yes",
+   "fieldname": "english_required",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "English Required",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "scholarship_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Scholarship Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "scholarship_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Scholarship End Date",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-12 15:26:48.638592",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Scholarship Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

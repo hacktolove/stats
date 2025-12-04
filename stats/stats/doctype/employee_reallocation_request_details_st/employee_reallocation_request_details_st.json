@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-12 08:01:12.895754",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reallocation_reference",
+  "date",
+  "employee_no",
+  "employee_name",
+  "grade",
+  "basic_salary",
+  "column_break_wzih",
+  "iban",
+  "bank_name",
+  "due_amount",
+  "idresidency_number",
+  "joining_date",
+  "transportation_amount",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "reallocation_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reallocation Reference",
+   "options": "Employee Reallocation ST"
+  },
+  {
+   "fetch_from": "reallocation_reference.transaction_date",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "reallocation_reference.employee_no",
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.iban",
+   "fieldname": "iban",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IBAN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.bank_name",
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bank Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "reallocation_reference.due_amount",
+   "fieldname": "due_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Due Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wzih",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee_no.grade",
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_idresidency_number",
+   "fieldname": "idresidency_number",
+   "fieldtype": "Data",
+   "label": "ID/Residency Number"
+  },
+  {
+   "fetch_from": "employee_no.date_of_joining",
+   "fieldname": "joining_date",
+   "fieldtype": "Data",
+   "label": "Joining Date"
+  },
+  {
+   "fieldname": "basic_salary",
+   "fieldtype": "Currency",
+   "label": "Basic Salary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transportation_amount",
+   "fieldtype": "Currency",
+   "label": "Transportation Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Data",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-11 14:45:25.400861",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Reallocation Request Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

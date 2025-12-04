@@ -1,0 +1,194 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-21 13:59:09.997674",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activity_name",
+  "todo",
+  "status",
+  "column_break_vvwr",
+  "date_of_completion",
+  "company_email_creation_task",
+  "send_email_notification_to",
+  "section_break_xwbx",
+  "technical_tools",
+  "section_break_nmek",
+  "tool_1",
+  "tool_2",
+  "tool_3",
+  "column_break_gycb",
+  "tool_4",
+  "tool_5",
+  "tool_6",
+  "column_break_alta",
+  "tool_7",
+  "tool_8",
+  "tool_9",
+  "tool_10"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "activity_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Activity Name",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 2,
+   "fieldname": "todo",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "ToDo",
+   "no_copy": 1,
+   "options": "ToDo",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Open\nClosed\nCancelled",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "fieldname": "date_of_completion",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Completion",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "company_email_creation_task",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Company Email Creation Task",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vvwr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xwbx",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.technical_tools==1",
+   "fieldname": "section_break_nmek",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "tool_1",
+   "fieldtype": "Check",
+   "label": "Tool 1"
+  },
+  {
+   "default": "0",
+   "fieldname": "tool_2",
+   "fieldtype": "Check",
+   "label": "Tool 2"
+  },
+  {
+   "default": "0",
+   "fieldname": "tool_3",
+   "fieldtype": "Check",
+   "label": "Tool 3"
+  },
+  {
+   "fieldname": "column_break_gycb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "tool_4",
+   "fieldtype": "Check",
+   "label": "Tool 4"
+  },
+  {
+   "default": "0",
+   "fieldname": "tool_5",
+   "fieldtype": "Check",
+   "label": "Tool 5"
+  },
+  {
+   "default": "0",
+   "fieldname": "tool_6",
+   "fieldtype": "Check",
+   "label": "Tool 6"
+  },
+  {
+   "fieldname": "column_break_alta",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "tool_7",
+   "fieldtype": "Check",
+   "label": "Tool 7"
+  },
+  {
+   "default": "0",
+   "fieldname": "tool_8",
+   "fieldtype": "Check",
+   "label": "Tool 8"
+  },
+  {
+   "default": "0",
+   "fieldname": "tool_9",
+   "fieldtype": "Check",
+   "label": "Tool 9"
+  },
+  {
+   "default": "0",
+   "fieldname": "tool_10",
+   "fieldtype": "Check",
+   "label": "Tool 10"
+  },
+  {
+   "default": "0",
+   "fieldname": "technical_tools",
+   "fieldtype": "Check",
+   "label": "Technical Tools"
+  },
+  {
+   "fieldname": "send_email_notification_to",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Send Email Notification To",
+   "options": "Email",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-02 15:03:47.944716",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Onboarding Procedures ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

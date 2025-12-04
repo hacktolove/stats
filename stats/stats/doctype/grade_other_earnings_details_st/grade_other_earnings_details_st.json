@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-03 14:47:23.731500",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "earning",
+  "abbr",
+  "method",
+  "amount",
+  "percentage",
+  "maximum_amount",
+  "minimum_amount"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "earning",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Earning",
+   "link_filters": "[[\"Salary Component\",\"type\",\"=\",\"Earning\"]]",
+   "options": "Salary Component",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "depends_on": "eval:doc.method=='Percentage'",
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Percentage",
+   "mandatory_depends_on": "eval:doc.method=='Percentage'"
+  },
+  {
+   "columns": 2,
+   "fieldname": "maximum_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Maximum Amount"
+  },
+  {
+   "columns": 2,
+   "fieldname": "minimum_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Minimum Amount"
+  },
+  {
+   "columns": 1,
+   "fieldname": "method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Method",
+   "options": "Amount\nPercentage"
+  },
+  {
+   "columns": 2,
+   "depends_on": "eval:doc.method=='Amount'",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "mandatory_depends_on": "eval:doc.method=='Amount'"
+  },
+  {
+   "fetch_from": "earning.salary_component_abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Abbr",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-06 15:33:39.877314",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Grade Other Earnings Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

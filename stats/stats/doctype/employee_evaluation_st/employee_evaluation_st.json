@@ -1,0 +1,270 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EE-.#####",
+ "creation": "2024-09-24 09:54:39.925527",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "grade",
+  "designation",
+  "column_break_wtkb",
+  "creation_date",
+  "evaluation_type",
+  "evaluation_from",
+  "evaluation_to",
+  "action",
+  "contrcat_start_date",
+  "employee_contract_reference",
+  "fetch_goals",
+  "employee_personal_goals_section",
+  "employee_personal_goals",
+  "section_break_kpbm",
+  "employee_job_goals",
+  "section_break_dqic",
+  "basic_competencies",
+  "technical_competencies",
+  "leadership",
+  "evaluation_summary_section",
+  "personal_goals",
+  "job_goals",
+  "competencies",
+  "column_break_cywl",
+  "final_evaluation",
+  "evaluation_classification",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee No",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.grade",
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wtkb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "evaluation_type",
+   "fieldtype": "Select",
+   "label": "Evaluation Type",
+   "options": "\nTest Period\nHalf Yearly\nYearly"
+  },
+  {
+   "fieldname": "evaluation_from",
+   "fieldtype": "Date",
+   "label": "Evaluation From"
+  },
+  {
+   "fieldname": "evaluation_to",
+   "fieldtype": "Date",
+   "label": "Evaluation To"
+  },
+  {
+   "depends_on": "eval:doc.evaluation_type == \"Test Period\"",
+   "fieldname": "action",
+   "fieldtype": "Select",
+   "label": "Action",
+   "mandatory_depends_on": "eval:doc.evaluation_type == \"Test Period\"",
+   "options": "\nRenew Test Period\nSeparate\nHire"
+  },
+  {
+   "depends_on": "eval:doc.evaluation_type == \"Test Period\"",
+   "fieldname": "contrcat_start_date",
+   "fieldtype": "Date",
+   "label": "Contrcat Start Date",
+   "mandatory_depends_on": "eval:doc.evaluation_type == \"Test Period\""
+  },
+  {
+   "depends_on": "eval:doc.evaluation_type != \"Test Period\"",
+   "fieldname": "employee_personal_goals_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_personal_goals",
+   "fieldtype": "Table",
+   "label": "Employee Personal Goals",
+   "options": "Employee Personal Goals Details ST"
+  },
+  {
+   "depends_on": "eval:doc.evaluation_type != \"Test Period\"",
+   "fieldname": "section_break_kpbm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_job_goals",
+   "fieldtype": "Table",
+   "label": "Employee Job Goals",
+   "options": "Employee Job Goals Details ST"
+  },
+  {
+   "fieldname": "section_break_dqic",
+   "fieldtype": "Section Break",
+   "label": "Competencies"
+  },
+  {
+   "fieldname": "evaluation_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Evaluation Summary"
+  },
+  {
+   "fieldname": "personal_goals",
+   "fieldtype": "Float",
+   "label": "Personal Goals",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "job_goals",
+   "fieldtype": "Float",
+   "label": "Job Goals",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_cywl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "final_evaluation",
+   "fieldtype": "Float",
+   "label": "Final Evaluation",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "evaluation_classification",
+   "fieldtype": "Data",
+   "label": "Evaluation classification",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.docstatus == 0",
+   "fieldname": "fetch_goals",
+   "fieldtype": "Button",
+   "label": "Fetch Goals"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Evaluation ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval:doc.evaluation_type == \"Test Period\"",
+   "fieldname": "employee_contract_reference",
+   "fieldtype": "Data",
+   "label": "Employee Contract Reference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "basic_competencies",
+   "fieldtype": "Table",
+   "label": "Basic Competencies",
+   "options": "Employee Competencies Details ST"
+  },
+  {
+   "fieldname": "technical_competencies",
+   "fieldtype": "Table",
+   "label": "Technical Competencies",
+   "options": "Employee Competencies Details ST"
+  },
+  {
+   "fieldname": "leadership",
+   "fieldtype": "Table",
+   "label": "Leadership",
+   "options": "Employee Competencies Details ST"
+  },
+  {
+   "fieldname": "competencies",
+   "fieldtype": "Float",
+   "label": "Competencies",
+   "precision": "2",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-03 15:31:03.893904",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Evaluation ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

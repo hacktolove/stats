@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-18 12:30:22.438506",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "column_break_kvzs",
+  "email_id",
+  "phone_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "column_break_kvzs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.company_email",
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email ID"
+  },
+  {
+   "fetch_from": "employee.cell_number",
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone No"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-18 12:32:58.598039",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Inquiry Responsible Team Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

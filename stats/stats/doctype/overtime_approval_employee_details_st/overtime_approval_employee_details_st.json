@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-07 07:28:00.355597",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_no",
+  "employee_name",
+  "sub_department",
+  "deduct_vacation_and_absent_days",
+  "column_break_nbfo",
+  "total_no_of_days",
+  "no_of_vacation",
+  "no_of_absent",
+  "expected_approved_days",
+  "approved_days"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee No",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_nbfo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_no_of_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total No of Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Approved Days"
+  },
+  {
+   "fieldname": "no_of_vacation",
+   "fieldtype": "Int",
+   "label": "No of Vacation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_of_absent",
+   "fieldtype": "Int",
+   "label": "No of Absent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expected_approved_days",
+   "fieldtype": "Int",
+   "label": "Expected Approved Days",
+   "non_negative": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "deduct_vacation_and_absent_days",
+   "fieldtype": "Check",
+   "label": "Deduct Vacation and Absent days"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-24 09:51:23.654585",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Overtime Approval Employee Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

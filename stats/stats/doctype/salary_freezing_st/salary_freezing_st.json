@@ -1,0 +1,236 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ESF-.#####",
+ "creation": "2024-09-06 14:33:07.340224",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "instruction",
+  "section_break_6iaq",
+  "employee_no",
+  "creation_date",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "grade",
+  "contract_type",
+  "section",
+  "amended_from",
+  "column_break_dpbo",
+  "salary_freezing_start_date",
+  "salary_freezing_end_date",
+  "decision_number",
+  "date_of_the_decision",
+  "decision_details",
+  "freezing_end_type",
+  "section_break_ccdv",
+  "regular_salary_structure_ref",
+  "regular_total_salary",
+  "column_break_uxyy",
+  "freeze_salary_structure_ref",
+  "freezing_salary_assignment_start_date",
+  "freeze_total_salary",
+  "per_month_cut_salary"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_6iaq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Salary Freezing ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee No",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_no.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_no.department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "salary_freezing_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Salary Freezing Start Date",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "salary_freezing_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Salary Freezing End Date",
+   "read_only_depends_on": "eval:doc.freezing_end_type"
+  },
+  {
+   "fieldname": "decision_number",
+   "fieldtype": "Data",
+   "label": "Decision Number"
+  },
+  {
+   "fieldname": "date_of_the_decision",
+   "fieldtype": "Date",
+   "label": "Date of the Decision"
+  },
+  {
+   "fieldname": "decision_details",
+   "fieldtype": "Small Text",
+   "label": "Decision Details"
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  },
+  {
+   "fieldname": "column_break_dpbo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fetch_from": "employee_no.custom_contract_type",
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "label": "Contract Type",
+   "options": "Contract Type ST"
+  },
+  {
+   "fetch_from": "employee_no.grade",
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade"
+  },
+  {
+   "fieldname": "instruction",
+   "fieldtype": "HTML",
+   "label": "Instruction",
+   "options": "<h5><b> Freezing Salary Assignment \u2013 Logic Overview</b></h5>\n  <p><strong>Reference Point:</strong> Payroll Date as defined in Stats Settings</p>\n\n  <b>1. Freezing Start Date Logic</b>\n  <ul>\n    <li>Start Date is <b>before</b> Payroll Date:  \n      Salary freeze begins from the <strong>same month</strong> as the Start Date.</li>\n    <li>Start Date is <b>after</b> Payroll Date:  \n      Salary freeze begins from the <strong>next month</strong>.</li>\n  </ul>\n\n  <b>2. Freezing End Date Logic</b>\n  <ul>\n    <li>End Date is <b>before</b> Payroll Date:  \n      Regular salary resumes from the <strong>same month</strong> as the End Date.</li>\n    <li>End Date is <b>after</b> Payroll Date:  \n      Regular salary resumes from the <strong>next month</strong>.</li>\n  </ul>\n\n  <h5><b>Freezing End Type \u2013 Actions</b></h5>\n  <ul>\n    <li><b>Separation</b>:  \n      Manually create an <strong>Employee Resignation</strong> with the correct Freezing End Date.</li>\n    <li><b>Reactivation</b>:  \n      Regular salary resumes from the <strong>Freezing End Date</strong>.</li>\n    <li><b>Superior Reactivation</b>:  \n      Issue <strong>Additional Salary</strong> for the cut amount (in End Date month), then resume <strong>regular salary</strong> from the Freezing End Date.</li>\n  </ul>"
+  },
+  {
+   "fieldname": "section_break_ccdv",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "column_break_uxyy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "regular_salary_structure_ref",
+   "fieldtype": "Data",
+   "label": "Regular Salary Structure Ref",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "freezing_end_type",
+   "fieldtype": "Select",
+   "label": "Freezing End Type ",
+   "options": "\nSeparation\nReactivation\nSuperior Reactivation",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "regular_total_salary",
+   "fieldtype": "Float",
+   "label": "Regular Total Salary (Per Month)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "freeze_salary_structure_ref",
+   "fieldtype": "Data",
+   "label": "Freeze Salary Structure Ref",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "freeze_total_salary",
+   "fieldtype": "Float",
+   "label": "Freeze Total Salary (Per Month)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "per_month_cut_salary",
+   "fieldtype": "Float",
+   "label": "Cut Salary (Per Month)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "freezing_salary_assignment_start_date",
+   "fieldtype": "Date",
+   "label": "Freezing Salary Assignment Start Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-06 12:55:29.963995",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Salary Freezing ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

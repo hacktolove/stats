@@ -1,0 +1,203 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ETC-.#####",
+ "creation": "2024-08-22 13:24:48.233398",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "task_creation_date",
+  "business_trip_reference",
+  "employee_no",
+  "employee_name",
+  "main_department",
+  "sub_department",
+  "section",
+  "column_break_fjth",
+  "trip_direction",
+  "business_trip_start_date",
+  "business_trip_end_date",
+  "process_status",
+  "no_of_days",
+  "trip_classification",
+  "location",
+  "section_break_iysk",
+  "trip_cost_template",
+  "trip_cost_detail",
+  "notes_about_the_trip",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "business_trip_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Business Trip Reference",
+   "options": "Business Trip Request ST",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "business_trip_reference.employee_no",
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "business_trip_reference.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "business_trip_reference.main_department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "business_trip_reference.sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "business_trip_reference.section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fjth",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "business_trip_reference.trip_direction",
+   "fieldname": "trip_direction",
+   "fieldtype": "Data",
+   "label": "Trip Direction",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "business_trip_reference.business_trip_start_date",
+   "fieldname": "business_trip_start_date",
+   "fieldtype": "Date",
+   "label": "Business Trip Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "business_trip_reference.business_trip_end_date",
+   "fieldname": "business_trip_end_date",
+   "fieldtype": "Date",
+   "label": "Business Trip End Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "business_trip_reference.no_of_days",
+   "fieldname": "no_of_days",
+   "fieldtype": "Int",
+   "label": "No of Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_iysk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "trip_cost_detail",
+   "fieldtype": "Table",
+   "label": "Trip Cost Details",
+   "options": "Trip Cost Details ST"
+  },
+  {
+   "fieldname": "notes_about_the_trip",
+   "fieldtype": "Small Text",
+   "label": "Notes about the trip"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "process_status",
+   "fieldtype": "Select",
+   "label": "Process Status",
+   "no_copy": 1,
+   "options": "\nPending\nProcessed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "trip_cost_template",
+   "fieldtype": "Link",
+   "label": "Trip Cost Template",
+   "options": "Trip Cost Template ST"
+  },
+  {
+   "default": "Today",
+   "fieldname": "task_creation_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Task Completion ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "description": "Based on this, City or Country will be shown below in Location field as data.<br>External --&gt; Country<br>Internal --&gt; Saudi City",
+   "fetch_from": "business_trip_reference.trip_classification",
+   "fieldname": "trip_classification",
+   "fieldtype": "Select",
+   "label": "Trip Classification",
+   "options": "\nInternal\nExternal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-28 11:15:20.962546",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Employee Task Completion ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

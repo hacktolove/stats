@@ -1,0 +1,403 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "JA-.######",
+ "creation": "2024-08-05 15:12:24.793523",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "opening_job_reference",
+  "job_title",
+  "resume",
+  "column_break_vhhn",
+  "status",
+  "employment_type",
+  "contract_type",
+  "section_break_zcri",
+  "main_department",
+  "sub_department",
+  "branch",
+  "column_break_fsoh",
+  "section",
+  "grade",
+  "designation",
+  "section_break_oeli",
+  "candidate_name",
+  "candidate_namein_english",
+  "date_of_birth",
+  "hijri_birth_date",
+  "birth_place",
+  "column_break_iyou",
+  "gender",
+  "phone_no",
+  "email",
+  "country",
+  "column_break_yuey",
+  "religion",
+  "marital_status",
+  "blood_group",
+  "section_break_arex",
+  "issuance_place",
+  "issuance_date",
+  "column_break_ibwz",
+  "id_expiration_date",
+  "id_igama_no",
+  "section_break_knvi",
+  "building_number",
+  "neighbourhood",
+  "postal_code",
+  "column_break_wzsp",
+  "street_name",
+  "city",
+  "additional_number",
+  "section_break_cycb",
+  "education",
+  "section_break_bwfc",
+  "external_work_history",
+  "section_break_oicg",
+  "declaration_of_pregnancy",
+  "relatives_in_general_authority_statistics",
+  "relatives_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "opening_job_reference",
+   "fieldtype": "Link",
+   "label": "Opening Job Reference",
+   "options": "Opening Job ST",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "opening_job_reference.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "candidate_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Candidate Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "candidate_namein_english",
+   "fieldtype": "Data",
+   "label": "Candidate Name(In English)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "label": "Phone No",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "resume",
+   "fieldtype": "Attach",
+   "label": "Resume"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nAccepted\nRejected"
+  },
+  {
+   "fieldname": "column_break_vhhn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "opening_job_reference.employment_type",
+   "fieldname": "employment_type",
+   "fieldtype": "Link",
+   "label": "Employment Type",
+   "options": "Employment Type"
+  },
+  {
+   "fetch_from": "opening_job_reference.contract_type",
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract Type",
+   "options": "Contract Type ST",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "opening_job_reference.section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section ST"
+  },
+  {
+   "fetch_from": "opening_job_reference.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fetch_from": "opening_job_reference.main_department",
+   "fieldname": "main_department",
+   "fieldtype": "Link",
+   "label": "Main Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "opening_job_reference.sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "opening_job_reference.grade",
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade"
+  },
+  {
+   "fetch_from": "opening_job_reference.job_title",
+   "fieldname": "job_title",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job No",
+   "options": "Job No ST"
+  },
+  {
+   "fieldname": "section_break_oeli",
+   "fieldtype": "Section Break",
+   "label": "Candidate Information"
+  },
+  {
+   "fieldname": "column_break_iyou",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fsoh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zcri",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "birth_place",
+   "fieldtype": "Data",
+   "label": "Birth Place",
+   "reqd": 1
+  },
+  {
+   "fieldname": "religion",
+   "fieldtype": "Select",
+   "label": "Religion",
+   "options": "\nMuslim\nNon-Muslim",
+   "reqd": 1
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Select",
+   "label": "Blood Group",
+   "options": "\nA+\nA-\nB+\nB-\nAB+\nAB-\nO+\nO-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "\nSingle\nMarried\nDivorced\nWidowed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yuey",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_knvi",
+   "fieldtype": "Section Break",
+   "label": "Candidate National Address"
+  },
+  {
+   "fieldname": "building_number",
+   "fieldtype": "Data",
+   "label": "Building Number"
+  },
+  {
+   "fieldname": "neighbourhood",
+   "fieldtype": "Data",
+   "label": "Neighbourhood"
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal code"
+  },
+  {
+   "fieldname": "column_break_wzsp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "street_name",
+   "fieldtype": "Data",
+   "label": "Street name"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "additional_number",
+   "fieldtype": "Data",
+   "label": "Additional number",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "section_break_cycb",
+   "fieldtype": "Section Break",
+   "label": "Educational Qualification"
+  },
+  {
+   "fieldname": "education",
+   "fieldtype": "Table",
+   "label": "Education",
+   "options": "Employee Education"
+  },
+  {
+   "fieldname": "section_break_bwfc",
+   "fieldtype": "Section Break",
+   "label": "Previous Work Experience"
+  },
+  {
+   "fieldname": "external_work_history",
+   "fieldtype": "Table",
+   "label": "External Work History",
+   "options": "Employee External Work History"
+  },
+  {
+   "fieldname": "section_break_arex",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "issuance_place",
+   "fieldtype": "Data",
+   "label": "Issuance Place"
+  },
+  {
+   "fieldname": "id_expiration_date",
+   "fieldtype": "Date",
+   "label": "ID/Residency Expiration Date"
+  },
+  {
+   "fieldname": "issuance_date",
+   "fieldtype": "Date",
+   "label": "Issuance Date"
+  },
+  {
+   "fieldname": "column_break_ibwz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_oicg",
+   "fieldtype": "Section Break",
+   "label": "Disclosing"
+  },
+  {
+   "depends_on": "eval:doc.gender=='Female'",
+   "fieldname": "declaration_of_pregnancy",
+   "fieldtype": "Select",
+   "label": "Declaration of Pregnancy",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "relatives_in_general_authority_statistics",
+   "fieldtype": "Select",
+   "label": "Do You Have any Relatives Working at General Authority for Statistics?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.relatives_in_general_authority_statistics=='Yes'",
+   "fieldname": "relatives_details",
+   "fieldtype": "Table",
+   "label": "Relatives Details",
+   "options": "Candidate Relatives In Stats Details ST"
+  },
+  {
+   "fieldname": "id_igama_no",
+   "fieldtype": "Data",
+   "label": "Iqama/National ID No",
+   "unique": 1
+  },
+  {
+   "fieldname": "hijri_birth_date",
+   "fieldtype": "Data",
+   "label": "Hijri Birth Date",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Job Offer ST",
+   "link_fieldname": "job_application_reference"
+  }
+ ],
+ "modified": "2025-05-27 07:48:57.500122",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Job Application ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

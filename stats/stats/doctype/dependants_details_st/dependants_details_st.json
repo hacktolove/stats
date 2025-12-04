@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-21 12:08:48.000089",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "relation",
+  "date_of_birth",
+  "column_break_iuxc",
+  "age",
+  "id_number",
+  "employee_education_allowance_balance",
+  "applied_for_education_allowance"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name"
+  },
+  {
+   "fieldname": "relation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Relation",
+   "options": "\nFather\nMother\nHusband\nWife\nSon\nDaughter"
+  },
+  {
+   "fieldname": "column_break_iuxc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "id_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ID number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "employee_education_allowance_balance",
+   "fieldtype": "Currency",
+   "label": "Employee Education Allowance Balance"
+  },
+  {
+   "default": "0",
+   "description": "On submit of Education Allowance request this checkbox will checked.",
+   "fieldname": "applied_for_education_allowance",
+   "fieldtype": "Check",
+   "label": "Applied For Education Allowance",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-10 09:19:44.857914",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Dependants Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

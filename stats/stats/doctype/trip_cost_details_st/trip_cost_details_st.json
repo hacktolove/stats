@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-22 13:34:12.595277",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "element",
+  "column_break_ffcs",
+  "payment_method",
+  "attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "element",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Element",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Payment Method",
+   "options": "Payment Method ST"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_ffcs",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-28 09:31:56.160432",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Trip Cost Details ST",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

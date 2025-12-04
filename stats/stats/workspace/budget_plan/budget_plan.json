@@ -1,0 +1,58 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"AFK0B_lIQU\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\u0627\u0644\u062a\u062e\u0637\u064a\u0637 \u0627\u0644\u0645\u064a\u0632\u0627\u0646\u064a\u0629</span>\",\"col\":12}},{\"id\":\"hWYAV3tG17\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Department Budget ST\",\"col\":3}},{\"id\":\"loeKTFwSlX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Accumulative Budget ST\",\"col\":3}},{\"id\":\"9wufoiQPk6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Budget Change Request ST\",\"col\":3}}]",
+ "creation": "2024-09-04 09:30:17.428163",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "expenses",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 1,
+ "label": "Budget plan",
+ "links": [],
+ "modified": "2025-04-17 07:38:54.084285",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Budget plan",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Budget Manager"
+  }
+ ],
+ "sequence_id": 5.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Department Budget ST",
+   "link_to": "Department Budget ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Accumulative Budget ST",
+   "link_to": "Accumulative Budget ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Budget Change Request ST",
+   "link_to": "Budget Change Request ST",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Budget plan"
+}

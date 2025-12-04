@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "LCHR-.#####",
+ "creation": "2024-12-24 11:00:29.010137",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "creation_date",
+  "employee_no",
+  "employee_name",
+  "sub_department",
+  "column_break_zznn",
+  "leave_application_reference",
+  "leave_application_reference_ro",
+  "change_type",
+  "extend_date",
+  "stop_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "creation_date",
+   "fieldtype": "Date",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "Employee No",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_no.custom_employee_name_in_english",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "employee_no.custom_sub_department",
+   "fieldname": "sub_department",
+   "fieldtype": "Link",
+   "label": "Sub Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "leave_application_reference",
+   "fieldtype": "Link",
+   "label": "Leave Application Reference",
+   "options": "Leave Application"
+  },
+  {
+   "fieldname": "column_break_zznn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "change_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Change Type",
+   "options": "\nExtend\nStop Vacation\nCancel",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.change_type=='Extend'",
+   "fieldname": "extend_date",
+   "fieldtype": "Date",
+   "label": "Extend Date",
+   "mandatory_depends_on": "eval:doc.change_type=='Extend'"
+  },
+  {
+   "depends_on": "eval:doc.change_type=='Stop Vacation'",
+   "fieldname": "stop_date",
+   "fieldtype": "Date",
+   "label": "Stop Date",
+   "mandatory_depends_on": "eval:doc.change_type=='Stop Vacation'"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Leave Change Request ST",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "description": "Reference of corresponding Leave Application",
+   "fieldname": "leave_application_reference_ro",
+   "fieldtype": "Data",
+   "label": "Leave Application Reference",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-30 12:36:40.064283",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Leave Change Request ST",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
