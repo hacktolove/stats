@@ -3,6 +3,8 @@
 
 frappe.ui.form.on("Leave Request ST", {
 	setup(frm) {
+        frm.toggle_display(["custom_relative"]  , false);
+
         frm.set_query("leave_type", function() {
             return {
                 query: "stats.stats.doctype.leave_request_st.leave_request_st.get_leave_type",
@@ -18,6 +20,7 @@ frappe.ui.form.on("Leave Request ST", {
         })
 	},
     onload(frm){
+
         make_leave_type_readonly_for_civil_contract_employees(frm)
         // workflow_progressbar(frm)
         if (frm.doc.leave_request_reference) {
@@ -117,8 +120,24 @@ frappe.ui.form.on("Leave Request ST", {
     leave_type: function (frm) {
         frm.trigger("make_dashboard");
         make_attachment_mandatory_based_on_condition(frm)
-    },
+        console.info("HEEEEEEEEEEEERRRRRRRREEEEEEEEEEEEEEE", frm.doc.leave_type)
+        frm.toggle_display(["custom_relative"]  , true);
 
+        frappe.db.get_value("Leave Type", frm.doc.leave_type, "custom_require_relative")
+        .then(value => {
+            if(value.message.custom_require_relative == 1){
+                frm.toggle_display(["custom_relative"]  , true);
+                frm.set_df_property("custom_relative", "reqd", 1)
+            }
+            else{
+                frm.toggle_display(["custom_relative"]  , false);
+                frm.set_df_property("custom_relative", "reqd", 0)
+            }
+            console.info("VALUE", value.message.custom_require_relative)
+        }).catch(err => {
+            console.error("ERROR", err)
+        })
+    },
     from_date: function (frm) {
         frm.trigger("make_dashboard");
     },

@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-09 13:42:29.667918",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_amvc",
+  "amended_from",
+  "created_at",
+  "created_by",
+  "column_break_cmat",
+  "contract",
+  "choose_employees_section",
+  "refresh_employees",
+  "fill_next_step",
+  "employees"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_amvc",
+   "fieldtype": "Section Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Annual Increase",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "created_at",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Creation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Created By",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Civil",
+   "reqd": 1
+  },
+  {
+   "fieldname": "choose_employees_section",
+   "fieldtype": "Section Break",
+   "label": "Choose Employees"
+  },
+  {
+   "fieldname": "refresh_employees",
+   "fieldtype": "Button",
+   "label": "Refresh employees"
+  },
+  {
+   "columns": 15,
+   "fieldname": "employees",
+   "fieldtype": "Table",
+   "label": "Employees",
+   "options": "Annual Allowance Employee"
+  },
+  {
+   "fieldname": "fill_next_step",
+   "fieldtype": "Button",
+   "label": "Fill next Step"
+  },
+  {
+   "fieldname": "column_break_cmat",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-12-09 16:04:48.968241",
+ "modified_by": "Administrator",
+ "module": "Stats",
+ "name": "Annual Increase ST",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

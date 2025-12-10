@@ -55,15 +55,27 @@ def get_deputy_employee_list(doctype, txt, searchfield, start, page_len, filters
 	employee = filters.get("employee")
 	is_manager = frappe.db.get_value("Employee",employee,"custom_is_manager")
 	if is_manager == 1:
-		deputy_employee_list = frappe.db.get_all("Employee",
-										   filters={"reports_to":employee,"name": ("like", f"{txt}%")},
-										   fields=["name","employee_name","user_id"],as_list=1)
+		is_supervisor = frappe.db.get_value("Employee",employee,"custom_supervisor_type") == "Supervisor"
+		if is_supervisor:
+			deputy_employee_list = frappe.db.get_all("Employee",
+													filters=[
+														["name", "like", f"{txt}%"],
+														["name", "!=", employee],
+														["custom_supervisor_type", "=", "Supervisor"],
+														["custom_is_manager", "=", 1]
+													],
+													fields=["name","employee_name","user_id"],as_list=1)
+		else:
+			deputy_employee_list = frappe.db.get_all("Employee",
+													filters={"reports_to":employee,"name": ("like", f"{txt}%")},
+													fields=["name","employee_name","user_id"],as_list=1)
 	if is_manager == 0:
 		sub_department = frappe.db.get_value("Employee",employee,"custom_sub_department")
 		if sub_department:
-			deputy_employee_list = frappe.db.get_all("Employee",
+				deputy_employee_list = frappe.db.get_all("Employee",
 														filters={"custom_sub_department":sub_department,"name": ("like", f"{txt}%")},
 														fields=["name","employee_name","user_id"],as_list=1)
+			
 	return deputy_employee_list
 
 @frappe.whitelist()

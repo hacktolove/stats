@@ -21,6 +21,7 @@ class LeaveRequestST(Document):
 
 	def validate(self):
 		self.validate_once_per_life_time_requests()     
+		self.validate_relative()
 		self.validate_attachments()
 		self.calculate_to_date_based_on_no_of_days()
 		self.validate_other_leave_consumed_days()
@@ -31,6 +32,18 @@ class LeaveRequestST(Document):
 		self.calculate_total_days_and_yearly_days()
 		self.validate_leave_type_with_no_of_days()
 		self.validate_sick_leave_type()
+	
+	def validate_relative(self):
+		value = frappe.db.get_value("Leave Type" , self.leave_type , "custom_require_relative")
+		if(value == 1):
+			if(self.custom_relative not in ["Father" , "Mother" , "Sister" , "Brother" , "Son" , "Daughter"]):
+				frappe.throw("Please Add Relative")
+		else:
+			frappe.throw("me")
+
+
+
+
 	
 	def validate_sick_leave_type(self):
 		if _(self.contract_type) == _("Direct"):

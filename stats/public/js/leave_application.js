@@ -1,5 +1,7 @@
 frappe.ui.form.on("Leave Application", {
-	set_leave_type: function (frm) {
+	setup: function (frm) {
+	},
+	set_leave_type: async function (frm) {
 		// code from hrms app except stats filter 2 lines
 		if (frm.doc.employee) {
 			frappe.call({
@@ -16,6 +18,12 @@ frappe.ui.form.on("Leave Application", {
 					lwps = r.message["lwps"];
 				},
 			});
+
+
+			let contract_type = await frappe.db.get_value('Employee', frm.doc.employee, 'custom_contract');
+			contract_type = contract_type.message.custom_contract;
+
+
 
 			$("div").remove(".form-dashboard-section.custom");
 
@@ -36,8 +44,14 @@ frappe.ui.form.on("Leave Application", {
 				return {
 					filters: [
 						["leave_type_name", "in", allowed_leave_types],
+						// show only leave types that :
+						// 1. are in allowed_leave_types
+						// 2. are not based on leave request
+						// 3. are not once in company life
 						["custom_based_on_leave_request", "!=", 1],      // stats filter
-						["custom_once_in_company_life", "!=", 1]],		// stats filter
+						["custom_once_in_company_life", "!=", 1],
+						["custom_contract_type", "=", contract_type]
+					],		// stats filter
 				};
 			});
 		}
@@ -86,6 +100,12 @@ frappe.ui.form.on("Leave Application", {
 					frm.set_df_property('custom_exit_entry_required', 'hidden', 1)
 					frm.set_df_property('custom_ticket_required', 'hidden', 1)
 				}
+
+		// set custom_is_supervisor based on employee custom_supervisor_type
+		frappe.db.get_value('Employee', frm.doc.employee, 'custom_supervisor_type')
+			.then(r => {
+				frm.set_value('custom_is_supervisor', r.message.custom_supervisor_type == "Supervisor")
+			})
 
 
 			})
